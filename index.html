@@ -5,17 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,400;1,500;1,600&family=Playfair:ital,opsz,wght@1,5..1200,300;1,5..1200,400;1,5..1200,500;1,5..1200,700&family=Roboto:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+
     <title>Book/Movie Quiz</title>
   </head>
   <body>
-    <div class="container">
-      <div id="home" class="flex-center flex-column">
+    <main class="container">
+      <div id="home" class="container-flex">
         <h1>Book/Movie Quiz</h1>
         <a class="btn" href="/quiz.html">Start Game</a>
         <a class="btn" href="/highscores.html">High Scores</a>
-        <a class="btn rules" href="/rules.html">Rules</a>
+        <button onclick="displayRules()" class="btn">Rules</button>
       </div>
-    </div>
+    </main>
     <script src="assets/javascript/script.js"></script>
   </body>
 </html>

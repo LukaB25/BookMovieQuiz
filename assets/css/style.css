@@ -1,0 +1,84 @@
+/* Basic starting structure */
+:root {
+    background-color: #1a1a1a;
+    background: url(../images/cinema.jpg) center;
+    font-size: 10px;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Lora', 'Playfair', 'Roboto', serif;
+    margin: 0;
+    padding: 0;
+    color: #cbb26a
+}
+
+h1 {
+    font-size: 5rem;
+    color: #d8c690;
+    margin-bottom: 5rem;
+    text-align: center;
+}
+
+h2 {
+    font-size: 4rem;
+    margin-bottom: 4rem;
+    font-weight: 500;
+}
+
+h3 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+}
+
+/* Container */
+
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(26, 26, 26, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100rem;
+    margin: 0 auto;
+}
+
+.container-flex {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Buttons */
+
+.btn {
+    font-size: 2rem;
+    padding: 1rem 0;
+    width: 25rem;
+    text-align: center;
+    border: 0.2rem solid #e8d398;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    color: #cbb26a;
+    background-color: #FFF6E7;
+}
+
+.btn:hover {
+    cursor: pointer;
+    box-shadow: 0 0.5rem 1.5rem 0 rgba(255, 240, 216, 0.5);
+    transform: translateY(-0.1rem);
+    transition: transform 500ms;
+}
