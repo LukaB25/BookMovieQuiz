@@ -1,7 +1,7 @@
 /* Basic starting structure */
 :root {
     background-color: #1a1a1a;
-    background: url(../images/cinema.jpg) center;
+    background: url(../images/cinema.avif) center;
     font-size: 10px;
 }
 
@@ -20,8 +20,14 @@ h1 {
     text-align: center;
 }
 
+.text-deco-none {
+    text-decoration: none;
+    cursor: default;
+}
+
 h2 {
     font-size: 4rem;
+    color: #d8c690;
     margin-bottom: 4rem;
     font-weight: 500;
 }
@@ -46,11 +52,17 @@ h3 {
     margin: 0 auto;
 }
 
-.container-flex {
-    display: flex;
+.container>* {
     width: 100%;
-    align-items: center;
+}
+
+.justify-center {
+    display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+.flex-column {
     flex-direction: column;
 }
 
@@ -78,7 +90,11 @@ h3 {
 
 .btn:hover {
     cursor: pointer;
-    box-shadow: 0 0.5rem 1.5rem 0 rgba(255, 240, 216, 0.5);
-    transform: translateY(-0.1rem);
-    transition: transform 500ms;
+    box-shadow: 0 0.5rem 2rem 0 rgba(255, 240, 216, 0.5);
+}
+
+.btn-off:hover {
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
 }
