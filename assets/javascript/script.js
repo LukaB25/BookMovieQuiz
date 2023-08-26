@@ -70,10 +70,10 @@ let questions = [
     {
         question: "Which of the following was not Book-To-Movie adaptation?",
         answers: [
-            { text: 'The Godfather', correct: false },
-            { text: 'Titanic', correct: true },
-            { text: 'The Help', correct: false },
-            { text: 'The Devil Wears Prada', correct: false },
+            { text: 'The Godfather (1972)', correct: false },
+            { text: 'Titanic (1997)', correct: true },
+            { text: 'The Help (2011)', correct: false },
+            { text: 'The Devil Wears Prada (2006)', correct: false },
         ]
     },
     {
@@ -88,14 +88,14 @@ let questions = [
     {
         question: "Guess a movie where the main heroine uses a bow and arrows to take down the Capitol",
         answers: [
-            { text: 'The Hobbit', correct: false },
-            { text: 'Smurfs', correct: false },
-            { text: 'The Hunger Games', correct: true },
-            { text: 'Matilda', correct: false },
+            { text: 'The Hobbit (2012)', correct: false },
+            { text: 'Smurfs (2011)', correct: false },
+            { text: 'The Hunger Games (2012)', correct: true },
+            { text: 'Matilda (1996)', correct: false },
         ]
     },
     {
-        question: "Jurassic Park is a:",
+        question: "Jurassic Park (1993) is a:",
         answers: [
             { text: 'Book', correct: false },
             { text: 'Neither', correct: false },
@@ -104,7 +104,7 @@ let questions = [
         ]
     },
     {
-        question: "Hidden figures is a:",
+        question: "Hidden figures (2016) is a:",
         answers: [
             { text: 'Neither', correct: false },
             { text: 'Both', correct: true },
@@ -122,7 +122,7 @@ let questions = [
         ]
     },
     {
-        question: "Which of this books was not adapted into a movie/Tv Show:",
+        question: "Which of this books was not adapted into a movie or a Tv Show:",
         answers: [
             { text: 'Enemies with Benefits (by Lavander Fields)', correct: true },
             { text: 'Red, White and Royal Blue (by Casey McQuiston)', correct: false },
@@ -140,7 +140,7 @@ let questions = [
         ]
     },
     {
-        question: "Who were the main actresses in a Book-To-Movie adaptation of A Simple Favour?",
+        question: "Who were the main actresses in a Book-To-Movie adaptation of A Simple Favour (2018)?",
         answers: [
             { text: 'Blake Lively and Anne Hathaway', correct: false },
             { text: 'Blake Lively and Anna Kendrick', correct: true },
@@ -149,7 +149,7 @@ let questions = [
         ]
     },
     {
-        question: "The Harry Potter is a:",
+        question: "The Harry Potter (2001-2011) is a:",
         answers: [
             { text: 'Both', correct: true },
             { text: 'Book', correct: false },
@@ -158,7 +158,7 @@ let questions = [
         ]
     },
     {
-        question: "Who was the main actor in a Book-To-Movie adaptation of Forrest Gump",
+        question: "Who was the main actor in a Book-To-Movie adaptation of Forrest Gump (1994)",
         answers: [
             { text: 'Tom Hanks', correct: true },
             { text: 'Tom Hiddleston', correct: false },
@@ -167,7 +167,7 @@ let questions = [
         ]
     },
     {
-        question: "Shrek is a:",
+        question: "Shrek (2001) is a:",
         answers: [
             { text: 'Neither', correct: false },
             { text: 'Both', correct: true },
@@ -176,7 +176,7 @@ let questions = [
         ]
     },
     {
-        question: "The Fault in Our Stars is a:",
+        question: "The Fault in Our Stars (2014) is a:",
         answers: [
             { text: 'Neither', correct: false },
             { text: 'Movie', correct: false },
@@ -212,7 +212,7 @@ let questions = [
         ]
     },
     {
-        question: "Which of this actors was not in The Harry Potter?",
+        question: "Which of this actors was not in The Harry Potter (2001-2011)?",
         answers: [
             { text: 'Daniel Radcliffe', correct: false },
             { text: 'Ralph Fiennes', correct: false },
@@ -221,7 +221,7 @@ let questions = [
         ]
     },
     {
-        question: "Which of this actors was both in Dune and Call Me by Your Name",
+        question: "Which of this actors was both in Dune (2021) and Call Me by Your Name (2017)",
         answers: [
             { text: 'Armie Hammer', correct: false },
             { text: 'Timothée Chalamet', correct: true },
@@ -232,14 +232,14 @@ let questions = [
     {
         question: "Which of these Meryl Streep movies was not adaptation of a book?",
         answers: [
-            { text: 'Julie and Julia', correct: false },
-            { text: 'Death Becomes Her', correct: true },
-            { text: 'Sophie’s Choice', correct: false },
-            { text: 'The Devil Wears Prada', correct: false },
+            { text: 'Julie and Julia (2009)', correct: false },
+            { text: 'Mamma Mia! (2008)', correct: true },
+            { text: 'Sophie’s Choice (1982)', correct: false },
+            { text: 'The Devil Wears Prada (2006)', correct: false },
         ]
     },
     {
-        question: "Which of these actors was not in a Death Becomes Her from 1992",
+        question: "Which of these actors was not in a Death Becomes Her (1992)",
         answers: [
             { text: 'Meryl Streep', correct: false },
             { text: 'Goldie Hawn', correct: false },
@@ -268,28 +268,28 @@ let questions = [
     {
         question: "Which of these movies is not sci-fi?",
         answers: [
-            { text: 'The Matrix', correct: false },
-            { text: 'Avatar', correct: false },
-            { text: 'Inception', correct: false },
-            { text: 'Mission Impossible', correct: true },
+            { text: 'The Matrix (1999)', correct: false },
+            { text: 'Mission Impossible (1996)', correct: true },
+            { text: 'Avatar (2009)', correct: false },
+            { text: 'Inception ()2010', correct: false },
         ]
     },
     {
-        question: "",
+        question: "The Martian (2015) was adapted from a novel with a same name?",
         answers: [
-            { text: '', correct: false },
-            { text: '', correct: false },
-            { text: '', correct: false },
-            { text: '', correct: true },
+            { text: 'False', correct: false },
+            { text: 'Truly false', correct: false },
+            { text: 'Falsely true', correct: false },
+            { text: 'True', correct: true },
         ]
     },
     {
-        question: "",
+        question: "Which of these movies has no aliens in it?",
         answers: [
-            { text: '', correct: false },
-            { text: '', correct: true },
-            { text: '', correct: false },
-            { text: '', correct: false },
+            { text: 'Mars Attacks! (1996)', correct: false },
+            { text: 'E.T. (1982)', correct: false },
+            { text: 'The Martian (2015)', correct: true },
+            { text: 'Arrival (2016)', correct: false },
         ]
     },
 ];
