@@ -52,6 +52,14 @@ h3 {
     margin: 0 auto;
 }
 
+.container.correct {
+    background-color: rgba(53, 94, 59, 0.7);
+}
+
+.container.wrong {
+    background-color: rgba(148, 1, 40, 0.7);
+}
+
 .container>* {
     width: 100%;
 }
@@ -97,4 +105,29 @@ h3 {
     cursor: not-allowed;
     box-shadow: none;
     transform: none;
+}
+
+.answer-btn {
+    width: 50vw;
+    max-width: 50rem;
+}
+
+.answer-btn.wrong {
+    background-color: #940128;
+}
+
+.answer-btn.correct {
+    background-color: #355E3B;
+}
+
+/* Scoreboard */
+
+.scoreboard {
+    display: inline-flex;
+    font-size: 1.5rem;
+}
+
+.scoreboard>p {
+    padding-left: 4rem;
+    padding-right: 2rem;
 }
