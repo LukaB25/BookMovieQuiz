@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
     rulesButton.addEventListener('click', function () {
         if (rulesVisible) {
             rulesList.innerHTML = '';
+            console.log('Hiding rules..')
             // Clear rules when button is clicked again
         } else {
             rules.forEach(rule => {
@@ -30,7 +31,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 li.classList.add('rule-item');
                 // Add the 'rule-item' class
                 rulesList.appendChild(li);
+
+                
             });
+            console.log('Displaying rules..')
         }
 
         rulesVisible = !rulesVisible;
