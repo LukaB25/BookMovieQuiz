@@ -120,6 +120,12 @@ h3 {
     background-color: #355E3B;
 }
 
+.restart-btn,
+.next-btn {
+    width: 24.8vw;
+    max-width: 24.8rem;
+}
+
 /* Scoreboard */
 
 .scoreboard {
