@@ -1,39 +1,85 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# [Book/Movie Quiz](add link later)
 
-Welcome,
 
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+## Introduction
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **July 26th, 2023**
+- Book/Movie Quiz is a fun game to test your knowledge on various books and movies. It contains various questions that  test the general knowledge of movies, books and also on book to movie adaptations.
 
-## Codeanywhere Reminders
+- Book/Movie Quiz is a targeted towards users of all ages as it contains both classics and new movies and books.
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+- Book/Movie Quiz will offer it's users interactive game that will respond to their answers and will offer a fun way to learn more about the all time favorite movies and books. 
 
-`python3 -m http.server`
+![Am I Responsive](add link later)
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+## Wireframes
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
+Created using [Balsamiq](https://balsamiq.com)
 
-`http_server`
+First sketch on normal size device:
+![First sketch](/assets/images/screenshots/first_sketch.png)
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+Sketch on tablet or similar size device
+![Sketch_tablet](/assets/images/screenshots/sketch_tablet.png)
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+Sketch of a phone or similar size device:
+![Sketch_tablet](/assets/images/screenshots/sketch_phone.png)
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+## About the build:
 
-To log into the Heroku toolbelt CLI:
 
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+## Features
 
----
 
-Happy coding!
+
+### Features left to implement
+
+
+
+## Testing
+
+
+
+## Troubleshooting
+
+
+
+### Unfixed bugs:
+
+
+
+## Validator testing
+
+
+
+## Deployment
+
+- The site was deployed to GitHub pages.
+
+- Steps of deployment:
+
+1. Open repository [Book/Movie Quiz github](https://github.com/LukaB25/BookMovieQuiz).
+2. Go to settings.
+3. Locate Pages in the menu section on the left of the screen.
+4. Click on none under the Branch and select main option.
+5. Click on the save button.
+6. After couple of minutes reload the page and you will have a live site at the top of the site.
+7. Click on the link and it will take you to a live site. [My live site](link to be added)
+
+- Local deployment steps:
+
+1. Open my repository [Book/Movie Quiz github](https://github.com/LukaB25/BookMovieQuiz).
+2. Locate and click on the green button with Code written on it.
+3. Copy the link from the menu
+4. Clone the code onto your machine and start working on the code.
+
+## Credits
+
+### Media
+
+- The photos used on the site were taken from [PixaBay](https://www.pixabay.com) and [Unsplash](https://www.unsplash.com)
+
+### Content
+
+- Few lines of code were taken from [StackOverflow]()
+- Starting steps and few lines of code came from previous lessons and Love Maths project, as well as couple of online video tutorials for better understanding of Javascript
