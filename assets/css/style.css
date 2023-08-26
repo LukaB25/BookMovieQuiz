@@ -93,7 +93,7 @@ h3 {
     margin-bottom: 1rem;
     text-decoration: none;
     color: #cbb26a;
-    background-color: #FFF6E7;
+    background-color: rgb(255, 246, 231);
 }
 
 .btn:hover {
@@ -124,6 +124,32 @@ h3 {
 .next-btn {
     width: 24.8vw;
     max-width: 24.8rem;
+}
+
+
+/* Rules */
+
+.rules-text {
+    font-size: 1.5rem;
+    background-color: rgb(255, 246, 231);
+    max-width: 80rem;
+}
+
+.container>.rules-text {
+    width: 80vw;
+    height: auto;
+}
+
+.rules-text:hover {
+    box-shadow: 0 0.5rem 2rem 0 rgba(255, 240, 216, 0.5);
+}
+
+#rules-list {
+    list-style: none;
+}
+
+.rule-item {
+    padding: 1rem;
 }
 
 /* Scoreboard */
