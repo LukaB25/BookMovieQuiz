@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 const question = document.getElementById('question');
 const answers = Array.from(document.getElementsByClassName('answer-btn'));
-console.log(answers);
+
 
 let currentQuestion = {};
 let score = 0;
@@ -297,3 +297,13 @@ let questions = [
         ]
     },
 ];
+
+
+function nextQuestion() {
+    availableQuestions = questions;
+    let randomQuestion = Math.floor(Math.random() * availableQuestions.lenght);
+    currentQuestion = questions[randomQuestion];
+    console.log(currentQuestion)
+};
+
+nextQuestion();
