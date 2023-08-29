@@ -50,6 +50,7 @@ h3 {
     align-items: center;
     max-width: 100rem;
     margin: 0 auto;
+    padding-top: 5rem;
 }
 
 .container.correct {
@@ -175,6 +176,7 @@ footer {
     align-items: center;
     max-width: 100rem;
     margin: 0 auto;
+    padding-top: 10rem;
 }
 
 footer ul {
@@ -187,10 +189,9 @@ footer li>a {
     padding-left: 2.5rem;
 }
 
-footer li>a:hover {
-    color: #c9b6a1;
-    box-shadow: rgba(255, 240, 216, 0.5);
-}
+/* footer li>a:hover {
+    color: #fff6e7;
+} */
 
 .links-page {
     display: flex;
@@ -206,12 +207,13 @@ footer p {
 
 footer p a {
     text-decoration: none;
-    color: #f8f9f8;
+    color: #cbb26a;
+    padding: 0 0.3rem;
 }
 
 footer p a:hover {
     text-decoration: none;
-    color: #c9b6a1;
+    color: rgb(255, 246, 231);
 }
 
 .project-links {
