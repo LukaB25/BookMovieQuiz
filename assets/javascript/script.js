@@ -46,9 +46,12 @@ document.addEventListener('DOMContentLoaded', function displayRules() {
 const question = document.getElementById('question');
 const answerButtons = document.querySelectorAll('.answer-btn');
 const answerContainer = document.getElementById('answer-btns');
+const restartButton = document.getElementById("restart-btn");
+const nextButton = document.getElementById("next-btn");
+
 let currentQuestion = {};
 let randomQuestion;
-let acceptingAnswers = true;
+let acceptingAnswers = false;
 let score = 0;
 let questionCount = 0;
 let availableQuestions = [];
@@ -279,7 +282,7 @@ let questions = [
             { text: 'The Matrix (1999)', correct: false },
             { text: 'Mission Impossible (1996)', correct: true },
             { text: 'Avatar (2009)', correct: false },
-            { text: 'Inception ()2010', correct: false },
+            { text: 'Inception (2010)', correct: false },
         ]
     },
     {
@@ -315,7 +318,63 @@ nextQuestion = () => {
     randomQuestion = Math.floor(Math.random() * availableQuestions.length);
     currentQuestion = availableQuestions[randomQuestion];
     question.innerText = currentQuestion.question;
+    nextButton.disabled = true;
+
+    // Randomize the answers position
+
+    shuffleArray(currentQuestion.answers);
+
+    function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+    }
+    // Insert a button for each answer
+    currentQuestion.answers.forEach(answer => {
+        const button = document.createElement('button');
+        button.innerText = answer.text;
+        button.classList.add('btn', 'answer-btn');
+        if (answer.correct) {
+            button.dataset.correct = answer.correct;
+        }
+        button.addEventListener('click', selectAnswer);
+        answerContainer.appendChild(button);
+    });
+
+    availableQuestions.splice(randomQuestion, 1);
+    acceptingAnswers = true;
 };
+
+
+
+selectAnswer = e => {
+
+
+};
+
+
+
+clearAnswers = () => {
+    while (answerContainer.firstChild) {
+        answerContainer.removeChild(answerContainer.firstChild);
+    }
+};
+
+// Clear existing answers and restart the game with all of the values set back to 0
+// When Restart button is clicked
+restartGame = () => {
+    clearAnswers();
+
+    questionCount = 0;
+    score = 0;
+
+    availableQuestions = [...questions];
+
+    nextQuestion();
+};
+
+restartButton.addEventListener('click', restartGame);
 
 startGame();
 
