@@ -30,6 +30,16 @@
         >
           <h1 href="index.html">Book/Movie Quiz</h1>
         </a>
+        <div id="progress-display">
+            <div class="question-counter">
+                <p class="count-prefix">
+                    Question: <span id="question-counter" class="count-text">1/10</span>
+                </p>
+            </div>
+            <div id="score" class="scoreboard">
+                <p class="score">Score: <span class="score">0</span></p>
+            </div>
+        </div>
         <h2 id="question" class="text-center">Can you answer correctly?</h2>
         <div id="answer-btns" class="justify-center flex-column">
         </div>
@@ -37,10 +47,7 @@
           <button id="restart-btn" class="restart-btn btn">Restart</button>
           <button id="next-btn" class="next-btn btn">Next</button>
         </div>
-        <div class="scoreboard">
-          <p class="score">Points won: <span class="score">0</span></p>
-          <p class="score">Points missed: <span class="score">0</span></p>
-        </div>
+        
       </div>
     </main>
     <footer>

@@ -48,6 +48,7 @@ const answerButtons = document.querySelectorAll('.answer-btn');
 const answerContainer = document.getElementById('answer-btns');
 const restartButton = document.getElementById("restart-btn");
 const nextButton = document.getElementById("next-btn");
+const yourScore = document.getElementById('score');
 
 let currentQuestion = {};
 let randomQuestion;
@@ -56,7 +57,7 @@ let score = 0;
 let questionCount = 0;
 let availableQuestions = [];
 const correctPoints = 10;
-const maxQuestions = 10;
+const maxQuestions = 4;
 
 // Questions
 let questions = [
@@ -314,13 +315,23 @@ startGame = () => {
 };
 
 nextQuestion = () => {
+
+    if (availableQuestions.length === 0 || questionCount >= maxQuestions) {
+        // Take user to high scores
+        return window.location.assign('/highscores.html');
+    }
     questionCount++;
+    clearAnswers();
+    removeAnswerEventListeners();
     randomQuestion = Math.floor(Math.random() * availableQuestions.length);
     currentQuestion = availableQuestions[randomQuestion];
     question.innerText = currentQuestion.question;
     nextButton.disabled = true;
 
-    // Randomize the answers position
+    // Clear container 
+    document.querySelector('.container').classList.remove('correct', 'wrong');
+
+    // Random answers
 
     shuffleArray(currentQuestion.answers);
 
@@ -330,11 +341,12 @@ nextQuestion = () => {
             [array[i], array[j]] = [array[j], array[i]];
         }
     }
+
     // Insert a button for each answer
     currentQuestion.answers.forEach(answer => {
         const button = document.createElement('button');
         button.innerText = answer.text;
-        button.classList.add('btn', 'answer-btn');
+        button.classList.add('btn', 'answer-btn', 'answer');
         if (answer.correct) {
             button.dataset.correct = answer.correct;
         }
@@ -347,24 +359,66 @@ nextQuestion = () => {
 };
 
 
+function addStatusClass(element, correct) {
+    removeStatusClass(element);
+    if (correct) {
+        element.classList.add('correct');
+    } else {
+        element.classList.add('wrong');
+    }
+}
 
-selectAnswer = e => {
+function removeStatusClass(element) {
+    element.classList.remove('correct');
+    element.classList.remove('wrong');
+}
+
+function selectAnswer(e) {
+    if (!acceptingAnswers) return;
+
+    const selectedButton = e.target;
+    const correct = selectedButton.dataset.correct;
+
+    document.querySelector('.container').classList.remove('correct', 'wrong');
+
+    if (correct === 'true') {
+        document.querySelector('.container').classList.add('correct');
+    } else {
+        document.querySelector('.container').classList.add('wrong');
+    }
+
+    if (correct) {
+        score += correctPoints;
+    } else {
+        score - 2;
+    }
+
+    addStatusClass(selectedButton, correct);
+
+    acceptingAnswers = false;
+    nextButton.disabled = false;
+}
+
+function removeAnswerEventListeners() {
+    answerButtons.forEach(answerButton => {
+        answerButton.removeEventListener('click', selectAnswer);
+    });
+}
 
 
-};
 
-
-
-clearAnswers = () => {
+function clearAnswers() {
     while (answerContainer.firstChild) {
         answerContainer.removeChild(answerContainer.firstChild);
     }
-};
+}
 
 // Clear existing answers and restart the game with all of the values set back to 0
 // When Restart button is clicked
 restartGame = () => {
     clearAnswers();
+    removeAnswerEventListeners();
+    document.querySelector('.container').classList.remove('correct', 'wrong');
 
     questionCount = 0;
     score = 0;
@@ -376,6 +430,6 @@ restartGame = () => {
 
 restartButton.addEventListener('click', restartGame);
 
+nextButton.addEventListener('click', nextQuestion);
+
 startGame();
-
-
