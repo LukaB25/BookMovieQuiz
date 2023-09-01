@@ -13,16 +13,16 @@ rules[9] = '10. You can save your score , entering requested details and saving,
 
 
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function displayRules() {
     const rulesButton = document.getElementById('rules-btn');
     const rulesList = document.getElementById('rules-list');
     let rulesVisible = false;
     // Keeps track of rules visibility
 
-    rulesButton.addEventListener('click', function () {
+    rulesButton.addEventListener('click', function displayRules() {
         if (rulesVisible) {
             rulesList.innerHTML = '';
-            console.log('Hiding rules..')
+            console.log('Hiding rules..');
             // Clear rules when button is clicked again
         } else {
             rules.forEach(rule => {
@@ -32,9 +32,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 // Add the 'rule-item' class
                 rulesList.appendChild(li);
 
-                
+
             });
-            console.log('Displaying rules..')
+            console.log('Displaying rules..');
         }
 
         rulesVisible = !rulesVisible;
@@ -42,16 +42,20 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-
+// Constants and selectors
 const question = document.getElementById('question');
-const answers = Array.from(document.getElementsByClassName('answer-btn'));
-
-
+const answerButtons = document.querySelectorAll('.answer-btn');
+const answerContainer = document.getElementById('answer-btns');
 let currentQuestion = {};
+let randomQuestion;
+let acceptingAnswers = true;
 let score = 0;
 let questionCount = 0;
 let availableQuestions = [];
+const correctPoints = 10;
+const maxQuestions = 10;
 
+// Questions
 let questions = [
     {
         question: "The Hunger Games is a:",
@@ -299,11 +303,20 @@ let questions = [
 ];
 
 
-function nextQuestion() {
-    availableQuestions = questions;
-    let randomQuestion = Math.floor(Math.random() * availableQuestions.lenght);
-    currentQuestion = questions[randomQuestion];
-    console.log(currentQuestion)
+startGame = () => {
+    questionCount = 0;
+    score = 0;
+    availableQuestions = [...questions];
+    nextQuestion();
 };
 
-nextQuestion();
+nextQuestion = () => {
+    questionCount++;
+    randomQuestion = Math.floor(Math.random() * availableQuestions.length);
+    currentQuestion = availableQuestions[randomQuestion];
+    question.innerText = currentQuestion.question;
+};
+
+startGame();
+
+
