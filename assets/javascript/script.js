@@ -315,13 +315,14 @@ startGame = () => {
     score = 0;
     availableQuestions = [...questions];
     nextQuestion();
+    restartButton.disabled = true;
 };
 
 nextQuestion = () => {
 
     if (availableQuestions.length === 0 || questionCount >= maxQuestions) {
         // Take user to high scores
-        return window.location.assign('/highscores.html');
+        return window.location.assign('/endscreen.html');
     }
 
     while (acceptingAnswers) {
@@ -413,15 +414,12 @@ function selectAnswer(e) {
 
     if (availableQuestions.length === 0 || questionCount >= maxQuestions) {
         // Replace Next button text with Save Highscore text
-        nextButton.innerText = 'Save Highscore';
-    }
-
-    while (!acceptingAnswers) {
-        answerButtons.classList.add('disabled');
+        nextButton.innerHTML = '<i class="fas fa-redo"></i>Save Highscore';
     }
 
     acceptingAnswers = false;
     nextButton.disabled = false;
+    restartButton.disabled = false;
 }
 
 function removeAnswerEventListeners() {
@@ -429,8 +427,6 @@ function removeAnswerEventListeners() {
         answerButton.removeEventListener('click', selectAnswer);
     });
 }
-
-
 
 function clearAnswers() {
     while (answerContainer.firstChild) {
@@ -447,7 +443,7 @@ restartGame = () => {
 
     if (!availableQuestions.length === 0 || questionCount >= maxQuestions) {
         // ReplaceSave Highscore text with Next button text
-        nextButton.innerText = 'Next';
+        nextButton.innerHTML = '<i class="fas fa-arrow-circle-right"></i> Next';
     }
 
     questionCount = 0;
@@ -457,6 +453,8 @@ restartGame = () => {
     availableQuestions = [...questions];
 
     nextQuestion();
+
+    restartButton.disabled = true;
 };
 
 

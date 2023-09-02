@@ -33,6 +33,7 @@ h2 {
 
 h3 {
     font-size: 2.5rem;
+    color: #d8c690;
     margin-bottom: 1.5rem;
     font-weight: 400;
 }
@@ -78,8 +79,8 @@ h3 {
     text-align: center;
 }
 
-.disabled {
-    cursor: not-allowed;
+.disable {
+    cursor: default;
 }
 
 /* Buttons */
@@ -334,6 +335,24 @@ footer p {
     position: absolute;
     margin-top: 3rem;
 }
+
+
+/* Form */
+
+#username {
+    font-size: 2rem;
+    padding: 1rem 0;
+    width: 25rem;
+    text-align: center;
+    border: 0.2rem solid #e8d398;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    color: #cbb26a;
+    background-color: rgb(255, 246, 231);
+}
+
+
+
 
 @media screen and (max-width: 600px) {
     /* Footer */
