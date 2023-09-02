@@ -49,6 +49,8 @@ const answerContainer = document.getElementById('answer-btns');
 const restartButton = document.getElementById("restart-btn");
 const nextButton = document.getElementById("next-btn");
 const yourScore = document.getElementById('score');
+const questionCounter = document.getElementById('question-counter');
+const scoreCounter = document.getElementById('score-counter');
 
 let currentQuestion = {};
 let randomQuestion;
@@ -57,6 +59,7 @@ let score = 0;
 let questionCount = 0;
 let availableQuestions = [];
 const correctPoints = 10;
+const incorrectPoints = 2;
 const maxQuestions = 4;
 
 // Questions
@@ -321,6 +324,7 @@ nextQuestion = () => {
         return window.location.assign('/highscores.html');
     }
     questionCount++;
+    questionCounter.innerText = `${questionCount}/${maxQuestions}`;
     clearAnswers();
     removeAnswerEventListeners();
     randomQuestion = Math.floor(Math.random() * availableQuestions.length);
@@ -356,6 +360,11 @@ nextQuestion = () => {
 
     availableQuestions.splice(randomQuestion, 1);
     acceptingAnswers = true;
+
+
+
+
+
 };
 
 
@@ -389,11 +398,18 @@ function selectAnswer(e) {
 
     if (correct) {
         score += correctPoints;
+        scoreCounter.innerText = score;
     } else {
-        score - 2;
+        score -= incorrectPoints;
+        scoreCounter.innerText = score;
     }
 
     addStatusClass(selectedButton, correct);
+
+    if (availableQuestions.length === 0 || questionCount >= maxQuestions) {
+        // Replace Next button text with Save Highscore text
+        nextButton.innerText = 'Save Highscore';
+    }
 
     acceptingAnswers = false;
     nextButton.disabled = false;
@@ -420,13 +436,21 @@ restartGame = () => {
     removeAnswerEventListeners();
     document.querySelector('.container').classList.remove('correct', 'wrong');
 
+    if (!availableQuestions.length === 0 || questionCount >= maxQuestions) {
+        // Replace Next button text with Save Highscore text
+        nextButton.innerText = 'Next';
+    }
+
     questionCount = 0;
+    scoreCounter.innerText = 0;
     score = 0;
 
     availableQuestions = [...questions];
 
     nextQuestion();
 };
+
+
 
 restartButton.addEventListener('click', restartGame);
 
