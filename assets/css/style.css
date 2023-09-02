@@ -10,7 +10,6 @@
     font-family: 'Lora', 'Playfair', 'Roboto', serif;
     margin: 0;
     padding: 0;
-    color: #cbb26a
 }
 
 h1 {
@@ -79,8 +78,8 @@ h3 {
     text-align: center;
 }
 
-.hidden {
-    display: none;
+.disabled {
+    cursor: not-allowed;
 }
 
 /* Buttons */
@@ -133,6 +132,7 @@ h3 {
 .rules-text {
     font-size: 1.5rem;
     background-color: rgb(255, 246, 231);
+    color: #d8c690;
     max-width: 80rem;
 }
 
@@ -159,6 +159,7 @@ h3 {
     display: flex;
     width: 80vw;
     max-width: 80rem;
+    color: #d8c690;
     justify-content: space-around;
     font-size: 2.5rem;
     padding-bottom: 1.5rem;
@@ -173,6 +174,7 @@ footer {
     height: auto;
     background-color: rgba(26, 26, 26, 0.7);
     display: flex;
+    color: #d8c690;
     justify-content: center;
     align-items: center;
     max-width: 100rem;
@@ -181,45 +183,174 @@ footer {
 }
 
 footer ul {
-    display: inline-flex;
+    display: flex;
     list-style-type: none;
 }
 
-footer li>a {
-    font-size: 250%;
-    padding-left: 2.5rem;
+/* Code taken from [Uiverse.io](<https: //uiverse.io/mrhyddenn/red-stingray-4>) 
+And changed to fit with my site. */
+footer li>a,
+footer p>a {
+    background: transparent;
+    position: relative;
+    padding: 5px 15px;
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 25px;
+    outline: none;
+    overflow: hidden;
+    transition: color 0.3s 0.1s ease-out;
+    text-align: center;
+    margin: 10px;
 }
 
-/* footer li>a:hover {
-    color: #fff6e7;
-} */
+footer li>a::before,
+footer p>a::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    content: '';
+    border-radius: 50%;
+    display: block;
+    width: 20em;
+    height: 20em;
+    left: -5em;
+    text-align: center;
+    transition: box-shadow 0.5s ease-out;
+    z-index: -1;
+}
+
+#facebook {
+    border: 1px solid rgb(25, 112, 194);
+    color: rgb(25, 112, 194);
+}
+
+#facebook:hover {
+    color: #fff;
+    border: 1px solid rgb(25, 112, 194);
+}
+
+#facebook:hover::before {
+    box-shadow: inset 0 0 0 10em rgb(25, 112, 194);
+}
+
+#instagram {
+    border: 1px solid rgb(237, 131, 184);
+    color: rgb(237, 131, 184);
+}
+
+#instagram:hover {
+    color: #fff;
+    border: 1px solid rgb(237, 131, 184);
+}
+
+#instagram:hover::before {
+    box-shadow: inset 0 0 0 10em rgb(237, 131, 184);
+}
+
+#twitter {
+    border: 1px solid rgb(40, 144, 241);
+    color: rgb(40, 144, 241);
+}
+
+#twitter:hover {
+    color: #fff;
+    border: 1px solid rgb(40, 144, 241);
+}
+
+#twitter:hover::before {
+    box-shadow: inset 0 0 0 10em rgb(40, 144, 241);
+}
+
+#youtube {
+    border: 1px solid rgb(235, 31, 31);
+    color: rgb(235, 31, 31);
+}
+
+#youtube:hover {
+    color: #fff;
+    border: 1px solid rgb(235, 31, 31);
+}
+
+#youtube:hover::before {
+    box-shadow: inset 0 0 0 10em rgb(235, 31, 31);
+}
+
 
 .links-page {
     display: flex;
-    justify-content: center;
-    align-items: baseline;
+    justify-content: space-around;
     padding-bottom: 5rem;
 }
+
 
 footer p {
     font-size: 2rem;
     display: flex;
+    padding-top: 1rem;
+    align-items: center;
 }
 
-footer p a {
-    text-decoration: none;
-    color: #cbb26a;
-    padding: 0 0.3rem;
+#codeinstitute {
+    border: 1px solid rgb(238, 121, 18);
+    color: rgb(238, 121, 18);
 }
 
-footer p a:hover {
-    text-decoration: none;
-    color: rgb(255, 246, 231);
+#codeinstitute:hover {
+    color: #fff;
+    border: 1px solid rgb(238, 121, 18);
 }
+
+#codeinstitute:hover::before {
+    box-shadow: inset 0 0 0 10em rgb(238, 121, 18);
+}
+
+#my-name {
+    border: 1px solid rgb(25, 112, 194);
+    color: rgb(25, 112, 194);
+}
+
+#my-name:hover {
+    color: #fff;
+    border: 1px solid rgb(25, 112, 194);
+}
+
+#my-name:hover::before {
+    box-shadow: inset 0 0 0 10em rgb(25, 112, 194);
+}
+
 
 .project-links {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     position: absolute;
+    margin-top: 3rem;
+}
+
+@media screen and (max-width: 600px) {
+    /* Footer */
+
+    footer li>a,
+    footer p>a,
+    footer p {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    /* Footer */
+
+    footer li>a,
+    footer p>a,
+    footer p {
+        font-size: 1rem;
+    }
 }

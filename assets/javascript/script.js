@@ -5,11 +5,11 @@ rules[1] = '2. You can start the game as soon as the site loads by pressin Start
 rules[2] = '3. The game will give you a random questions about books and/or movies that you have to guess.';
 rules[3] = '4. Choose your answers wisely as each correct answer will give you points, and incorrect answer will show you how many points you have missed out on.';
 rules[4] = '5. Each time you answer correct the answer will light up green and you will be awarded 10 points.';
-rules[5] = '6. Each incorrect answer will light up as red and 10 points will be awarded to missed points.';
+rules[5] = '6. Each incorrect answer will light up as red and 2 points will be taken from the total score.';
 rules[6] = '7. Try and answer as many correct answers, and if you answer all of them correctly, you might get a prize.';
 rules[7] = '8. If you are stuck, you can press restart, to start from beggining.';
-rules[8] = '9. Once you reach the end the game will automatically end, showing you your total score.';
-rules[9] = '10. You can save your score , entering requested details and saving, which will take you to main menu';
+rules[8] = '9. Once you reach the end the game will automatically end, where you will have an option to either restart or to save your score to the highscore on your local storage.';
+rules[9] = '10. To save your score you will need to fill out requested details and save your score.';
 
 
 
@@ -323,6 +323,11 @@ nextQuestion = () => {
         // Take user to high scores
         return window.location.assign('/highscores.html');
     }
+
+    while (acceptingAnswers) {
+        answerButtons.classList.add('disabled');
+    }
+
     questionCount++;
     questionCounter.innerText = `${questionCount}/${maxQuestions}`;
     clearAnswers();
@@ -411,6 +416,10 @@ function selectAnswer(e) {
         nextButton.innerText = 'Save Highscore';
     }
 
+    while (!acceptingAnswers) {
+        answerButtons.classList.add('disabled');
+    }
+
     acceptingAnswers = false;
     nextButton.disabled = false;
 }
@@ -437,7 +446,7 @@ restartGame = () => {
     document.querySelector('.container').classList.remove('correct', 'wrong');
 
     if (!availableQuestions.length === 0 || questionCount >= maxQuestions) {
-        // Replace Next button text with Save Highscore text
+        // ReplaceSave Highscore text with Next button text
         nextButton.innerText = 'Next';
     }
 

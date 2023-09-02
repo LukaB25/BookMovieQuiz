@@ -82,4 +82,5 @@ Sketch of a phone or similar size device:
 ### Content
 
 - Few lines of code were taken from [StackOverflow]()
+- I used an open source site for help with few lines of code to improve my site by implementing more responsive buttons in the footer. I used css and changed it slightly to benefit my site and style taken from [Uiverse.io](<https://uiverse.io/mrhyddenn/red-stingray-4>)
 - Starting steps and few lines of code came from previous lessons and Love Maths project, as well as couple of online video tutorials for better understanding of Javascript
