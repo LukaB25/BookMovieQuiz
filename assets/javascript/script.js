@@ -321,7 +321,8 @@ startGame = () => {
 nextQuestion = () => {
 
     if (availableQuestions.length === 0 || questionCount >= maxQuestions) {
-        // Take user to high scores
+        localStorage.setItem('newestScore', score);
+        // Take user to endscreen to save the score
         return window.location.assign('/endscreen.html');
     }
 

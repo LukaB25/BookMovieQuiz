@@ -78,6 +78,7 @@ Sketch of a phone or similar size device:
 ### Media
 
 - The photos used on the site were taken from [PixaBay](https://www.pixabay.com) and [Unsplash](https://www.unsplash.com)
+- The Favicon Icon was downloaded from: [icon8](https://icons8.com/icon/FoDhNGl8I5hv/clapper-board)
 
 ### Content
 

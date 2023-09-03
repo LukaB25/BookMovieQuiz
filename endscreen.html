@@ -14,6 +14,7 @@
         rel="stylesheet" />
 
     <title>Book/Movie Quiz - Game</title>
+    <link type="image/png" sizes="16x16" rel="icon" href="assets/images/icons8-clapper-board-emoji-16.png">
 </head>
 
 <body>
@@ -21,10 +22,10 @@
         <div id="end-screen" class="justify-center flex-column">
             <h1>Book/Movie Quiz</h1>
             <div id="final-score" class="justify-center flex-column">
-                <h2 class="score">Final score: <span id="final-score-total">0</span></h2>
+                <h2 class="score">Final score: <span id="final-score-total"></span></h2>
                 <form class="justify-center flex-column">
                     <input type="text" name="username" id="username" class="btn-hover" placeholder="username">
-                    <button type="submit" class="btn btn-hover" id="save-score-btn" onclick="saveHighScore(event)"><i
+                    <button type="submit" class="btn btn-hover" id="save-score-btn" onclick="saveHighScore(event)" disabled><i
                             class="far fa-save"></i> Save</button>
                 </form>
             </div>
@@ -68,6 +69,7 @@
     </footer>
     <script src="https://kit.fontawesome.com/eb70536764.js" crossorigin="anonymous"></script>
     <script src="assets/javascript/script.js"></script>
+    <script src="assets/javascript/endscreen.js"></script>
 </body>
 
 </html>
