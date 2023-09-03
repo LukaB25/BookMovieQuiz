@@ -325,10 +325,6 @@ nextQuestion = () => {
         return window.location.assign('/endscreen.html');
     }
 
-    while (acceptingAnswers) {
-        answerButtons.classList.add('disabled');
-    }
-
     questionCount++;
     questionCounter.innerText = `${questionCount}/${maxQuestions}`;
     clearAnswers();
@@ -356,19 +352,22 @@ nextQuestion = () => {
     currentQuestion.answers.forEach(answer => {
         const button = document.createElement('button');
         button.innerText = answer.text;
-        button.classList.add('btn', 'answer-btn', 'answer');
+        button.classList.add('btn', 'answer-btn', 'answer', 'btn-hover');
         if (answer.correct) {
             button.dataset.correct = answer.correct;
         }
         button.addEventListener('click', selectAnswer);
         answerContainer.appendChild(button);
+        button.addEventListener('click', (e) => {
+            selectAnswer(e);
+
+            // Remove 'btn-hover' class when the button is clicked
+            button.classList.remove('btn-hover');
+        });
     });
 
     availableQuestions.splice(randomQuestion, 1);
     acceptingAnswers = true;
-
-
-
 
 
 };
@@ -401,6 +400,7 @@ function selectAnswer(e) {
     } else {
         document.querySelector('.container').classList.add('wrong');
     }
+
 
     if (correct) {
         score += correctPoints;
@@ -456,6 +456,9 @@ restartGame = () => {
 
     restartButton.disabled = true;
 };
+
+
+
 
 
 

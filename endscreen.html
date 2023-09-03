@@ -19,19 +19,19 @@
 <body>
     <main class="container">
         <div id="end-screen" class="justify-center flex-column">
-            <a class="text-deco-none" href="index.html" target="_self"
-                aria-label="Go to the home page(opens in same tab)">
-                <h1 href="index.html">Book/Movie Quiz</h1>
-            </a>
+            <h1>Book/Movie Quiz</h1>
             <div id="final-score" class="justify-center flex-column">
                 <h2 class="score">Final score: <span id="final-score-total">0</span></h2>
-                <form>
-                    <input type="text" name="username" id="username" placeholder="username">
-                    <button type="submit" class="btn" id="save-score-btn" onclick="saveHighScore(event)"><i class="far fa-save"></i> Save</button>
+                <form class="justify-center flex-column">
+                    <input type="text" name="username" id="username" class="btn-hover" placeholder="username">
+                    <button type="submit" class="btn btn-hover" id="save-score-btn" onclick="saveHighScore(event)"><i
+                            class="far fa-save"></i> Save</button>
                 </form>
             </div>
-            <a class="btn" href="/quiz.html" aria-label="Play the quiz game again(opens in same tab)"><i class="fas fa-redo"></i> Play Again</a>
-            <a class="btn" href="/index.html" aria-label="Go back to home screen(opens in same tab)"><i class="fas fa-home"></i> Home</a>
+            <a class="btn btn-hover" href="/quiz.html" aria-label="Play the quiz game again(opens in same tab)"><i
+                    class="fas fa-redo"></i> Play Again</a>
+            <a class="btn btn-hover" href="/index.html" aria-label="Go back to home screen(opens in same tab)"><i
+                    class="fas fa-home"></i> Home</a>
         </div>
     </main>
     <footer>
