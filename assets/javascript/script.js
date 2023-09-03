@@ -414,7 +414,7 @@ function selectAnswer(e) {
 
     if (availableQuestions.length === 0 || questionCount >= maxQuestions) {
         // Replace Next button text with Save Highscore text
-        nextButton.innerHTML = '<i class="fas fa-redo"></i>Save Highscore';
+        nextButton.innerHTML = '<i class="far fa-save"></i> Save Highscore';
     }
 
     acceptingAnswers = false;
@@ -456,10 +456,6 @@ restartGame = () => {
 
     restartButton.disabled = true;
 };
-
-
-
-
 
 
 restartButton.addEventListener('click', restartGame);
