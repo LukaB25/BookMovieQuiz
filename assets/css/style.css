@@ -340,7 +340,7 @@ footer p {
 }
 
 
-/* Form */
+/* Endscreen */
 
 #username {
     font-size: 2rem;
@@ -355,7 +355,22 @@ footer p {
     background-color: rgb(255, 246, 231);
 }
 
+/* High Scores */
 
+.high-score {
+    font-size: 2rem;
+    padding: 1rem 0;
+    width: 50rem;
+    max-width: 50vw;
+    text-align: center;
+    border: 0.2rem solid #e8d398;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    list-style: none;
+    display: grid;
+    color: #cbb26a;
+    background-color: rgb(255, 246, 231);
+}
 
 
 @media screen and (max-width: 600px) {
