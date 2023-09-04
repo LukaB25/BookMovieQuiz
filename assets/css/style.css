@@ -392,6 +392,61 @@ footer p {
         -13px -13px 100px #ffffff;
 }
 
+#message-container {
+    width: 80rem;
+    max-width: 80vw;
+    text-align: center;
+    display: flex;
+    color: #2c281e;
+    margin: 0;
+    position: relative;
+    text-decoration: none;
+    overflow: hidden;
+    padding: 0.2rem;
+    isolation: isolate;
+    margin-bottom: 2rem;
+    backdrop-filter: blur(10rem);
+}
+
+#message-container:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1000%;
+    height: 93%;
+    background: linear-gradient(115deg, #4fcf70, #fad648, #faf748, #eb1f1f, #a767e5, #12bcfe, #44ce7b);
+    backdrop-filter: blur(10rem);
+    background-size: 25% 100%;
+    animation: transformation .75s linear infinite;
+    animation-play-state: paused;
+    translate: -5% 0%;
+    transition: translate 0.25s ease-out;
+}
+
+#message-container:hover::before {
+    animation-play-state: running;
+    transition-duration: 0.75s;
+    translate: 0% 0%;
+}
+
+@keyframes transformation {
+    to {
+        transform: translateX(-25%);
+    }
+}
+
+#endgame-message {
+    color: rgb(255, 246, 231);
+    position: relative;
+    border-radius: 1rem;
+    display: flex;
+    border-radius: 1rem;
+    padding: 1rem 1rem;
+    background: #2c281e;
+    height: 100%;
+}
+
 /* High Scores */
 
 .high-score {

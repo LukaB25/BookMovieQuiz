@@ -50,8 +50,8 @@ if (highScores.lenght === 0) {
 
 document.addEventListener('DOMContentLoaded', function loadPlaceholderHighScore() {
     const placeholderHighScores = [
-        { score: 10000, name: 'Tena' },
-        { score: 9000, name: 'Dodo' },
+        { score: 9000, name: 'Tena' },
+        { score: 8990, name: 'Dodo' },
         { score: 8970, name: 'Tin' },
         { score: 7870, name: 'Lara' },
         { score: 6850, name: 'Teo' }
