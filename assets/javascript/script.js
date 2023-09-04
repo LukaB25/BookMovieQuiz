@@ -69,6 +69,7 @@ const nextButton = document.getElementById("next-btn");
 const yourScore = document.getElementById('score');
 const questionCounter = document.getElementById('question-counter');
 const scoreCounter = document.getElementById('score-counter');
+const progressBar = document.getElementById('progress-bar');
 
 let currentQuestion = {};
 let randomQuestion;
@@ -428,6 +429,10 @@ function selectAnswer(e) {
         document.querySelector('.container').classList.add('wrong');
     }
 
+    // Update the progress bar with every answer
+
+    progressBar.style.width = `${(questionCount / maxQuestions) * 100}%`;
+
 
     if (correct) {
         score += correctPoints;
@@ -475,6 +480,7 @@ restartGame = () => {
     questionCount = 0;
     scoreCounter.innerText = 0;
     score = 0;
+    progressBar.style.width = `0%`;
 
     availableQuestions = [...questions];
 

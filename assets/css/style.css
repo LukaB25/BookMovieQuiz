@@ -14,7 +14,7 @@
 
 h1 {
     font-size: 5rem;
-    color: #d8c690;
+    color: rgb(255, 246, 231);
     margin-bottom: 5rem;
     text-align: center;
     cursor: default;
@@ -22,14 +22,14 @@ h1 {
 
 h2 {
     font-size: 4rem;
-    color: #d8c690;
+    color: rgb(255, 246, 231);
     margin-bottom: 4rem;
     font-weight: 500;
 }
 
 h3 {
     font-size: 2.5rem;
-    color: #d8c690;
+    color: rgb(255, 246, 231);
     margin-bottom: 1.5rem;
     font-weight: 400;
 }
@@ -86,7 +86,7 @@ h3 {
     border-radius: 1rem;
     margin-bottom: 1rem;
     text-decoration: none;
-    color: #cbb26a;
+    color: #2c281e;
     background-color: rgb(255, 246, 231);
 }
 
@@ -108,7 +108,9 @@ h3 {
 
 .btn-hover:hover {
     color: rgb(255, 246, 231);
-    background-color: rgb(61, 188, 159);
+    transition: all 1.5s ease;
+    transition-property: color;
+    background: linear-gradient(32deg, #03a9f4, #f441a5, #ffc73b, #03a9f4);
 }
 
 .answer-btn {
@@ -117,11 +119,17 @@ h3 {
 }
 
 .answer-btn.wrong {
-    background-color: #940128;
+    background: linear-gradient(32deg, #940128, #f44162, #f37120, #940128);
+    color: rgb(255, 246, 231);
+    transition: all 1.5s ease;
+    transition-property: color;
 }
 
 .answer-btn.correct {
-    background-color: #355E3B;
+    background: linear-gradient(32deg, #266a31, #10f59d, #4daa14, #355E3B);
+    color: rgb(255, 246, 231);
+    transition: all 1.5s ease;
+    transition-property: color;
 }
 
 .restart-btn,
@@ -136,8 +144,9 @@ h3 {
 .rules-text {
     font-size: 1.5rem;
     background-color: rgb(255, 246, 231);
-    color: #d8c690;
+    color: #2c281e;
     max-width: 80rem;
+    border-radius: 1rem;
 }
 
 .container>.rules-text {
@@ -146,6 +155,11 @@ h3 {
 }
 
 .rules-text:hover {
+    color: rgb(255, 246, 231);
+    transition: all 1.5s ease;
+    transition-property: color;
+    background: linear-gradient(32deg, #03a9f4, #f441a5, #ffc73b, #03a9f4);
+
     box-shadow: 0 0.5rem 2rem 0 rgba(255, 240, 216, 0.5);
 }
 
@@ -163,27 +177,39 @@ h3 {
     display: flex;
     width: 80vw;
     max-width: 80rem;
-    color: #d8c690;
+    color: rgb(255, 246, 231);
     justify-content: space-around;
     font-size: 2.5rem;
     padding-bottom: 1.5rem;
 }
 
+#progress-container {
+    width: 80rem;
+    max-width: 80vw;
+    height: 4rem;
+    border-radius: 1rem;
+    border: 0.2rem solid rgb(255, 246, 231);
+}
 
+#progress-bar {
+    width: 0%;
+    height: 3.5rem;
+    border-radius: 1rem;
+    background: linear-gradient(32deg, #03a9f4, #f441a5, #ffc73b, #03a9f4);
+    transition: width 1s ease;
+}
 
 /* Footer and links */
 
 footer {
     width: 100vw;
-    height: auto;
     background-color: rgba(26, 26, 26, 0.7);
     display: flex;
-    color: #d8c690;
+    color: rgb(255, 246, 231);
     justify-content: center;
     align-items: center;
     max-width: 100rem;
     margin: 0 auto;
-    padding-top: 10rem;
 }
 
 footer ul {
@@ -359,7 +385,7 @@ footer p {
 
 #username:focus {
     background-color: white;
-    color: #1a1a1a;
+    color: #2c281e;
 
     transform: scale(1.05);
     box-shadow: 13px 13px 100px #969696,
@@ -379,9 +405,14 @@ footer p {
     margin-bottom: 1rem;
     list-style: none;
     display: grid;
-    color: #cbb26a;
+    color: #2c281e;
     background-color: rgb(255, 246, 231);
 }
+
+/* .high-score:hover {
+    color: white;
+    background: linear-gradient(32deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+} */
 
 
 @media screen and (max-width: 600px) {
