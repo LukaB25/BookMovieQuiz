@@ -341,18 +341,29 @@ footer p {
 
 
 /* Endscreen */
-
+/* Taken some style inspiration from https: //uiverse.io/Praashoo7/tame-sloth-39 */
 #username {
     font-size: 2rem;
-    padding: 1rem 0;
+    border: none;
     width: 25rem;
-    text-align: center;
-    border: 0.2rem solid #e8d398;
+    outline: none;
     border-radius: 1rem;
     margin-bottom: 1rem;
-    text-decoration: none;
-    color: #cbb26a;
+    padding: 1rem 0;
+    text-align: center;
+    border: 0.2rem solid #e8d398;
     background-color: rgb(255, 246, 231);
+    box-shadow: inset 2px 5px 10px rgba(0, 0, 0, 0.3);
+    transition: 300ms ease-in-out;
+}
+
+#username:focus {
+    background-color: white;
+    color: #1a1a1a;
+
+    transform: scale(1.05);
+    box-shadow: 13px 13px 100px #969696,
+        -13px -13px 100px #ffffff;
 }
 
 /* High Scores */

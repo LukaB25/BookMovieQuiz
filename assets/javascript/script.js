@@ -42,6 +42,24 @@ document.addEventListener('DOMContentLoaded', function displayRules() {
     });
 });
 
+const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
+
+if (highScores.lenght === 0) {
+    loadPlaceholderHighScore();
+}
+
+document.addEventListener('DOMContentLoaded', function loadPlaceholderHighScore() {
+    const placeholderHighScores = [
+        { score: 10000, name: 'Tena' },
+        { score: 9000, name: 'Dodo' },
+        { score: 8970, name: 'Tin' },
+        { score: 7870, name: 'Lara' },
+        { score: 6850, name: 'Teo' }
+    ];
+    localStorage.setItem('highScores', JSON.stringify(placeholderHighScores));
+});
+
+
 // Constants and selectors
 const question = document.getElementById('question');
 const answerButtons = document.querySelectorAll('.answer-btn');
@@ -58,9 +76,9 @@ let acceptingAnswers = false;
 let score = 0;
 let questionCount = 0;
 let availableQuestions = [];
-const correctPoints = 10;
-const incorrectPoints = 2;
-const maxQuestions = 4;
+const correctPoints = 1000;
+const incorrectPoints = [0, 10, 30, 50, 100];
+const maxQuestions = 10;
 
 // Questions
 let questions = [
@@ -388,6 +406,14 @@ function removeStatusClass(element) {
     element.classList.remove('wrong');
 }
 
+function deductPoints() {
+    const randomDeductor = Math.floor(Math.random() * incorrectPoints.length);
+    const selectedDeductionPoints = incorrectPoints[randomDeductor];
+
+    score -= selectedDeductionPoints;
+    scoreCounter.innerText = score;
+}
+
 function selectAnswer(e) {
     if (!acceptingAnswers) return;
 
@@ -407,8 +433,7 @@ function selectAnswer(e) {
         score += correctPoints;
         scoreCounter.innerText = score;
     } else {
-        score -= incorrectPoints;
-        scoreCounter.innerText = score;
+        deductPoints();
     }
 
     addStatusClass(selectedButton, correct);
