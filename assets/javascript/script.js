@@ -120,7 +120,7 @@ let questions = [
         ]
     },
     {
-        question: "Guess a movie where the main heroine uses a bow and arrows to take down the Capitol",
+        question: "In which movie does the main heroine use a bow and arrows to take down the Capitol?",
         answers: [
             { text: 'The Hobbit (2012)', correct: false },
             { text: 'Smurfs (2011)', correct: false },
@@ -174,7 +174,7 @@ let questions = [
         ]
     },
     {
-        question: "Who were the main actresses in a Book-To-Movie adaptation of A Simple Favour (2018)?",
+        question: "Which two actresses were in a Book-To-Movie adaptation of A Simple Favour (2018)?",
         answers: [
             { text: 'Blake Lively and Anne Hathaway', correct: false },
             { text: 'Blake Lively and Anna Kendrick', correct: true },
@@ -192,7 +192,7 @@ let questions = [
         ]
     },
     {
-        question: "Who was the main actor in a Book-To-Movie adaptation of Forrest Gump (1994)",
+        question: "Who was the main actor in a Book-To-Movie adaptation of Forrest Gump (1994)?",
         answers: [
             { text: 'Tom Hanks', correct: true },
             { text: 'Tom Hiddleston', correct: false },
@@ -219,7 +219,7 @@ let questions = [
         ]
     },
     {
-        question: "The Maze Runner is a Movie-To-Book adaptation",
+        question: "The Maze Runner is a Movie-To-Book adaptation?",
         answers: [
             { text: 'True', correct: false },
             { text: 'Not Not True', correct: false },
@@ -237,7 +237,7 @@ let questions = [
         ]
     },
     {
-        question: "Which was not adapted into a movie",
+        question: "Which book was not adapted into a movie?",
         answers: [
             { text: 'Brokeback Mountain by Annie Proulx', correct: false },
             { text: 'They Both Die at the End by Adam Silvera', correct: true },
@@ -246,7 +246,7 @@ let questions = [
         ]
     },
     {
-        question: "Which of this actors was not in The Harry Potter (2001-2011)?",
+        question: "Which actoror was not in The Harry Potter (2001-2011)?",
         answers: [
             { text: 'Daniel Radcliffe', correct: false },
             { text: 'Ralph Fiennes', correct: false },
@@ -255,7 +255,7 @@ let questions = [
         ]
     },
     {
-        question: "Which of this actors was both in Dune (2021) and Call Me by Your Name (2017)",
+        question: "Which actor was both in Dune (2021) and Call Me by Your Name (2017)?",
         answers: [
             { text: 'Armie Hammer', correct: false },
             { text: 'Timothée Chalamet', correct: true },
@@ -264,7 +264,7 @@ let questions = [
         ]
     },
     {
-        question: "Which of these Meryl Streep movies was not adaptation of a book?",
+        question: "Which one of Meryl Streep movies was not an adaptation of a book?",
         answers: [
             { text: 'Julie and Julia (2009)', correct: false },
             { text: 'Mamma Mia! (2008)', correct: true },
@@ -273,7 +273,7 @@ let questions = [
         ]
     },
     {
-        question: "Which of these actors was not in a Death Becomes Her (1992)",
+        question: "Which actor was not in a Death Becomes Her (1992)?",
         answers: [
             { text: 'Meryl Streep', correct: false },
             { text: 'Goldie Hawn', correct: false },
@@ -291,7 +291,7 @@ let questions = [
         ]
     },
     {
-        question: "Which of this books was not published in 1996?",
+        question: "Which books was not published in 1996?",
         answers: [
             { text: 'A Game of Thrones by George R. R. Martin', correct: false },
             { text: "Bridget Jones's Diary by Helen Fielding", correct: false },
@@ -300,7 +300,7 @@ let questions = [
         ]
     },
     {
-        question: "Which of these movies is not sci-fi?",
+        question: "Which movie does not belong in sci-fi genre?",
         answers: [
             { text: 'The Matrix (1999)', correct: false },
             { text: 'Mission Impossible (1996)', correct: true },
@@ -318,7 +318,7 @@ let questions = [
         ]
     },
     {
-        question: "Which of these movies has no aliens in it?",
+        question: "Which movie has no aliens in it?",
         answers: [
             { text: 'Mars Attacks! (1996)', correct: false },
             { text: 'E.T. (1982)', correct: false },
@@ -356,6 +356,7 @@ nextQuestion = () => {
 
     // Clear container 
     document.querySelector('.container').classList.remove('correct', 'wrong');
+    document.querySelector('footer').classList.remove('correct', 'wrong');
 
     // Random answers
 
@@ -425,8 +426,10 @@ function selectAnswer(e) {
 
     if (correct === 'true') {
         document.querySelector('.container').classList.add('correct');
+        document.querySelector('footer').classList.add('correct');
     } else {
         document.querySelector('.container').classList.add('wrong');
+        document.querySelector('footer').classList.add('wrong');
     }
 
     // Update the progress bar with every answer

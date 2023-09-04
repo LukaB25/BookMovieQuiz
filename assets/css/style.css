@@ -49,11 +49,13 @@ h3 {
     padding-top: 5rem;
 }
 
-.container.correct {
+.container.correct,
+footer.correct {
     background-color: rgba(53, 94, 59, 0.7);
 }
 
-.container.wrong {
+.container.wrong,
+footer.wrong {
     background-color: rgba(148, 1, 40, 0.7);
 }
 
@@ -463,11 +465,6 @@ footer p {
     color: #2c281e;
     background-color: rgb(255, 246, 231);
 }
-
-/* .high-score:hover {
-    color: white;
-    background: linear-gradient(32deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
-} */
 
 
 @media screen and (max-width: 600px) {
