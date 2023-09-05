@@ -1,63 +1,4 @@
-// Rules of the game.
-const rules = [];
-rules[0] = '1. For best user experience open the game on a larger screen devices, otherwise use a portrait mode on your smaller devices.';
-rules[1] = '2. You can start the game as soon as the site loads by pressin Start Game button';
-rules[2] = '3. The game will give you a random questions about books and/or movies that you have to guess.';
-rules[3] = '4. Choose your answers wisely as each correct answer will give you points, and incorrect answer will show you how many points you have missed out on.';
-rules[4] = '5. Each time you answer correct the answer will light up green and you will be awarded 10 points.';
-rules[5] = '6. Each incorrect answer will light up as red and 2 points will be taken from the total score.';
-rules[6] = '7. Try and answer as many correct answers, and if you answer all of them correctly, you might get a prize.';
-rules[7] = '8. If you are stuck, you can press restart, to start from beggining.';
-rules[8] = '9. Once you reach the end the game will automatically end, where you will have an option to either restart or to save your score to the highscore on your local storage.';
-rules[9] = '10. To save your score you will need to fill out requested details and save your score.';
-
-
-
-document.addEventListener('DOMContentLoaded', function displayRules() {
-    const rulesButton = document.getElementById('rules-btn');
-    const rulesList = document.getElementById('rules-list');
-    let rulesVisible = false;
-    // Keeps track of rules visibility
-
-    rulesButton.addEventListener('click', function displayRules() {
-        if (rulesVisible) {
-            rulesList.innerHTML = '';
-            console.log('Hiding rules..');
-            // Clear rules when button is clicked again
-        } else {
-            rules.forEach(rule => {
-                const li = document.createElement('li');
-                li.textContent = rule;
-                li.classList.add('rule-item');
-                // Add the 'rule-item' class
-                rulesList.appendChild(li);
-
-
-            });
-            console.log('Displaying rules..');
-        }
-
-        rulesVisible = !rulesVisible;
-        // Toggles visibility
-    });
-});
-
-const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
-
-if (highScores.lenght === 0) {
-    loadPlaceholderHighScore();
-}
-
-document.addEventListener('DOMContentLoaded', function loadPlaceholderHighScore() {
-    const placeholderHighScores = [
-        { score: 9000, name: 'Tena' },
-        { score: 8990, name: 'Dodo' },
-        { score: 8970, name: 'Tin' },
-        { score: 7870, name: 'Lara' },
-        { score: 6850, name: 'Teo' }
-    ];
-    localStorage.setItem('highScores', JSON.stringify(placeholderHighScores));
-});
+document.addEventListener('load', console.log('Quiz loaded completely.'));
 
 
 // Constants and selectors
@@ -341,8 +282,10 @@ nextQuestion = () => {
 
     if (availableQuestions.length === 0 || questionCount >= maxQuestions) {
         localStorage.setItem('newestScore', score);
+        document.addEventListener('DOMContentLoaded', console.log('Quiz finished. Save your score.'));
         // Take user to endscreen to save the score
         return window.location.assign('/endscreen.html');
+
     }
 
     questionCount++;
@@ -379,11 +322,25 @@ nextQuestion = () => {
         }
         button.addEventListener('click', selectAnswer);
         answerContainer.appendChild(button);
-        button.addEventListener('click', (e) => {
-            selectAnswer(e);
 
-            // Remove 'btn-hover' class when the button is clicked
-            button.classList.remove('btn-hover');
+
+        const buttons = document.querySelectorAll('.answer-btn');
+
+        // Remove hover when answer is selected
+        function removeHoverEffect() {
+            buttons.forEach(button => {
+                button.classList.remove('btn-hover');
+            });
+        }
+
+        //  Event listener cheking when selection was made on each button 
+        buttons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                selectAnswer(e);
+
+                // Remove hover from all buttons when any button is clicked
+                removeHoverEffect();
+            });
         });
     });
 
@@ -414,6 +371,7 @@ function deductPoints() {
 
     score -= selectedDeductionPoints;
     scoreCounter.innerText = score;
+    console.log(`Sadly that was an incorrect answer. You lost ${selectedDeductionPoints} points.`);
 }
 
 function selectAnswer(e) {
@@ -432,6 +390,8 @@ function selectAnswer(e) {
         document.querySelector('footer').classList.add('wrong');
     }
 
+
+
     // Update the progress bar with every answer
 
     progressBar.style.width = `${(questionCount / maxQuestions) * 100}%`;
@@ -440,6 +400,7 @@ function selectAnswer(e) {
     if (correct) {
         score += correctPoints;
         scoreCounter.innerText = score;
+        console.log(`That was a correct answer, you win ${correctPoints} points.`);
     } else {
         deductPoints();
     }
@@ -479,6 +440,8 @@ restartGame = () => {
         // ReplaceSave Highscore text with Next button text
         nextButton.innerHTML = '<i class="fas fa-arrow-circle-right"></i> Next';
     }
+
+    console.log('Restarting quiz...');
 
     questionCount = 0;
     scoreCounter.innerText = 0;

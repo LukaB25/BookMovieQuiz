@@ -1,3 +1,5 @@
+document.addEventListener('load', console.log('Displaying high scores.'));
+
 // Display High Scores
 
 const highScoresList = document.getElementById('high-score-list');

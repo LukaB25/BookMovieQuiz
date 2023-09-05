@@ -140,6 +140,9 @@ footer.wrong {
     max-width: 24.8rem;
 }
 
+.default-cursor {
+    cursor: default;
+}
 
 /* Rules */
 

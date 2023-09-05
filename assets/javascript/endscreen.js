@@ -1,3 +1,5 @@
+document.addEventListener('DOMContentLoaded', console.log('Displaying final score..'));
+
 // Endscreen and High Scores
 
 const username = document.getElementById('username');
@@ -27,7 +29,7 @@ username.addEventListener('keyup', () => {
 // Code for submit on Enter was used from: https://weekendprojects.dev/posts/addeventlistener-for-enter-key/?utm_content=cmp-true
 username.addEventListener('keydown', function (event) {
     if (event.keyCode === 13 || event.key === 'Enter') {
-        console.log('Enter key was pressed');
+        console.log('Saving your high score...');
     }
 });
 
