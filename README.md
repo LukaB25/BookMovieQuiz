@@ -88,6 +88,8 @@ Sketch of a phone or similar size device:
 
 ### Endscreen
 
+- The only way to open the Endscreen is if you play through the whole quiz and click Save Score button 
+
 ### High scores
 
 ### Interactive footer
