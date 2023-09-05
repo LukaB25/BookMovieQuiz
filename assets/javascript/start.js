@@ -23,6 +23,10 @@ document.addEventListener('DOMContentLoaded', function displayRules() {
         if (rulesVisible) {
             rulesList.innerHTML = '';
             console.log('Hiding rules..');
+
+            // Replace Close Rules button text with Rules text
+            rulesButton.innerHTML = '<i class="fas fa-list-alt"></i> Rules';
+
             // Clear rules when button is clicked again
         } else {
             rules.forEach(rule => {
@@ -32,6 +36,8 @@ document.addEventListener('DOMContentLoaded', function displayRules() {
                 // Add the 'rule-item' class
                 rulesList.appendChild(li);
 
+                // Replace Rules button text with Close Rules text
+                rulesButton.innerHTML = '<i class="fas fa-list-alt"></i> Close Rules';
 
             });
             console.log('Displaying rules..');

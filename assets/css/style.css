@@ -93,11 +93,6 @@ footer.wrong {
     background-color: rgb(255, 246, 231);
 }
 
-.btn:hover {
-    cursor: pointer;
-    box-shadow: 0 1rem 2rem 0 rgba(61, 188, 159, 0.5);
-}
-
 .disable-hover {
     pointer-events: none;
     cursor: default;
@@ -110,6 +105,8 @@ footer.wrong {
 }
 
 .btn-hover:hover {
+    cursor: pointer;
+    box-shadow: 0 1rem 2rem 0 rgba(61, 188, 159, 0.5);
     color: rgb(255, 246, 231);
     transition: all 1.5s ease;
     transition-property: color;

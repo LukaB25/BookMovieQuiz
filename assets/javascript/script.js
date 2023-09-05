@@ -23,7 +23,7 @@ const incorrectPoints = [0, 10, 30, 50, 100];
 const maxQuestions = 10;
 
 // Questions
-let questions = [
+const questions = [
     {
         question: "The Hunger Games is a:",
         answers: [
@@ -276,6 +276,9 @@ startGame = () => {
     availableQuestions = [...questions];
     nextQuestion();
     restartButton.disabled = true;
+    if (restartButton.disabled) {
+        removeHoverEffect(document.querySelectorAll('.restart-btn'));
+    }
 };
 
 nextQuestion = () => {
@@ -297,20 +300,23 @@ nextQuestion = () => {
     question.innerText = currentQuestion.question;
     nextButton.disabled = true;
 
+    if (nextButton.disabled) {
+        removeHoverEffect(document.querySelectorAll('.next-btn'));
+    }
+
     // Clear container 
     document.querySelector('.container').classList.remove('correct', 'wrong');
     document.querySelector('footer').classList.remove('correct', 'wrong');
 
     // Random answers
 
-    shuffleArray(currentQuestion.answers);
+    const arrayAnswers = currentQuestion.answers;
 
-    function shuffleArray(array) {
-        for (let i = array.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [array[i], array[j]] = [array[j], array[i]];
-        }
+    for (let i = arrayAnswers.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arrayAnswers[i], arrayAnswers[j]] = [arrayAnswers[j], arrayAnswers[i]];
     }
+
 
     // Insert a button for each answer
     currentQuestion.answers.forEach(answer => {
@@ -326,12 +332,6 @@ nextQuestion = () => {
 
         const buttons = document.querySelectorAll('.answer-btn');
 
-        // Remove hover when answer is selected
-        function removeHoverEffect() {
-            buttons.forEach(button => {
-                button.classList.remove('btn-hover');
-            });
-        }
 
         //  Event listener cheking when selection was made on each button 
         buttons.forEach(button => {
@@ -339,17 +339,29 @@ nextQuestion = () => {
                 selectAnswer(e);
 
                 // Remove hover from all buttons when any button is clicked
-                removeHoverEffect();
+                removeHoverEffect(document.querySelectorAll('.answer-btn'));
             });
         });
     });
 
     availableQuestions.splice(randomQuestion, 1);
     acceptingAnswers = true;
-
-
 };
 
+
+// Remove hover effect
+function removeHoverEffect(element) {
+    element.forEach(button => {
+        button.classList.remove('btn-hover');
+    });
+}
+
+// Return hover effect
+function returnHoverEffect(element) {
+    element.forEach(button => {
+        button.classList.add('btn-hover');
+    });
+}
 
 function addStatusClass(element, correct) {
     removeStatusClass(element);
@@ -416,6 +428,14 @@ function selectAnswer(e) {
     acceptingAnswers = false;
     nextButton.disabled = false;
     restartButton.disabled = false;
+
+    if (!restartButton.disabled) {
+        returnHoverEffect(document.querySelectorAll('.restart-btn'));
+    }
+
+    if (!nextButton.disabled) {
+        returnHoverEffect(document.querySelectorAll('.next-btn'));
+    }
 }
 
 function removeAnswerEventListeners() {
@@ -454,6 +474,10 @@ restartGame = () => {
     nextQuestion();
 
     restartButton.disabled = true;
+
+    if (restartButton.disabled) {
+        removeHoverEffect(document.querySelectorAll('.restart-btn'));
+    }
 };
 
 

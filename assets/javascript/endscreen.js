@@ -28,6 +28,18 @@ username.addEventListener('keyup', () => {
     saveButton.disabled = !username.value;
 });
 
+if (saveButton.disabled) {
+    removeHoverEffect(document.querySelectorAll('.save-btn'));
+}
+
+username.addEventListener('input', () => {
+    if (username.value) {
+        returnHoverEffect(document.querySelectorAll('.save-btn'));
+    } else {
+        removeHoverEffect(document.querySelectorAll('.save-btn'));
+    }
+});
+
 // Code for submit on Enter was used from: https://weekendprojects.dev/posts/addeventlistener-for-enter-key/?utm_content=cmp-true
 username.addEventListener('keydown', function (event) {
     if (event.keyCode === 13 || event.key === 'Enter') {
@@ -56,3 +68,16 @@ saveHighScore = (e) => {
 
     return window.location.assign('/highscores.html');
 };
+
+// Remove hover when answer is selected
+function removeHoverEffect(element) {
+    element.forEach(button => {
+        button.classList.remove('btn-hover');
+    });
+}
+
+function returnHoverEffect(element) {
+    element.forEach(button => {
+        button.classList.add('btn-hover');
+    });
+}
