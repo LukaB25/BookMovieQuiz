@@ -1,6 +1,6 @@
 /* Basic starting structure */
 :root {
-    background-color: #1a1a1a;
+    background-color: #9e0000;
     background: url(../images/cinema.avif) center;
     font-size: 10px;
 }
@@ -411,6 +411,7 @@ footer p {
     isolation: isolate;
     margin-bottom: 2rem;
     backdrop-filter: blur(10rem);
+    border-radius: 1rem;
 }
 
 #message-container:before {
@@ -419,9 +420,8 @@ footer p {
     top: 0;
     left: 0;
     width: 1000%;
-    height: 93%;
+    height: 100%;
     background: linear-gradient(115deg, #4fcf70, #fad648, #faf748, #eb1f1f, #a767e5, #12bcfe, #44ce7b);
-    backdrop-filter: blur(10rem);
     background-size: 25% 100%;
     animation: transformation .75s linear infinite;
     animation-play-state: paused;
@@ -442,6 +442,7 @@ footer p {
 }
 
 #endgame-message {
+    font-size: 2.5rem;
     color: rgb(255, 246, 231);
     position: relative;
     border-radius: 1rem;
