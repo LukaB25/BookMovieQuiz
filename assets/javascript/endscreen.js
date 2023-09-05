@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', console.log('Displaying final score..'));
 
 // Endscreen and High Scores
+// Code was taken and implemented to fit my site from https://www.youtube.com/watch?v=DFhmNLKwwGw
+// I additionally worked on adding some functions 
 
 const username = document.getElementById('username');
 const saveButton = document.getElementById('save-score-btn');

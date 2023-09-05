@@ -39,7 +39,7 @@ h3 {
 
 .container {
     width: 100vw;
-    height: 100vh;
+    height: auto;
     background-color: rgba(26, 26, 26, 0.7);
     display: flex;
     justify-content: center;
@@ -47,6 +47,10 @@ h3 {
     max-width: 100rem;
     margin: 0 auto;
     padding-top: 5rem;
+}
+
+.home-container {
+    min-height: 100vh;
 }
 
 .container.correct,
@@ -215,6 +219,7 @@ footer {
     align-items: center;
     max-width: 100rem;
     margin: 0 auto;
+    padding-top: 5rem;
 }
 
 footer ul {

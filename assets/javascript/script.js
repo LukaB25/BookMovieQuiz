@@ -374,6 +374,7 @@ function deductPoints() {
     console.log(`Sadly that was an incorrect answer. You lost ${selectedDeductionPoints} points.`);
 }
 
+// Parts of code were used from: https://www.youtube.com/watch?v=riDzcEQbX6k
 function selectAnswer(e) {
     if (!acceptingAnswers) return;
 
