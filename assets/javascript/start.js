@@ -1,7 +1,7 @@
 // Rules of the game.
 const rules = [];
 rules[0] = '1. For best user experience open the game on a larger screen devices, otherwise use a portrait mode on your smaller devices.';
-rules[1] = '2. You can start the game as soon as the site loads by pressin Start Game button';
+rules[1] = '2. You can start the game as soon as the site loads by pressing Start Game button';
 rules[2] = '3. The game will give you a random questions about books and/or movies that you have to guess.';
 rules[3] = '4. Choose your answers wisely as each correct answer will give you points, and incorrect answer will show you how many points you have missed out on.';
 rules[4] = '5. Each time you answer correct the answer will light up green and you will be awarded 10 points.';

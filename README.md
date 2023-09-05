@@ -59,11 +59,44 @@ Sketch of a phone or similar size device:
 
 ## Features
 
+### Background Image & Adjustable Container
 
+- The site background image responds to the screen change, by hiding the overflow on smaller screen sizes and repeating the image on left and right, on extra large screens. The image repeat function is not distracting from or obstructing any elements of the site. All of the pages have the same background image.
+- The adjustable container is set up to be resposive to the screen size by adjusting to the screen width and height. on bigger screens it is keeping the quiz size to an optimum design and pleasing user experience. The container is transparent, to make sure that the full background image is visible. The image outside of the container is vibrant in colour, but not distracting from the content. All of the pages have the same container styles and sizing.
+- Inside of the quiz game page the container is set up to change colour to green every time the user selects correct answer and to change to red on incorrect answer. The style is cleared every time a new question is loaded or the game is restarted.
 
-### Features left to implement
+### Home screen
 
+- Home screen has a simple yet effective design. It contains game name or "Logo", for the logo I purpusefully decided for it to be static and users can't interact with it. It is followed by three anchor links, that are styled as buttons, all three "buttons" are fully responsive and users can interact with them. On the bottom of the screen we have a footer.
+- As soon as the home page loads there is a function that will insert placeholder high scores, to insure that the score list is not empty when opened
+-  Play game button will take users to the quiz, load the first question. The button has a hover effect that will change the button background colour and the text colour will transit from black to white slowly.
+- High scores button will take users to the high score list.  The button has a hover effect that will change the button background colour and the text colour will transit from black to white slowly.
+- Rules button when clicked will display all of the rules, if clicked again it will hide the rules as if they were never there. The rules are completely being implemented by javascript.  The button has a hover effect that will change the button background colour and the text colour will transit from black to white slowly.
 
+### Quiz game
+
+- The quiz will load completely and display a question randomly from stored array, it will also display all of the answers to the question in a randomised position. When the page is first loaded, you can see the question counter, score, progress bar, followed by question and answers, restart, next and home buttons. 
+- Question counter is completely controlled by javascript and will update with each question that is being answered.
+- Score will automatically increment any points users win or lose. For each correct answer user answers they will gain 1000 points, but for each wrong answer I have set up an array of point they could lose, the game randomly chooses if user will lose 0, 10, 30, 50 or 100 points on incorrect answer.
+- Progress bar indicates how far along is the user. After each selected answer, no matter if it is correct or wrong, the progress bar will move for 10%. The progress bar is set up to have a smooth transition, as it filles up the colors will change and expand.
+- Questions. There is a total of 27 questions (Small tribute to me turning 27 years old), out of which the game will choose random question and implement it into the game. After each question is used, it will be removed from the selection and it won't repeat.
+- Answers. For each question, there are 4 answers. The order of the answers will change with each time question is loaded. Each answer button has a hover effect that will change the button background colour and the text colour which will transit from black to white slowly. After a user selects their answer, the hover effect is removed from other answers, the selected answer will change colour to either green(showing the answer was correct) or red(showing the answer was wrong), the buttons can not be clicked again.
+- Restart button offers users to restart the game from the beggining. The button is disabled on each first question, to prevent switching questions. Once clicked, the game will start from the beginning, without reloading the page. The question count, score, the progress bar and answer selection will all return to starting point, ie the changes will be reverted and cleared. The button has a hover effect that will change the button background colour and the text colour will transit from black to white slowly.
+- Next button lets users switch to next question. The button is disabled until the user makes a selection, after which it is enabled and will load a new questions and answers. After the final question has been answered the Next button will change into Save score button The button has a hover effect that will change the button background colour and the text colour will transit from black to white slowly.
+- Save score button showes up in place of a next button once the final question is answered. Once pressed the user will be taken to the endscreen. In case the user clicks on Restart button, the Save score button will revert back to Next button.
+- Home button offers users an option to return to the home page, without having to click return button on their browser. The button has a hover effect that will change the button background colour and the text colour will transit from black to white slowly.
+
+### Endscreen
+
+### High scores
+
+### Interactive footer
+
+## Features left to implement
+
+- Possible Timer - user will have 20 seconds to respond, if there is no response in the given time, the answer will automatically be incorrect and user will lose points.
+- Adding randomised messages on the high score page, to motivate users to play the game.
+- Disabling of the username input if the score is not high enough to be added to the scoreboard.
 
 ## Testing
 
@@ -107,7 +140,6 @@ Sketch of a phone or similar size device:
 |        Scores update    |        Scores are being updated when Local Storage is changed       |  Pass   |
 |       Play     |      Takes user to the quiz, to play the quiz         |  Pass   |
 |           Home button     |                          Takes user to home screen                      |  Pass   |
-|           |               |  Pass   |
 |           Footers           |                          Adjust with screen size                           |  Pass   |
 |     Footer icons:hover      |                          Changes colour on hover                           |  Pass   |
 |    Footer Facebook icon     |                    Opens Facebook site in separate tab                     |  Pass   |
@@ -118,23 +150,20 @@ Sketch of a phone or similar size device:
 | Footer Code institute:hover |                          Changes colour on hover                           |  Pass   |
 |   Footer Luka Black link    |                     Opens my LinkedIn in separate tab                      |  Pass   |
 |   Footer Luka Black:hover   |                          Changes colour on hover                           |  Pass   |
-|             |                      Opens Form site in separate tab                       |  Pass   |
-|           |                     Opens Twitch site in separate tab                      |  Pass   |
-|            |                      Opens Skype site in separate tab                      |  Pass   |
-|           |                     Opens Twitch site in separate tab                      |  Pass   |
 |     Home responsivness      |               Home page fully responsive with screen changes               |  Pass   |
-|    Recipes responsivness    |             Recipes page fully responsive with screen changes              |  Pass   |
-|    Contact responsivness    |               Form page fully responsive with screen changes               |  Pass   |
-| Confirmation responsivness  |           Confirmation page fully responsive with screen changes           |  Pass   |
-
+|    Quiz game responsivness    |             Quiz game page fully responsive with screen changes              |  Pass   |
+|    Endscreen responsivness    |               Endscreen page fully responsive with screen changes               |  Pass   |
+| High Score responsivness  |           High score page fully responsive with screen changes           |  Pass   |
 
 ## Troubleshooting
 
+- I kept having issues in the console log from certain functions that were not being used on each site, so I decided to separate all of the javascript code by pages, to prevent console log being clogged up with errors, when they were not real errors.
+- After building the quiz and implementing most of the  code, I kept having issues with remaining answer buttons still having a hover effect after user makes a choice for their answer. I kept trying to find solutions online and couldn't find answers anywhere. I even tried running that part of the code through ChatGPT but it was unsucessful in giving me the right answer. No matter what I tried it didn't work, so I spent couple of days on and off playing with the code and trying to merge different event listeners and functions to get it to work and I finally managed to figure it out and disable the hover effect once the user selects an answer.
+- I had issues trying to understand the Local Storage and how to construct it, I watched multiple tutorials and in the end I decided to following a tutorial from [James Q Quick](https://www.youtube.com/watch?v=DFhmNLKwwGw) and adding my own minor changes to it.
 
+### Unfixed bugs
 
-### Unfixed bugs:
-
-
+- For the moment, the only unfixed bugs I am having is the quiz does not display the correct answer if user chooses the incorrect one. I keep troubleshooting it, but I still haven't found the answer
 
 ## Validator testing
 
