@@ -16,8 +16,8 @@ const maxHighScores = 5;
 
 finalScore.innerText = newestScore;
 
-if (newestScore === '10000') {
-    endgameMessage.innerText = `Congradulations! You beat the highest score. Your score is: ${newestScore}. Make sure you save your score, to receive your prize of 10 minutes of a bragging time, totally free of charge.`;
+if (newestScore === '10000' | newestScore > highScores[0].score) {
+    endgameMessage.innerText = `Congratulations! You beat the highest score. Your score is: ${newestScore}. Make sure you save your score, to receive your prize of 10 minutes of a bragging time, totally free of charge.`;
 } else if (newestScore > highScores[4].score) {
     endgameMessage.innerText = `Great job! You managed to beat some of the old high scores. You managed to get ${newestScore} points. Sadly given that your score is not the highest, you will have to try and beat it to get the prize.`;
 } else if (newestScore < highScores[4].score) {
@@ -39,6 +39,18 @@ username.addEventListener('input', () => {
         removeHoverEffect(document.querySelectorAll('.save-btn'));
     }
 });
+
+if (newestScore <= highScores[4].score) {
+    username.placeholder = 'Score too low..';
+    username.disabled = true;
+    removeHoverEffect(document.querySelectorAll('#username'));
+} else {
+    username.placeholder = 'username';
+    username.disabled = false;
+
+    returnHoverEffect(document.querySelectorAll('#username'));
+}
+
 
 // Code for submit on Enter was used from: https://weekendprojects.dev/posts/addeventlistener-for-enter-key/?utm_content=cmp-true
 username.addEventListener('keydown', function (event) {

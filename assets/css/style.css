@@ -469,6 +469,20 @@ footer p {
     background-color: rgb(255, 246, 231);
 }
 
+#highscore-emoji {
+    font-size: 150%;
+}
+
+#highscore-emoji:hover {
+
+    box-shadow: 0 1rem 2rem 0 rgba(255, 255, 255, 0.5);
+    color: #ffe570;
+    transition: all 1.5s ease;
+    transition-property: color;
+    background: linear-gradient(32deg, #530303, #a10303, #ea2828, #fc7171);
+    border-radius: 50%;
+}
+
 
 @media screen and (max-width: 600px) {
     /* Footer */
