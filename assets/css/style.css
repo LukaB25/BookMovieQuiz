@@ -1,7 +1,6 @@
 /* Basic starting structure */
 :root {
-    background-color: #9e0000;
-    background: url(../images/cinema.avif) center;
+    background-color: #400202;
     font-size: 10px;
 }
 
@@ -10,6 +9,10 @@
     font-family: 'Lora', 'Playfair', 'Roboto', serif;
     margin: 0;
     padding: 0;
+}
+
+body {
+    background: url(../images/cinema.avif) center;
 }
 
 h1 {
@@ -105,8 +108,13 @@ footer.wrong {
 }
 
 .btn-hover:hover {
+    --glow-color: rgb(217, 176, 255);
+    --glow-spread-color: rgba(191, 123, 255, 0.781);
+    --enhanced-glow-color: rgb(231, 206, 255);
     cursor: pointer;
-    box-shadow: 0 1rem 2rem 0 rgba(61, 188, 159, 0.5);
+    box-shadow: 0 0 1em .25em var(--glow-color),
+        0 0 4em 1em var(--glow-spread-color),
+        inset 0 0 .75em .25em var(--glow-color);
     color: rgb(255, 246, 231);
     transition: all 1.5s ease;
     transition-property: color;
@@ -123,6 +131,12 @@ footer.wrong {
     color: rgb(255, 246, 231);
     transition: all 1.5s ease;
     transition-property: color;
+    --glow-color: rgb(249, 150, 150);
+    --glow-spread-color: rgba(223, 56, 56, 0.781);
+    --enhanced-glow-color: rgb(253, 211, 211);
+    box-shadow: 0 0 .5em .25em var(--glow-color),
+        0 0 2em .5em var(--glow-spread-color),
+        inset 0 0 .75em .25em var(--glow-color);
 }
 
 .answer-btn.correct {
@@ -130,6 +144,12 @@ footer.wrong {
     color: rgb(255, 246, 231);
     transition: all 1.5s ease;
     transition-property: color;
+    --glow-color: rgb(178, 249, 150);
+    --glow-spread-color: rgba(34, 198, 31, 0.781);
+    --enhanced-glow-color: rgb(230, 253, 211);
+    box-shadow: 0 0 .5em .25em var(--glow-color),
+        0 0 2em .5em var(--glow-spread-color),
+        inset 0 0 .75em .25em var(--glow-color);
 }
 
 .restart-btn,
@@ -162,8 +182,12 @@ footer.wrong {
     transition: all 1.5s ease;
     transition-property: color;
     background: linear-gradient(32deg, #03a9f4, #f441a5, #ffc73b, #03a9f4);
-
-    box-shadow: 0 0.5rem 2rem 0 rgba(255, 240, 216, 0.5);
+    --glow-color: rgb(217, 176, 255);
+    --glow-spread-color: rgba(191, 123, 255, 0.781);
+    --enhanced-glow-color: rgb(231, 206, 255);
+    box-shadow: 0 0 1em .25em var(--glow-color),
+        0 0 4em 1em var(--glow-spread-color),
+        inset 0 0 .75em .25em var(--glow-color);
 }
 
 #rules-list {
@@ -199,6 +223,12 @@ footer.wrong {
     height: 3.5rem;
     border-radius: 1rem;
     background: linear-gradient(32deg, #03a9f4, #f441a5, #ffc73b, #03a9f4);
+    --glow-color: rgb(217, 176, 255);
+    --glow-spread-color: rgba(191, 123, 255, 0.781);
+    --enhanced-glow-color: rgb(231, 206, 255);
+    box-shadow: 0 0 1em .25em var(--glow-color),
+        0 0 4em 1em var(--glow-spread-color),
+        inset 0 0 .75em .25em var(--glow-color);
     transition: width 1s ease;
 }
 
@@ -227,6 +257,12 @@ footer.wrong {
     border-radius: 1rem;
     background: linear-gradient(32deg, #03a9f4, #f441a5, #ffc73b, #03a9f4);
     transition: width 1s ease;
+    --glow-color: rgb(217, 176, 255);
+    --glow-spread-color: rgba(191, 123, 255, 0.781);
+    --enhanced-glow-color: rgb(231, 206, 255);
+    box-shadow: 0 0 1em .25em var(--glow-color),
+        0 0 4em 1em var(--glow-spread-color),
+        inset 0 0 .75em .25em var(--glow-color);
 }
 
 /* Footer and links */
@@ -296,6 +332,12 @@ footer p>a::before {
 #facebook:hover {
     color: #fff;
     border: 1px solid rgb(25, 112, 194);
+    --glow-color: rgb(18, 106, 188);
+    --glow-spread-color: rgba(144, 191, 235, 0.781);
+    --enhanced-glow-color: rgb(178, 211, 243);
+    box-shadow: 0 0 0.25em 0.1em var(--glow-color),
+        0 0 2em 0.5em var(--glow-spread-color),
+        inset 0 0 0.75em 0.25em var(--glow-color);
 }
 
 #facebook:hover::before {
@@ -303,17 +345,23 @@ footer p>a::before {
 }
 
 #instagram {
-    border: 1px solid rgb(237, 131, 184);
-    color: rgb(237, 131, 184);
+    border: 1px solid rgb(203, 69, 136);
+    color: rgb(203, 69, 136);
 }
 
 #instagram:hover {
     color: #fff;
-    border: 1px solid rgb(237, 131, 184);
+    border: 1px solid rgb(203, 69, 136);
+    --glow-color: rgb(189, 108, 149);
+    --glow-spread-color: rgba(237, 131, 184, 0.781);
+    --enhanced-glow-color: rgb(230, 104, 167);
+    box-shadow: 0 0 0.25em 0.1em var(--glow-color),
+        0 0 2em 0.5em var(--glow-spread-color),
+        inset 0 0 0.75em 0.25em var(--glow-color);
 }
 
 #instagram:hover::before {
-    box-shadow: inset 0 0 0 10em rgb(237, 131, 184);
+    box-shadow: inset 0 0 0 10em rgb(203, 69, 136);
 }
 
 #twitter {
@@ -324,6 +372,12 @@ footer p>a::before {
 #twitter:hover {
     color: #fff;
     border: 1px solid rgb(40, 144, 241);
+    --glow-color: rgb(22, 128, 227);
+    --glow-spread-color: rgba(119, 182, 242, 0.781);
+    --enhanced-glow-color: rgb(193, 222, 252);
+    box-shadow: 0 0 0.25em 0.1em var(--glow-color),
+        0 0 2em 0.5em var(--glow-spread-color),
+        inset 0 0 0.75em 0.25em var(--glow-color);
 }
 
 #twitter:hover::before {
@@ -337,7 +391,13 @@ footer p>a::before {
 
 #youtube:hover {
     color: #fff;
-    border: 1px solid rgb(235, 31, 31);
+    border: 1px solid rgb(208, 13, 13);
+    --glow-color: rgb(220, 59, 59);
+    --glow-spread-color: rgba(208, 13, 13, 0.781);
+    --enhanced-glow-color: rgb(253, 144, 144);
+    box-shadow: 0 0 0.25em 0.1em var(--glow-color),
+        0 0 2em 0.5em var(--glow-spread-color),
+        inset 0 0 0.75em 0.25em var(--glow-color);
 }
 
 #youtube:hover::before {
@@ -360,17 +420,23 @@ footer p {
 }
 
 #codeinstitute {
-    border: 1px solid rgb(238, 121, 18);
-    color: rgb(238, 121, 18);
+    border: 1px solid rgb(233, 83, 7);
+    color: rgb(233, 83, 7);
 }
 
 #codeinstitute:hover {
     color: #fff;
-    border: 1px solid rgb(238, 121, 18);
+    border: 1px solid rgb(233, 83, 7);
+    --glow-color: rgb(220, 80, 59);
+    --glow-spread-color: rgba(208, 71, 13, 0.781);
+    --enhanced-glow-color: rgb(253, 171, 144);
+    box-shadow: 0 0 0.25em 0.1em var(--glow-color),
+        0 0 2em 0.5em var(--glow-spread-color),
+        inset 0 0 0.75em 0.25em var(--glow-color);
 }
 
 #codeinstitute:hover::before {
-    box-shadow: inset 0 0 0 10em rgb(238, 121, 18);
+    box-shadow: inset 0 0 0 10em rgb(233, 83, 7);
 }
 
 #my-name {
@@ -381,6 +447,12 @@ footer p {
 #my-name:hover {
     color: #fff;
     border: 1px solid rgb(25, 112, 194);
+    --glow-color: rgb(18, 106, 188);
+    --glow-spread-color: rgba(144, 191, 235, 0.781);
+    --enhanced-glow-color: rgb(178, 211, 243);
+    box-shadow: 0 0 0.25em 0.1em var(--glow-color),
+        0 0 2em 0.5em var(--glow-spread-color),
+        inset 0 0 0.75em 0.25em var(--glow-color);
 }
 
 #my-name:hover::before {
@@ -459,6 +531,15 @@ footer p {
     animation-play-state: running;
     transition-duration: 0.75s;
     translate: 0% 0%;
+}
+
+#message-container:hover {
+    --glow-color: rgb(217, 176, 255);
+    --glow-spread-color: rgba(191, 123, 255, 0.781);
+    --enhanced-glow-color: rgb(231, 206, 255);
+    box-shadow: 0 0 1em .25em var(--glow-color),
+        0 0 4em 1em var(--glow-spread-color),
+        inset 0 0 .75em .25em var(--glow-color);
 }
 
 @keyframes transformation {

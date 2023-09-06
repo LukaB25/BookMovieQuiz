@@ -187,7 +187,7 @@ const questions = [
         ]
     },
     {
-        question: "Which actoror was not in The Harry Potter (2001-2011)?",
+        question: "Which actor was not in The Harry Potter (2001-2011)?",
         answers: [
             { text: 'Ian McKellen', correct: true },
             { text: 'Daniel Radcliffe', correct: false },
