@@ -85,6 +85,7 @@ Sketch of a phone or similar size device:
 - **Next button** lets users switch to next question. The button is disabled until the user makes a selection, , user can see that the button is disabled, by lack of hover effect on the button. After user selects the answer the button is enabled, has hover effect and when clicked it will load a new questions and answers. After the final question has been answered the Next button will change into Save score button The button has a hover effect that will change the button background colour and the text colour will transit from black to white slowly.
 - **Save score** button showes up in place of a next button once the final question is answered. Once pressed the user will be taken to the endscreen. In case the user clicks on Restart button, the Save score button will return to Next button state.
 - **Home button** offers users an option to return to the home page, without having to click return button on their browser. The button has a hover effect that will change the button background colour and the text colour will transit from black to white slowly.
+- **Timer** is used to keep track if the quiz is being played. Timer structure was taken from [shecode.ie](https://www.shecodes.io/athena/52336-how-to-create-a-countdown-timer-in-javascript#:~:text=let%20count%20%3D%2060%3B%20const%20timer,second%20using%20the%20setInterval%20method.)
 
 ### Endscreen
 

@@ -27,17 +27,17 @@ const questions = [
     {
         question: "The Hunger Games is a:",
         answers: [
+            { text: 'Both', correct: true },
             { text: 'Book', correct: false },
             { text: 'Movie', correct: false },
-            { text: 'Both', correct: true },
             { text: 'Neither', correct: false },
         ]
     },
     {
         question: "Trilogy under the name Divirgent is a:",
         answers: [
-            { text: 'Movie', correct: false },
             { text: 'Both', correct: true },
+            { text: 'Movie', correct: false },
             { text: 'Book', correct: false },
             { text: 'Neither', correct: false },
         ]
@@ -45,8 +45,8 @@ const questions = [
     {
         question: "Which of the following was not Book-To-Movie adaptation?",
         answers: [
-            { text: 'The Godfather (1972)', correct: false },
             { text: 'Titanic (1997)', correct: true },
+            { text: 'The Godfather (1972)', correct: false },
             { text: 'The Help (2011)', correct: false },
             { text: 'The Devil Wears Prada (2006)', correct: false },
         ]
@@ -63,26 +63,26 @@ const questions = [
     {
         question: "In which movie does the main heroine use a bow and arrows to take down the Capitol?",
         answers: [
+            { text: 'The Hunger Games (2012)', correct: true },
             { text: 'The Hobbit (2012)', correct: false },
             { text: 'Smurfs (2011)', correct: false },
-            { text: 'The Hunger Games (2012)', correct: true },
             { text: 'Matilda (1996)', correct: false },
         ]
     },
     {
         question: "Jurassic Park (1993) is a:",
         answers: [
+            { text: 'Both', correct: true },
             { text: 'Book', correct: false },
             { text: 'Neither', correct: false },
             { text: 'Movie', correct: false },
-            { text: 'Both', correct: true },
         ]
     },
     {
         question: "Hidden figures (2016) is a:",
         answers: [
-            { text: 'Neither', correct: false },
             { text: 'Both', correct: true },
+            { text: 'Neither', correct: false },
             { text: 'Movie', correct: false },
             { text: 'Book', correct: false },
         ]
@@ -108,17 +108,17 @@ const questions = [
     {
         question: "Is Gone Girl (2014) a Book-To-Movie adaptation?",
         answers: [
+            { text: 'Yes', correct: true },
             { text: 'Who?', correct: false },
             { text: 'No', correct: false },
             { text: 'Maybe', correct: false },
-            { text: 'Yes', correct: true },
         ]
     },
     {
         question: "Which two actresses were in a Book-To-Movie adaptation of A Simple Favour (2018)?",
         answers: [
-            { text: 'Blake Lively and Anne Hathaway', correct: false },
             { text: 'Blake Lively and Anna Kendrick', correct: true },
+            { text: 'Blake Lively and Anne Hathaway', correct: false },
             { text: 'Kate Winslet and Anna Kendrick', correct: false },
             { text: 'Anne Hathaway and Meryl Streep', correct: false },
         ]
@@ -144,8 +144,8 @@ const questions = [
     {
         question: "Shrek (2001) is a:",
         answers: [
-            { text: 'Neither', correct: false },
             { text: 'Both', correct: true },
+            { text: 'Neither', correct: false },
             { text: 'Book', correct: false },
             { text: 'Movie', correct: false },
         ]
@@ -153,35 +153,35 @@ const questions = [
     {
         question: "The Fault in Our Stars (2014) is a:",
         answers: [
+            { text: 'Both', correct: true },
             { text: 'Neither', correct: false },
             { text: 'Movie', correct: false },
             { text: 'Book', correct: false },
-            { text: 'Both', correct: true },
         ]
     },
     {
         question: "The Maze Runner is a Movie-To-Book adaptation?",
         answers: [
+            { text: 'False', correct: true },
             { text: 'True', correct: false },
             { text: 'Not Not True', correct: false },
-            { text: 'False', correct: true },
             { text: 'Not False', correct: false },
         ]
     },
     {
         question: "Which book was not adapted into a movie:",
         answers: [
+            { text: 'Bleeding Edge by Thomas Pynchon', correct: true },
             { text: 'The Princess Diaries by Meg Cabot', correct: false },
             { text: 'The Maze Runner by James Dashner', correct: false },
-            { text: 'Bleeding Edge by Thomas Pynchon', correct: true },
             { text: 'The Color Purple by Alice Walker', correct: false },
         ]
     },
     {
         question: "Which book was not adapted into a movie?",
         answers: [
-            { text: 'Brokeback Mountain by Annie Proulx', correct: false },
             { text: 'They Both Die at the End by Adam Silvera', correct: true },
+            { text: 'Brokeback Mountain by Annie Proulx', correct: false },
             { text: 'The Talented Mr. Ripley by Patricia Highsmith', correct: false },
             { text: 'Simon vs. The Homo Sapiens Agenda by Becky Albertalli', correct: false },
         ]
@@ -189,17 +189,17 @@ const questions = [
     {
         question: "Which actoror was not in The Harry Potter (2001-2011)?",
         answers: [
+            { text: 'Ian McKellen', correct: true },
             { text: 'Daniel Radcliffe', correct: false },
             { text: 'Ralph Fiennes', correct: false },
             { text: 'Maggie Smith', correct: false },
-            { text: 'Ian McKellen', correct: true },
         ]
     },
     {
         question: "Which actor was both in Dune (2021) and Call Me by Your Name (2017)?",
         answers: [
-            { text: 'Armie Hammer', correct: false },
             { text: 'Timothée Chalamet', correct: true },
+            { text: 'Armie Hammer', correct: false },
             { text: 'Tom Holland', correct: false },
             { text: 'Zendaya', correct: false },
         ]
@@ -207,8 +207,8 @@ const questions = [
     {
         question: "Which one of Meryl Streep movies was not an adaptation of a book?",
         answers: [
-            { text: 'Julie and Julia (2009)', correct: false },
             { text: 'Mamma Mia! (2008)', correct: true },
+            { text: 'Julie and Julia (2009)', correct: false },
             { text: 'Sophie’s Choice (1982)', correct: false },
             { text: 'The Devil Wears Prada (2006)', correct: false },
         ]
@@ -216,35 +216,35 @@ const questions = [
     {
         question: "Which actor was not in a Death Becomes Her (1992)?",
         answers: [
+            { text: 'Brad Pitt', correct: true },
             { text: 'Meryl Streep', correct: false },
             { text: 'Goldie Hawn', correct: false },
             { text: 'Bruce Willis', correct: false },
-            { text: 'Brad Pitt', correct: true },
         ]
     },
     {
         question: "Which movie did not come out in 1996?",
         answers: [
+            { text: 'Miss Congeniality', correct: true },
             { text: '101 Dalmations', correct: false },
             { text: 'Independence Day', correct: false },
             { text: 'Scream', correct: false },
-            { text: 'Miss Congeniality', correct: true },
         ]
     },
     {
         question: "Which books was not published in 1996?",
         answers: [
+            { text: 'Twilight by Stephenie Meyer', correct: true },
             { text: 'A Game of Thrones by George R. R. Martin', correct: false },
             { text: "Bridget Jones's Diary by Helen Fielding", correct: false },
-            { text: 'Twilight by Stephenie Meyer', correct: true },
             { text: 'The Notebook by Nicholas Sparks', correct: false },
         ]
     },
     {
         question: "Which movie does not belong in sci-fi genre?",
         answers: [
-            { text: 'The Matrix (1999)', correct: false },
             { text: 'Mission Impossible (1996)', correct: true },
+            { text: 'The Matrix (1999)', correct: false },
             { text: 'Avatar (2009)', correct: false },
             { text: 'Inception (2010)', correct: false },
         ]
@@ -252,18 +252,18 @@ const questions = [
     {
         question: "The Martian (2015) was adapted from a novel with a same name?",
         answers: [
+            { text: 'True', correct: true },
             { text: 'False', correct: false },
             { text: 'Truly false', correct: false },
             { text: 'Falsely true', correct: false },
-            { text: 'True', correct: true },
         ]
     },
     {
         question: "Which movie has no aliens in it?",
         answers: [
+            { text: 'The Martian (2015)', correct: true },
             { text: 'Mars Attacks! (1996)', correct: false },
             { text: 'E.T. (1982)', correct: false },
-            { text: 'The Martian (2015)', correct: true },
             { text: 'Arrival (2016)', correct: false },
         ]
     },
@@ -288,8 +288,10 @@ nextQuestion = () => {
         document.addEventListener('DOMContentLoaded', console.log('Quiz finished. Save your score.'));
         // Take user to endscreen to save the score
         return window.location.assign('/endscreen.html');
-
     }
+
+
+
 
     questionCount++;
     questionCounter.innerText = `${questionCount}/${maxQuestions}`;
@@ -337,7 +339,7 @@ nextQuestion = () => {
         buttons.forEach(button => {
             button.addEventListener('click', (e) => {
                 selectAnswer(e);
-
+                stopTimer();
                 // Remove hover from all buttons when any button is clicked
                 removeHoverEffect(document.querySelectorAll('.answer-btn'));
             });
@@ -346,7 +348,73 @@ nextQuestion = () => {
 
     availableQuestions.splice(randomQuestion, 1);
     acceptingAnswers = true;
+
+    startTimer();
 };
+
+// Timer
+
+const timerCount = document.getElementById('timer-count');
+const timerProgressBar = document.getElementById('timer-progress-bar');
+timerCount.textContent = '';
+const totalCount = 30;
+let count = totalCount;
+let timer;
+let timerWorking = false;
+
+function startTimer() {
+    restartTimer(); // Restart the timer before starting a new one
+    if (!timerWorking) {
+        timerWorking = true;
+        timer = setInterval(function () {
+            count--;
+            timerCount.innerText = `${count}/30s`;
+
+            let timerProgressWidth = (count / 30) * 100;
+
+            if (count > 0) {
+                timerProgressBar.style.width = `${timerProgressWidth}%`;
+            } else if (count === 0) {
+                clearInterval(timer);
+                console.log("Time's up!");
+                timerProgressBar.style.width = `${timerProgressWidth}%`;
+
+                document.querySelector('.container').classList.add('wrong');
+                document.querySelector('footer').classList.add('wrong');
+
+                acceptingAnswers = false;
+
+                if (acceptingAnswers) return;
+
+                removeAnswerEventListeners();
+
+                nextButton.disabled = false;
+                restartButton.disabled = false;
+                removeHoverEffect(document.querySelectorAll('.answer-btn'));
+                returnHoverEffect(document.querySelectorAll('.restart-btn'));
+                returnHoverEffect(document.querySelectorAll('.next-btn'));
+
+                console.log('Sadly time ran out.');
+                deductPoints();
+                stopTimer();
+            }
+        }, 1000);
+    }
+}
+
+function restartTimer() {
+    clearInterval(timer);
+    count = totalCount;
+    timerCount.innerText = `${count}/30s`;
+}
+
+function stopTimer() {
+    clearInterval(timer);
+    count = totalCount;
+    timerCount.innerText = `${count}/30s`;
+    timerProgressBar.style.width = `100%`;
+    timerWorking = false;
+}
 
 
 // Remove hover effect
@@ -383,7 +451,7 @@ function deductPoints() {
 
     score -= selectedDeductionPoints;
     scoreCounter.innerText = score;
-    console.log(`Sadly that was an incorrect answer. You lost ${selectedDeductionPoints} points.`);
+    console.log(`You lost ${selectedDeductionPoints} points.`);
 }
 
 // Parts of code were used from: https://www.youtube.com/watch?v=riDzcEQbX6k
@@ -415,6 +483,7 @@ function selectAnswer(e) {
         scoreCounter.innerText = score;
         console.log(`That was a correct answer, you win ${correctPoints} points.`);
     } else {
+        console.log('Sadly that was an incorrect answer.');
         deductPoints();
     }
 
