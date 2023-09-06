@@ -290,9 +290,6 @@ nextQuestion = () => {
         return window.location.assign('/endscreen.html');
     }
 
-
-
-
     questionCount++;
     questionCounter.innerText = `${questionCount}/${maxQuestions}`;
     clearAnswers();
@@ -350,6 +347,8 @@ nextQuestion = () => {
     acceptingAnswers = true;
 
     startTimer();
+
+
 };
 
 // Timer
@@ -379,6 +378,9 @@ function startTimer() {
                 console.log("Time's up!");
                 timerProgressBar.style.width = `${timerProgressWidth}%`;
 
+                // When timer reaches 0, the game considers that the user selected wrong answer.
+                // Various functions and settings are applied
+
                 document.querySelector('.container').classList.add('wrong');
                 document.querySelector('footer').classList.add('wrong');
 
@@ -395,6 +397,7 @@ function startTimer() {
                 returnHoverEffect(document.querySelectorAll('.next-btn'));
 
                 console.log('Sadly time ran out.');
+                showCorrectAnswers();
                 deductPoints();
                 stopTimer();
             }
@@ -402,11 +405,15 @@ function startTimer() {
     }
 }
 
+// Restarts the timer to starting point
+
 function restartTimer() {
     clearInterval(timer);
     count = totalCount;
     timerCount.innerText = `${count}/30s`;
 }
+
+// Stops and sets up everyting for new/next question
 
 function stopTimer() {
     clearInterval(timer);
@@ -444,6 +451,8 @@ function removeStatusClass(element) {
     element.classList.remove('correct');
     element.classList.remove('wrong');
 }
+
+// Makes a random selection on how many points the user is loosing
 
 function deductPoints() {
     const randomDeductor = Math.floor(Math.random() * incorrectPoints.length);
@@ -483,6 +492,7 @@ function selectAnswer(e) {
         scoreCounter.innerText = score;
         console.log(`That was a correct answer, you win ${correctPoints} points.`);
     } else {
+        showCorrectAnswers();
         console.log('Sadly that was an incorrect answer.');
         deductPoints();
     }
@@ -555,3 +565,20 @@ restartButton.addEventListener('click', restartGame);
 nextButton.addEventListener('click', nextQuestion);
 
 startGame();
+
+
+function showCorrectAnswers() {
+    const correctAnswer = currentQuestion.answers.find(answer => answer.correct === true);
+    const correctAnswerText = correctAnswer.text;
+    const currentAnswers = currentQuestion.answers;
+
+    currentAnswers.forEach(answer => {
+        const answerButton = document.querySelector(`.answer-btn[data-correct="true"]`);
+
+        if (answer.correct) {
+            answerButton.classList.add('correct');
+        } else {
+            answerButton.classList.add('wrong');
+        }
+    });
+}
