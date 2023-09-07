@@ -17,13 +17,13 @@
 Created using [Balsamiq](https://balsamiq.com)
 
 First sketch on normal size device:
-![First sketch](/assets/images/screenshots/first_sketch.png)
+![First sketch](/assets/images/screenshots/first_sketch.avif)
 
 Sketch on tablet or similar size device
-![Sketch_tablet](/assets/images/screenshots/sketch_tablet.png)
+![Sketch_tablet](/assets/images/screenshots/sketch_tablet.avif)
 
 Sketch of a phone or similar size device:
-![Sketch_tablet](/assets/images/screenshots/sketch_phone.png)
+![Sketch_tablet](/assets/images/screenshots/sketch_phone.avif)
 
 ## About the build
 
@@ -64,7 +64,7 @@ Sketch of a phone or similar size device:
 - The adjustable container is set up to be resposive to the screen size by adjusting to the screen width and height. on bigger screens it is keeping the quiz size to an optimum design and pleasing user experience. The container is transparent, to make sure that the full background image is visible. The image outside of the container is vibrant in colour, but not distracting from the content. All of the pages have the same container styles and sizing.
 - Inside of the quiz game page the container is set up to change colour to green every time the user selects correct answer and to change to red on incorrect answer. The style is cleared every time a new question is loaded or the game is restarted.
 
-![Background image and container](assets/images/screenshots/features/background-and-container.png)
+![Background image and container](assets/images/screenshots/features/background-and-container.avif)
 
 ### Home screen
 
@@ -74,15 +74,15 @@ Sketch of a phone or similar size device:
 - High scores button will take users to the high score list.  The button has a hover effect that will change the button background colour and the text colour will transit from black to white slowly.
 - Rules button when clicked will display all of the rules and the text inside of the button will change to Close Rules, if clicked again it will hide the rules as if they were never there. The rules are completely being implemented by javascript.  The button has a hover effect that will change the button background colour and the text colour will transit from black to white slowly.
 
-![Home screen](assets/images/screenshots/features/home-screen.png)
+![Home screen](assets/images/screenshots/features/home-screen.avif)
 
-![Play game button](assets/images/screenshots/features/play-game-btn.png)
+![Play game button](assets/images/screenshots/features/play-game-btn.avif)
 
-![High scores button](assets/images/screenshots/features/high-scores-btn.png)
+![High scores button](assets/images/screenshots/features/high-scores-btn.avif)
 
-![Rules button](assets/images/screenshots/features/rules-btn.png)
+![Rules button](assets/images/screenshots/features/rules-btn.avif)
 
-![Close rules button](assets/images/screenshots/features/close-rules-btn.png)
+![Close rules button](assets/images/screenshots/features/close-rules-btn.avif)
 
 ### Quiz game
 
@@ -100,24 +100,23 @@ Sketch of a phone or similar size device:
 - **Home button** offers users an option to return to the home page, without having to click return button on their browser. The button has a hover effect that will change the button background colour and the text colour will transit from black to white slowly.
 - **Timer** is used to keep track if the quiz is being played. Starting timer structure was taken from [shecode.ie](https://www.shecodes.io/athena/ 52336-how-to-create-a-countdown-timer-in-javascript#:~:text=let%20count%20%3D%2060%3B%20const%20timer,second%20using%20the%20setInterval%20method.) but it was updated and changed to fit within the site. The timer returns to the starting state every time the question is answered or when the timer runs out. The timer consists of the countdown that is visible to the user and the automatic progress bar that automatically updates and reduces to visually represent the time that is left.
 
-![Quiz game](assets/images/screenshots/features/quiz-game.png)
+![Quiz game](assets/images/screenshots/features/quiz-game.avif)
 
-![Timer feature](assets/images/screenshots/features/timer-feature.png)
+![Timer feature](assets/images/screenshots/features/timer-feature.avif)
 
-![Question count, Score and Progress bar](assets/images/screenshots/features/q-count-score&progress-bar.png)
+![Question count, Score and Progress bar](assets/images/screenshots/features/q-count-score&progress-bar.avif)
 
-![Correct answer](assets/images/screenshots/features/correct-answer.png)
+![Correct answer](assets/images/screenshots/features/correct-answer.avif)
 
-![Incorrect answer selected, revealing correct answer](assets/images/screenshots/features/incorrect-correct-answer.png)
+![Incorrect answer selected, revealing correct answer](assets/images/screenshots/features/incorrect-correct-answer.avif)
 
-![Restart button:hover](assets/images/screenshots/features/restart-btn.png)
+![Restart button:hover](assets/images/screenshots/features/restart-btn.avif)
 
-![Next button:hover](assets/images/screenshots/features/next-btn.png)
+![Next button:hover](assets/images/screenshots/features/next-btn.avif)
 
-![Home button:hover](assets/images/screenshots/features/home-btn.png)
+![Home button:hover](assets/images/screenshots/features/home-btn.avif)
 
-![Save Score button:hover](assets/images/screenshots/features/save-scorebtn.png)
-
+![Save Score button:hover](assets/images/screenshots/features/save-scorebtn.avif)
 
 ### Endscreen
 
@@ -127,7 +126,7 @@ Sketch of a phone or similar size device:
 - If a user beats the lowest high score, they will need to input their username to save their score. The Save button will only be activated once the input field is filled out, after which the user can click on the button or press Enter key to save their score and to be taken to high scores.
 - User also has a choice to Replay the quiz or go to the Home screen by pressing on either of those two buttons.
 
-![Endscreen](assets/images/screenshots/features/endscreen.png)
+![Endscreen](assets/images/screenshots/features/endscreen.avif)
 
 ### High scores
 
@@ -137,14 +136,14 @@ Sketch of a phone or similar size device:
 - The page has two buttons, one to take you to the quiz once you press Play Game. and another that will return you to the Home page.
 - All of the emoji that loads along side of the randomised messages have a hover effect to offer more interaction with the site
 
-![High Scores page](assets/images/screenshots/features/high-scores.png)
+![High Scores page](assets/images/screenshots/features/high-scores.avif)
 
 ### Interactive footer
 
 - The footer consists of [Facebook](https://www.facebook.com), [Instagram](https://www.instagram.com), [X or Twitter](https://www.twitter.com), [Youtube](https://www.youtube.com) and links for [Code Institute Website](https://codeinstitute.net/ie/) and [my own linked in profile](https://www.linkedin.com/in/luka-black-lb96/).
 - Each link has an interactive links that are styled as a button, that respond to the hover by changing colours and adding a glow effect. Once clicked on, each button will take you to their own website in another tab.
 
-![Footer](assets/images/screenshots/features/footer.png)
+![Footer](assets/images/screenshots/features/footer.avif)
 
 ## Features left to implement
 
@@ -242,20 +241,19 @@ Sketch of a phone or similar size device:
 
 #### index.html
 
-![Lighthouse performance index.html](assets/images/screenshots/validator-tests/index.html-lighthouse.png)
+![Lighthouse performance index.html](assets/images/screenshots/validator-tests/index.html-lighthouse.avif)
 
 #### quiz.html
 
-![Lighthouse performance quiz.html](assets/images/screenshots/validator-tests/quiz.html-lighthouse.png)
+![Lighthouse performance quiz.html](assets/images/screenshots/validator-tests/quiz.html-lighthouse.avif)
 
 #### endscreen.html
 
-![Lighthouse performance endscreen.html](assets/images/screenshots/validator-tests/endscreen.html-lighthouse.png)
+![Lighthouse performance endscreen.html](assets/images/screenshots/validator-tests/endscreen.html-lighthouse.avif)
 
 #### highscores.html
 
-![Lighthouse performance highscores.html](assets/images/screenshots/validator-tests/highscores.html-lighthouse.png)
-
+![Lighthouse performance highscores.html](assets/images/screenshots/validator-tests/highscores.html-lighthouse.avif)
 
 ## Deployment
 
@@ -287,6 +285,7 @@ Sketch of a phone or similar size device:
 
 ### Content
 
-- Few lines of code were taken from [StackOverflow]()
+- Few lines of code were taken from [James Q Quick - youtube video and channel](https://www.youtube.com/watch?v=DFhmNLKwwGw); [shecode.ie](https://www.shecodes.io/athena/52336-how-to-create-a-countdown-timer-in-javascript#:~:text=let%20count%20%3D%2060%3B%20const%20timer,second%20using%20the%20setInterval%20method.); [Web Dev Simplified - youtube video and channel](https://www.youtube.com/watch?v=riDzcEQbX6k).
+- I used a lot of Youtube video tutorials and lessons to learn more about javascript and how to use and implement it.
 - I used an open source site for help with few lines of code to improve my site by implementing more responsive buttons in the footer. I used css and changed it slightly to benefit my site and style taken from [Uiverse.io](<https://uiverse.io/mrhyddenn/red-stingray-4>)
 - Starting steps and few lines of code came from previous lessons and Love Maths project, as well as couple of online video tutorials for better understanding of Javascript
