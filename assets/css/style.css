@@ -147,7 +147,8 @@ https://uiverse.io/cssbuttons-io/funny-dog-69 to raise the styles on the site*/
 }
 
 .restart-btn,
-.next-btn {
+.next-btn,
+.home-btn {
     width: 24.8vw;
     max-width: 24.8rem;
 }
@@ -608,7 +609,7 @@ footer p {
 }
 
 /* Media queries for small screens to make sure site is accessible and fully functional on all devices */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
 
     /* Footer */
     footer li>a,
@@ -616,9 +617,33 @@ footer p {
     footer p {
         font-size: 1.5rem;
     }
+
+    /* Home button */
+    .home-btn {
+        width: 50vw;
+        max-width: 40rem;
+    }
 }
 
 @media screen and (max-width: 500px) {
+
+    /* Header elements */
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    /* Buttons */
+    .btn {
+        font-size: 1.5rem;
+    }
 
     /* Rules */
     .rules-text {
@@ -630,5 +655,28 @@ footer p {
     footer p>a,
     footer p {
         font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    /* Buttons */
+
+    .btn {
+        width: 90vw;
+    }
+
+    .restart-btn,
+    .next-btn {
+        max-width: 90vw;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* Footer */
+    footer li>a,
+    footer p>a,
+    footer p {
+        justify-content: center;
+        font-size: 0.5rem;
     }
 }
