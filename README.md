@@ -255,6 +255,20 @@ Sketch of a phone or similar size device:
 
 ![Lighthouse performance highscores.html](assets/images/screenshots/validator-tests/highscores.html-lighthouse.avif)
 
+
+### HTML, CSS
+
+#### HTML
+
+- index.html Error found on line 57, inside of the footer. There was no closing tag for the unordered list. It was corrected and fixed. After checking the rest of the pages, I noticed the same closing tag was missing in all of the pages and I corrected all of them prior to running any other tests.
+- quiz.html had an arror where it found a stray closing div tag that was unnecessary. I deleted the closing tag and error was cleared
+- endscreen.html has no errors
+- highscores.html has no errors. It has one warning that the h2 element is empty, but that is intentional, as it is being filled out by javascript.
+
+#### CSS
+
+- The CSS file had two errors and two warnings all being connected to the translate style that was unnecessary. I corrected the CSS file and removed them.
+
 ## Deployment
 
 - The site was deployed to GitHub pages.

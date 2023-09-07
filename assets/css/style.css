@@ -284,8 +284,11 @@ footer ul {
     list-style-type: none;
 }
 
-/* Code taken from [Uiverse.io](<https: //uiverse.io/mrhyddenn/red-stingray-4>) 
+/* Code taken from [Uiverse.io](<https://uiverse.io/mrhyddenn/red-stingray-4>) 
 And changed to fit with my site. */
+/* Glow effect was taken and adjusted where necessary from 
+https://uiverse.io/cssbuttons-io/funny-dog-69 to raise the styles on the site*/
+
 footer li>a,
 footer p>a {
     background: transparent;
@@ -523,14 +526,12 @@ footer p {
     background-size: 25% 100%;
     animation: transformation .75s linear infinite;
     animation-play-state: paused;
-    translate: -5% 0%;
     transition: translate 0.25s ease-out;
 }
 
 #message-container:hover::before {
     animation-play-state: running;
     transition-duration: 0.75s;
-    translate: 0% 0%;
 }
 
 #message-container:hover {
@@ -591,7 +592,7 @@ footer p {
     border-radius: 50%;
 }
 
-
+/* Media queries for small screens to make sure site is accessible and fully functional on all devices */
 @media screen and (max-width: 600px) {
     /* Footer */
 
