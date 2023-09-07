@@ -10,7 +10,7 @@
 
 - I got the idea and inspiration for the quiz from one of my favourite books Red, White and Royal Blue by Casey McQuiston being adapted into a movie recently. Additionally I love books and movies, so the idea came quite easy to me.
 
-![Am I Responsive](/assets/images/validator-tests/am-i-responsive.avif)
+![Am I Responsive](/assets/images/screenshots/validator-tests/am-i-responsive.avif)
 
 ## Wireframes
 
