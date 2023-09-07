@@ -576,7 +576,6 @@ nextButton.addEventListener('click', nextQuestion);
 
 startGame();
 
-
 function showCorrectAnswers() {
     const currentAnswers = currentQuestion.answers;
 
@@ -590,4 +589,3 @@ function showCorrectAnswers() {
         }
     });
 }
-/
