@@ -38,8 +38,6 @@ h3 {
 }
 
 /* Container */
-
-
 .container {
     width: 100vw;
     height: auto;
@@ -82,7 +80,6 @@ footer.wrong {
 }
 
 /* Buttons */
-
 .btn {
     font-size: 2rem;
     padding: 1rem 0;
@@ -96,17 +93,14 @@ footer.wrong {
     background-color: rgb(255, 246, 231);
 }
 
-.disable-hover {
-    pointer-events: none;
-    cursor: default;
-}
-
 .btn-off:hover {
     cursor: not-allowed;
     box-shadow: none;
     transform: none;
 }
 
+/* Glow effect was taken and adjusted where necessary from 
+https://uiverse.io/cssbuttons-io/funny-dog-69 to raise the styles on the site*/
 .btn-hover:hover {
     --glow-color: rgb(217, 176, 255);
     --glow-spread-color: rgba(191, 123, 255, 0.781);
@@ -163,9 +157,8 @@ footer.wrong {
 }
 
 /* Rules */
-
 .rules-text {
-    font-size: 1.5rem;
+    font-size: 2rem;
     background-color: rgb(255, 246, 231);
     color: #2c281e;
     max-width: 80rem;
@@ -178,10 +171,10 @@ footer.wrong {
 }
 
 .rules-text:hover {
-    color: rgb(255, 246, 231);
+    color: #ffffff;
     transition: all 1.5s ease;
     transition-property: color;
-    background: linear-gradient(32deg, #03a9f4, #f441a5, #ffc73b, #03a9f4);
+    background: linear-gradient(32deg, #03a9f4, #f441a5, #f1a31d, #03a9f4);
     --glow-color: rgb(217, 176, 255);
     --glow-spread-color: rgba(191, 123, 255, 0.781);
     --enhanced-glow-color: rgb(231, 206, 255);
@@ -198,8 +191,7 @@ footer.wrong {
     padding: 1rem;
 }
 
-/* Progress display */
-
+/* Progress bar and timer */
 #progress-display {
     display: flex;
     width: 80vw;
@@ -266,7 +258,6 @@ footer.wrong {
 }
 
 /* Footer and links */
-
 footer {
     width: 100vw;
     background-color: rgba(26, 26, 26, 0.7);
@@ -286,9 +277,6 @@ footer ul {
 
 /* Code taken from [Uiverse.io](<https://uiverse.io/mrhyddenn/red-stingray-4>) 
 And changed to fit with my site. */
-/* Glow effect was taken and adjusted where necessary from 
-https://uiverse.io/cssbuttons-io/funny-dog-69 to raise the styles on the site*/
-
 footer li>a,
 footer p>a {
     background: transparent;
@@ -407,13 +395,11 @@ footer p>a::before {
     box-shadow: inset 0 0 0 10em rgb(235, 31, 31);
 }
 
-
 .links-page {
     display: flex;
     justify-content: space-around;
     padding-bottom: 5rem;
 }
-
 
 footer p {
     font-size: 2rem;
@@ -461,7 +447,6 @@ footer p {
 #my-name:hover::before {
     box-shadow: inset 0 0 0 10em rgb(25, 112, 194);
 }
-
 
 .project-links {
     display: flex;
@@ -551,18 +536,24 @@ footer p {
 
 #endgame-message {
     font-size: 2.5rem;
-    color: rgb(255, 246, 231);
+    color: #2c281e;
     position: relative;
     border-radius: 1rem;
     display: flex;
     border-radius: 1rem;
     padding: 1rem 1rem;
-    background: #2c281e;
+    background: rgb(255, 246, 231);
     height: 100%;
 }
 
-/* High Scores */
+#endgame-message:hover {
+    color: #ffffff;
+    transition: all 1.5s ease;
+    transition-property: color;
+    background: linear-gradient(32deg, #03a9f4, #f441a5, #f1a31d, #03a9f4);
+}
 
+/* High Scores */
 .high-score {
     font-size: 2rem;
     padding: 1rem 0;
@@ -576,6 +567,30 @@ footer p {
     display: grid;
     color: #2c281e;
     background-color: rgb(255, 246, 231);
+}
+
+#highscores-message {
+    width: auto;
+    max-width: 100vw;
+    height: auto;
+    padding: 1rem;
+    border: 0.2rem solid #e8d398;
+    border-radius: 1rem;
+    color: #2c281e;
+    background: rgb(255, 246, 231);
+}
+
+#highscores-message:hover {
+    color: #ffffff;
+    transition: all 1.5s ease;
+    transition-property: color;
+    background: linear-gradient(32deg, #03a9f4, #f441a5, #f1a31d, #03a9f4);
+    --glow-color: rgb(217, 176, 255);
+    --glow-spread-color: rgba(191, 123, 255, 0.781);
+    --enhanced-glow-color: rgb(231, 206, 255);
+    box-shadow: 0 0 1em .25em var(--glow-color),
+        0 0 4em 1em var(--glow-spread-color),
+        inset 0 0 .75em .25em var(--glow-color);
 }
 
 #highscore-emoji {
@@ -594,8 +609,8 @@ footer p {
 
 /* Media queries for small screens to make sure site is accessible and fully functional on all devices */
 @media screen and (max-width: 600px) {
-    /* Footer */
 
+    /* Footer */
     footer li>a,
     footer p>a,
     footer p {
@@ -604,8 +619,13 @@ footer p {
 }
 
 @media screen and (max-width: 500px) {
-    /* Footer */
 
+    /* Rules */
+    .rules-text {
+        font-size: 1.5rem;
+    }
+
+    /* Footer */
     footer li>a,
     footer p>a,
     footer p {

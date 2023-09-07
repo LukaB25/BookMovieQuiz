@@ -1,6 +1,5 @@
 document.addEventListener('load', console.log('Quiz loaded completely.'));
 
-
 // Constants and selectors
 const question = document.getElementById('question');
 const answerButtons = document.querySelectorAll('.answer-btn');
@@ -22,7 +21,7 @@ const correctPoints = 1000;
 const incorrectPoints = [0, 10, 30, 50, 100];
 const maxQuestions = 10;
 
-// Questions
+// Questions and their answers
 const questions = [
     {
         question: "The Hunger Games is a:",
@@ -269,7 +268,7 @@ const questions = [
     },
 ];
 
-
+// Starts the quiz
 startGame = () => {
     questionCount = 0;
     score = 0;
@@ -281,28 +280,37 @@ startGame = () => {
     }
 };
 
+// Loads the next random question from the pre set questions
 nextQuestion = () => {
     acceptingAnswers = true;
 
     startTimer();
 
+    // Stores the total score won to local storage when all 10 questions are answered
     if (availableQuestions.length === 0 || questionCount >= maxQuestions) {
         localStorage.setItem('newestScore', score);
-        document.addEventListener('DOMContentLoaded', console.log('Quiz finished. Save your score.'));
+        console.log('Quiz finished. Save your score.');
+
         // Take user to endscreen to save the score
         return window.location.assign('endscreen.html');
     }
 
+    // Incrementing the question number and adding it to quiz
     questionCount++;
     questionCounter.innerText = `${questionCount}/${maxQuestions}`;
+
     clearAnswers();
     removeAnswerEventListeners();
+
+    // Choosing the random question that will be implemented into the quiz
     randomQuestion = Math.floor(Math.random() * availableQuestions.length);
     currentQuestion = availableQuestions[randomQuestion];
     question.innerText = currentQuestion.question;
+
     nextButton.disabled = true;
     restartButton.disabled = true;
 
+    // Checks if the next and restart buttons are disabled to remove hover styles
     if (nextButton.disabled || restartButton.disabled) {
         removeHoverEffect(document.querySelectorAll('.next-btn'));
         removeHoverEffect(document.querySelectorAll('.restart-btn'));
@@ -313,7 +321,6 @@ nextQuestion = () => {
     document.querySelector('footer').classList.remove('correct', 'wrong');
 
     // Random answers
-
     const arrayAnswers = currentQuestion.answers;
 
     for (let i = arrayAnswers.length - 1; i > 0; i--) {
@@ -333,11 +340,9 @@ nextQuestion = () => {
         button.addEventListener('click', selectAnswer);
         answerContainer.appendChild(button);
 
-
         const buttons = document.querySelectorAll('.answer-btn');
 
-
-        //  Event listener cheking when selection was made on each button 
+        //  Event listener cheking when answer was selected on each button 
         buttons.forEach(button => {
             button.addEventListener('click', (e) => {
                 selectAnswer(e);
@@ -347,12 +352,11 @@ nextQuestion = () => {
             });
         });
     });
-
+    // Removes used question from an array of questions
     availableQuestions.splice(randomQuestion, 1);
 };
 
 // Timer
-
 const timerCount = document.getElementById('timer-count');
 const timerProgressBar = document.getElementById('timer-progress-bar');
 timerCount.textContent = '';
@@ -372,15 +376,16 @@ function startTimer() {
             let timerProgressWidth = (count / 30) * 100;
 
             if (count > 0) {
+                // Keeps track of the timer and reduces in size with each second that passes
                 timerProgressBar.style.width = `${timerProgressWidth}%`;
             } else if (count === 0) {
                 clearInterval(timer);
                 console.log("Time's up!");
+                // Keeps track of the timer and reduces completely when timer reaches 0
                 timerProgressBar.style.width = `${timerProgressWidth}%`;
 
-                // When timer reaches 0, the game considers that the user selected wrong answer.
+                // When timer reaches 0, the game applies everything as if the user selected wrong answer.
                 // Various functions and settings are applied
-
                 document.querySelector('.container').classList.add('wrong');
                 document.querySelector('footer').classList.add('wrong');
 
@@ -390,10 +395,10 @@ function startTimer() {
 
                 removeAnswerEventListeners();
 
+                // Increments the progress bar as if the user selected an answer
                 progressBar.style.width = `${(questionCount / maxQuestions) * 100}%`;
 
-
-
+                // Enables next and restart buttons, adds their hover effects and removes hover effect from answer button
                 nextButton.disabled = false;
                 restartButton.disabled = false;
                 removeHoverEffect(document.querySelectorAll('.answer-btn'));
@@ -401,10 +406,13 @@ function startTimer() {
                 returnHoverEffect(document.querySelectorAll('.next-btn'));
 
                 console.log('Sadly time ran out.');
+
+                // Reveals correct answer, deducts random points and stops timer
                 showCorrectAnswers();
                 deductPoints();
                 stopTimer();
 
+                // If the last question was answered or timer ran out, it changes the next button to save score button
                 if (availableQuestions.length === 0 || questionCount >= maxQuestions) {
                     // Replace Next button text with Save Highscore text
                     nextButton.innerHTML = '<i class="far fa-save"></i> Save Score';
@@ -412,19 +420,19 @@ function startTimer() {
                 }
             }
         }, 1000);
+        restartButton.addEventListener('click', restartGame);
+        nextButton.addEventListener('click', nextQuestion);
     }
 }
 
 // Restarts the timer to starting point
-
 function restartTimer() {
     clearInterval(timer);
     count = totalCount;
     timerCount.innerText = `${count}/30s`;
 }
 
-// Stops and sets up everyting for new/next question
-
+// Stops and sets up timer for next question
 function stopTimer() {
     clearInterval(timer);
     count = totalCount;
@@ -448,6 +456,7 @@ function returnHoverEffect(element) {
     });
 }
 
+// Adds status class
 function addStatusClass(element, correct) {
     removeStatusClass(element);
     if (correct) {
@@ -457,13 +466,13 @@ function addStatusClass(element, correct) {
     }
 }
 
+// Removes status class
 function removeStatusClass(element) {
     element.classList.remove('correct');
     element.classList.remove('wrong');
 }
 
-// Makes a random selection on how many points the user is loosing
-
+// Makes a random selection on how many points the user is loosing from preset array
 function deductPoints() {
     const randomDeductor = Math.floor(Math.random() * incorrectPoints.length);
     const selectedDeductionPoints = incorrectPoints[randomDeductor];
@@ -474,6 +483,7 @@ function deductPoints() {
 }
 
 // Parts of code were used from: https://www.youtube.com/watch?v=riDzcEQbX6k
+// Targets clicked answer as a selected answer and checks if it is correct or incorrect
 function selectAnswer(e) {
     if (!acceptingAnswers) return;
 
@@ -482,6 +492,7 @@ function selectAnswer(e) {
 
     document.querySelector('.container').classList.remove('correct', 'wrong');
 
+    // Changes the container background colour to green on correct and red on incorrect answer
     if (correct === 'true') {
         document.querySelector('.container').classList.add('correct');
         document.querySelector('footer').classList.add('correct');
@@ -490,13 +501,11 @@ function selectAnswer(e) {
         document.querySelector('footer').classList.add('wrong');
     }
 
-
-
     // Update the progress bar with every answer
-
     progressBar.style.width = `${(questionCount / maxQuestions) * 100}%`;
 
-
+    // If selected answer is correct it adds points
+    // If selected answer is incorrect it deducts points
     if (correct) {
         score += correctPoints;
         scoreCounter.innerText = score;
@@ -509,30 +518,35 @@ function selectAnswer(e) {
 
     addStatusClass(selectedButton, correct);
 
+    // Checks if the last question was answered or timer ran out, it changes the next button to save score button
     if (availableQuestions.length === 0 || questionCount >= maxQuestions) {
-        // Replace Next button text with Save Highscore text
-        nextButton.innerHTML = '<i class="far fa-save"></i> Save Highscore';
+        // Replace Next button text with Save Score text
+        nextButton.innerHTML = '<i class="far fa-save"></i> Save Score';
     }
 
     acceptingAnswers = false;
+
+    // Enables next and restart button and returns their hover effects
     nextButton.disabled = false;
     restartButton.disabled = false;
-
     if (!restartButton.disabled) {
         returnHoverEffect(document.querySelectorAll('.restart-btn'));
     }
-
     if (!nextButton.disabled) {
         returnHoverEffect(document.querySelectorAll('.next-btn'));
     }
+    restartButton.addEventListener('click', restartGame);
+    nextButton.addEventListener('click', nextQuestion);
 }
 
+// Removes event listeners from answer buttons
 function removeAnswerEventListeners() {
     answerButtons.forEach(answerButton => {
         answerButton.removeEventListener('click', selectAnswer);
     });
 }
 
+// Removes answers to previous question to make room for new answers
 function clearAnswers() {
     while (answerContainer.firstChild) {
         answerContainer.removeChild(answerContainer.firstChild);
@@ -540,42 +554,43 @@ function clearAnswers() {
 }
 
 // Clear existing answers and restart the game with all of the values set back to 0
-// When Restart button is clicked
+// when Restart button is clicked
 restartGame = () => {
     clearAnswers();
     removeAnswerEventListeners();
-    document.querySelector('.container').classList.remove('correct', 'wrong');
 
+    // Changes the Save Score button back to Next button if the game is restarted 
+    // after final question is answered
     if (!availableQuestions.length === 0 || questionCount >= maxQuestions) {
-        // ReplaceSave Highscore text with Next button text
+        // Replace Save Score text with Next button text
         nextButton.innerHTML = '<i class="fas fa-arrow-circle-right"></i> Next';
     }
 
     console.log('Restarting quiz...');
 
+    // Resets all progress made to starting settings
     questionCount = 0;
     scoreCounter.innerText = 0;
     score = 0;
     progressBar.style.width = `0%`;
 
+    // Reloads all of the questions, to return previously removed used questions
     availableQuestions = [...questions];
 
+    // Loads up the new question
     nextQuestion();
 
+    // Disables restart button and removes hover effect to prevent repeat clicking
     restartButton.disabled = true;
-
     if (restartButton.disabled) {
         removeHoverEffect(document.querySelectorAll('.restart-btn'));
     }
 };
 
-
-restartButton.addEventListener('click', restartGame);
-
-nextButton.addEventListener('click', nextQuestion);
-
+// Starts the game on page load
 startGame();
 
+// Reveals correct answers when user chooses incorrect answer or the timer runs out.
 function showCorrectAnswers() {
     const currentAnswers = currentQuestion.answers;
 

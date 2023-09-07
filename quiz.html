@@ -1,93 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Quiz game to test your knowledge about books and movies." />
+    <meta
+      name="description"
+      content="Quiz game to test your knowledge about books and movies."
+    />
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,400;1,500;1,600&family=Playfair:ital,opsz,wght@1,5..1200,300;1,5..1200,400;1,5..1200,500;1,5..1200,700&family=Roboto:wght@300;400&display=swap"
-        rel="stylesheet" />
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,400;1,500;1,600&family=Playfair:ital,opsz,wght@1,5..1200,300;1,5..1200,400;1,5..1200,500;1,5..1200,700&family=Roboto:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
 
     <title>Book/Movie Quiz - Game</title>
-    <link type="image/png" sizes="16x16" rel="icon" href="assets/images/icons8-clapper-board-emoji-16.png">
-</head>
+    <link
+      type="image/png"
+      sizes="16x16"
+      rel="icon"
+      href="assets/images/icons8-clapper-board-emoji-16.png"
+    />
+  </head>
 
-<body>
+  <body>
     <main class="container">
-        <div id="game" class="justify-center flex-column">
-            <h1>Book/Movie Quiz</h1>
-            <div id="timer-container">
-                <p id="timer-count">30/30</p>
-            </div>
-            <div id="timer-bar-container">
-                <div id="timer-progress-bar"></div>
-            </div>
-            <div id="progress-display">
-                <div class="question-counter">
-                    <p class="count-prefix">
-                        Question: <span id="question-counter" class="count-text"></span>
-                    </p>
-                </div>
-                <div id="score" class="scoreboard">
-                    <p class="score">Score: <span id="score-counter" class="score">0</span></p>
-                </div>
-            </div>
-            <div id="progress-container">
-                <div id="progress-bar"></div>
-            </div>
-            <h2 id="question" class="text-center">Can you answer correctly?</h2>
-            <div id="answer-btns" class="justify-center flex-column">
-            </div>
-            <div class="controls">
-                <button id="restart-btn" class="restart-btn btn btn-hover"><i class="fas fa-redo"></i> Restart</button>
-                <button id="next-btn" class="next-btn btn btn-hover"><i class="fas fa-arrow-circle-right"></i>
-                    Next</button>
-            </div>
-            <a class="btn btn-hover" href="index.html" aria-label="Go back to home screen(opens in same tab)"><i
-                    class="fas fa-home"></i>
-                Home</a>
+      <div id="game" class="justify-center flex-column">
+        <h1>Book/Movie Quiz</h1>
+        <div id="timer-container">
+          <p id="timer-count">30/30</p>
         </div>
+        <div id="timer-bar-container">
+          <div id="timer-progress-bar"></div>
+        </div>
+        <div id="progress-display">
+          <div class="question-counter">
+            <p class="count-prefix">
+              Question: <span id="question-counter" class="count-text"></span>
+            </p>
+          </div>
+          <div id="score" class="scoreboard">
+            <p class="score">
+              Score: <span id="score-counter" class="score">0</span>
+            </p>
+          </div>
+        </div>
+        <div id="progress-container">
+          <div id="progress-bar"></div>
+        </div>
+        <h2 id="question" class="text-center">Can you answer correctly?</h2>
+        <div id="answer-btns" class="justify-center flex-column"></div>
+        <div class="controls">
+          <button id="restart-btn" class="restart-btn btn btn-hover">
+            <i class="fas fa-redo"></i> Restart
+          </button>
+          <button id="next-btn" class="next-btn btn btn-hover">
+            <i class="fas fa-arrow-circle-right"></i> Next
+          </button>
+        </div>
+        <a
+          class="btn btn-hover"
+          href="index.html"
+          aria-label="Go back to home screen(opens in same tab)"
+          ><i class="fas fa-home"></i> Home</a
+        >
+      </div>
     </main>
     <footer>
-        <div class="links-page">
-            <ul>
-                <li>
-                    <a id="facebook" href="https://www.facebook.com" target="_blank" rel="noopener"
-                        aria-label="Visit our Facebook page(opens in a new tab)"><i
-                            class="fab fa-facebook-f"></i>Facebook</a>
-                </li>
-                <li>
-                    <a id="instagram" href="https://www.instagram.com" target="_blank" rel="noopener"
-                        aria-label="Visit our Instagram page(opens in a new tab)"><i
-                            class="fab fa-instagram"></i>Instagram</a>
-                </li>
-                <li>
-                    <a id="twitter" href="https://www.twitter.com" target="_blank" rel="noopener"
-                        aria-label="Visit our Twitter page(opens in a new tab)"><i
-                            class="fab fa-twitter"></i>Twitter</a>
-                </li>
-                <li>
-                    <a id="youtube" href="https://www.youtube.com" target="_blank" rel="noopener"
-                        aria-label="Visit our Youtube page(opens in a new tab)"><i
-                            class="fab fa-youtube"></i>Youtube</a>
-                </li>
-            </ul>
-        </div>
-        <div class="project-links">
-            <p>Created as a project for <a id="codeinstitute" href="https://codeinstitute.net/ie/" target="_blank"
-                    rel="noopener" aria-label="Check out Code Institute page(opens in a new tab)"> Code Institute </a>
-                by <a id="my-name" href="https://www.linkedin.com/in/luka-black-lb96/" target="_blank" rel="noopener"
-                    aria-label="You can find me on my LinkedIn page(opens in a new tab)"> Luka Black</a></p>
-
-        </div>
+      <div class="links-page">
+        <ul>
+          <li>
+            <a
+              id="facebook"
+              href="https://www.facebook.com"
+              target="_blank"
+              rel="noopener"
+              aria-label="Visit our Facebook page(opens in a new tab)"
+              ><i class="fab fa-facebook-f"></i>Facebook</a
+            >
+          </li>
+          <li>
+            <a
+              id="instagram"
+              href="https://www.instagram.com"
+              target="_blank"
+              rel="noopener"
+              aria-label="Visit our Instagram page(opens in a new tab)"
+              ><i class="fab fa-instagram"></i>Instagram</a
+            >
+          </li>
+          <li>
+            <a
+              id="twitter"
+              href="https://www.twitter.com"
+              target="_blank"
+              rel="noopener"
+              aria-label="Visit our Twitter page(opens in a new tab)"
+              ><i class="fab fa-twitter"></i>Twitter</a
+            >
+          </li>
+          <li>
+            <a
+              id="youtube"
+              href="https://www.youtube.com"
+              target="_blank"
+              rel="noopener"
+              aria-label="Visit our Youtube page(opens in a new tab)"
+              ><i class="fab fa-youtube"></i>Youtube</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="project-links">
+        <p>
+          Created as a project for
+          <a
+            id="codeinstitute"
+            href="https://codeinstitute.net/ie/"
+            target="_blank"
+            rel="noopener"
+            aria-label="Check out Code Institute page(opens in a new tab)"
+          >
+            Code Institute
+          </a>
+          by
+          <a
+            id="my-name"
+            href="https://www.linkedin.com/in/luka-black-lb96/"
+            target="_blank"
+            rel="noopener"
+            aria-label="You can find me on my LinkedIn page(opens in a new tab)"
+          >
+            Luka Black</a
+          >
+        </p>
+      </div>
     </footer>
-    <script src="https://kit.fontawesome.com/eb70536764.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/eb70536764.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="assets/javascript/script.js"></script>
-</body>
-
+  </body>
 </html>

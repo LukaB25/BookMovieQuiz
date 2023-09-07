@@ -193,7 +193,6 @@ Sketch of a phone or similar size device:
 |      Message section:hover      |       Transitions colours the "border" to draw attention to the message      |  Pass   |
 |        Final score   |       Displays the correct total score user managed to achieve        |  Pass   |
 |        Username input    |       Responds to interaction from user. Required to save score        |  Pass   |
-
 |        Username input disabled    |       Disabled when score is too low, displays message to let user know it doesn't work and why        |  Pass   |
 |      Username input:hover     |      Change background colour and size if score is high enough to be saved |  Pass   |
 |      Save button     |       Doesn't work without username input, takes user to the high scores screen after criteria met     |  Pass   |
@@ -228,10 +227,11 @@ Sketch of a phone or similar size device:
 - I had issues trying to understand the Local Storage and how to construct it, I watched multiple tutorials and in the end I decided to following a tutorial from [James Q Quick](https://www.youtube.com/watch?v=DFhmNLKwwGw) and adding my own minor changes to it.
 - Given that we are using font awesomes older version the logo for [X or Twitter](https://www.twitter.com) can not be changed to the new logo, and for that reason it has remained the same.
 - For the longest time I have been trying to implement the code that will display the correct answer if an incorrect answer was selected by the user. I created, deleted and recreated the same part of the code many times, but was unable to get it to work as I was accessing the variable from one function, and needed to use it within a different function. After days of trying to construct that code, I decided to test out each section of my code to see which parts will be able to read the file and extract variables from within the function, by running multiple console.logs. I managed to get a response from the console log, at the bottom of the code, after every function was already called and was running. I constructed my showCorrectAnswer code and it worked. I tryed moving it in other spots and it didn't work, so I just decided to leave it on the bottom of the file, and have it working from there.
+- After my final meeting with my mentor, he instructed me that it would be good for me to remove excess blank rows and to add more comments explaining what each function and or code does. I went through and I fixed blank rows and added comments where necessary. While I was doing that I fixed couple of typos and unnecessary parts of code I found along the way, I played a little bit more with styles and finalised the look and feel of the site.
 
 ### Unfixed bugs
 
-- For the moment, the only unfixed bugs I am having is the quiz does not display the correct answer if user chooses the incorrect one. I keep troubleshooting it, but I still haven't found the answer
+- There are no unfixed bugs that I am aware off
 
 ## Validator testing
 
@@ -254,7 +254,6 @@ Sketch of a phone or similar size device:
 #### highscores.html
 
 ![Lighthouse performance highscores.html](assets/images/screenshots/validator-tests/highscores.html-lighthouse.avif)
-
 
 ### HTML, CSS
 
