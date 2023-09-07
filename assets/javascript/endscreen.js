@@ -78,7 +78,7 @@ saveHighScore = (e) => {
 
     console.log(score);
 
-    return window.location.assign('/highscores.html');
+    return window.location.assign('highscores.html');
 };
 
 // Remove hover when answer is selected

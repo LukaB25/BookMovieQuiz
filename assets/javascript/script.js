@@ -290,7 +290,7 @@ nextQuestion = () => {
         localStorage.setItem('newestScore', score);
         document.addEventListener('DOMContentLoaded', console.log('Quiz finished. Save your score.'));
         // Take user to endscreen to save the score
-        return window.location.assign('/endscreen.html');
+        return window.location.assign('endscreen.html');
     }
 
     questionCount++;
@@ -590,3 +590,4 @@ function showCorrectAnswers() {
         }
     });
 }
+/
