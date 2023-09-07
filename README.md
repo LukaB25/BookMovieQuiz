@@ -1,4 +1,4 @@
-# [Book/Movie Quiz](add link later)
+# [Book/Movie Quiz](https://lukab25.github.io/BookMovieQuiz/)
 
 ## Introduction
 
@@ -10,7 +10,7 @@
 
 - I got the idea and inspiration for the quiz from one of my favourite books Red, White and Royal Blue by Casey McQuiston being adapted into a movie recently. Additionally I love books and movies, so the idea came quite easy to me.
 
-![Am I Responsive](add link later)
+![Am I Responsive](/assets/images/validator-tests/am-i-responsive.avif)
 
 ## Wireframes
 
@@ -267,7 +267,7 @@ Sketch of a phone or similar size device:
 4. Click on none under the Branch and select main option.
 5. Click on the save button.
 6. After couple of minutes reload the page and you will have a live site at the top of the site.
-7. Click on the link and it will take you to a live site. [My live site](link to be added)
+7. Click on the link and it will take you to a live site. [Book/Movie Quiz](https://lukab25.github.io/BookMovieQuiz/)
 
 - Local deployment steps:
 
