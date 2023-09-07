@@ -1,13 +1,12 @@
 # [Book/Movie Quiz](add link later)
 
-
 ## Introduction
 
 - Book/Movie Quiz is a fun game to test your knowledge on various books and movies. It contains various questions that  test the general knowledge of movies, books and also on book to movie adaptations.
 
 - Book/Movie Quiz is a targeted towards users of all ages as it contains both classics and new movies and books.
 
-- Book/Movie Quiz will offer it's users interactive game that will respond to their answers and will offer a fun way to learn more about the all time favorite movies and books. 
+- Book/Movie Quiz will offer it's users interactive game that will respond to their answers and will offer a fun way to learn more about the all time favorite movies and books.
 
 - I got the idea and inspiration for the quiz from one of my favourite books Red, White and Royal Blue by Casey McQuiston being adapted into a movie recently. Additionally I love books and movies, so the idea came quite easy to me.
 
@@ -26,7 +25,7 @@ Sketch on tablet or similar size device
 Sketch of a phone or similar size device:
 ![Sketch_tablet](/assets/images/screenshots/sketch_phone.png)
 
-## About the build:
+## About the build
 
 - In the beginning I created three pages that my project website will conisist of, index.html(starter page), quiz.html(quiz game page) and highscores.html, which I later on changed by adding fourth page endscreen.html("final" screen that will be shown after you finish the quiz), to improve my site and for it to be more user efficient. At the same time I created all of the necessary folders and files. I started with a style.css file and a single script.js file, which I slowly separated into three different files, as I kept having issues with the console log reading the functions that were not being used on each site, so to avoid clogging up the console log, I decided to separate the js files.
 
@@ -53,7 +52,7 @@ Sketch of a phone or similar size device:
 
 ### highscores.html and highscores.js
 
-- I created a placeholder code that loads on the initial load of the site that will imput placeholder high scores to the Local Storage so the highscores.html is not empty until the game has been played. As placeholder high scores I decided to make a tribute to my nieces and nephews and have their names as current winners with a high score record. 
+- I created a placeholder code that loads on the initial load of the site that will imput placeholder high scores to the Local Storage so the highscores.html is not empty until the game has been played. As placeholder high scores I decided to make a tribute to my nieces and nephews and have their names as current winners with a high score record.
 - The page will have the same layout and style as rest of the site.
 - From highscores.html you can either go to the home screen or to play the game.
 
@@ -65,41 +64,98 @@ Sketch of a phone or similar size device:
 - The adjustable container is set up to be resposive to the screen size by adjusting to the screen width and height. on bigger screens it is keeping the quiz size to an optimum design and pleasing user experience. The container is transparent, to make sure that the full background image is visible. The image outside of the container is vibrant in colour, but not distracting from the content. All of the pages have the same container styles and sizing.
 - Inside of the quiz game page the container is set up to change colour to green every time the user selects correct answer and to change to red on incorrect answer. The style is cleared every time a new question is loaded or the game is restarted.
 
+![Background image and container](assets/images/screenshots/features/background-and-container.png)
+
 ### Home screen
 
 - Home screen has a simple yet effective design. It contains game name or "Logo", for the logo I purpusefully decided for it to be static and users can't interact with it. It is followed by three anchor links, that are styled as buttons, all three "buttons" are fully responsive and users can interact with them. On the bottom of the screen we have a footer.
 - As soon as the home page loads there is a function that will insert placeholder high scores, to insure that the score list is not empty when opened
--  Play game button will take users to the quiz, load the first question. The button has a hover effect that will change the button background colour and the text colour will transit from black to white slowly.
+- Play game button will take users to the quiz, load the first question. The button has a hover effect that will change the button background colour and the text colour will transit from black to white slowly.
 - High scores button will take users to the high score list.  The button has a hover effect that will change the button background colour and the text colour will transit from black to white slowly.
-- Rules button when clicked will display all of the rules, if clicked again it will hide the rules as if they were never there. The rules are completely being implemented by javascript.  The button has a hover effect that will change the button background colour and the text colour will transit from black to white slowly.
+- Rules button when clicked will display all of the rules and the text inside of the button will change to Close Rules, if clicked again it will hide the rules as if they were never there. The rules are completely being implemented by javascript.  The button has a hover effect that will change the button background colour and the text colour will transit from black to white slowly.
+
+![Home screen](assets/images/screenshots/features/home-screen.png)
+
+![Play game button](assets/images/screenshots/features/play-game-btn.png)
+
+![High scores button](assets/images/screenshots/features/high-scores-btn.png)
+
+![Rules button](assets/images/screenshots/features/rules-btn.png)
+
+![Close rules button](assets/images/screenshots/features/close-rules-btn.png)
 
 ### Quiz game
 
-- The quiz will load completely and display a question randomly from stored array, it will also display all of the answers to the question in a randomised position. When the page is first loaded, you can see the question counter, score, progress bar, followed by question and answers, restart, next and home buttons. 
+- The quiz will load completely and display a question randomly from stored array, it will also display all of the answers to the question in a randomised position. When the page is first loaded, you can see the question counter, score, progress bar, followed by question and answers, restart, next and home buttons.
 - **Question counter** is completely controlled by javascript and will update with each question that is being answered.
 - **Score** will automatically increment any points users win or lose. For each correct answer user answers they will gain 1000 points, but for each wrong answer I have set up an array of point they could lose, the game randomly chooses if user will lose 0, 10, 30, 50 or 100 points on incorrect answer.
 - **Progress bar** indicates how far along is the user. After each selected answer, no matter if it is correct or wrong, the progress bar will move for 10%. The progress bar is set up to have a smooth transition, as it filles up the colors will change and expand.
 - **Questions**. There is a total of 27 questions (Small tribute to me turning 27 years old), out of which the game will choose random question and implement it into the game. After each question is used, it will be removed from the selection and it won't repeat.
 - **Answers**. For each question, there are 4 answers. The order of the answers will change with each time question is loaded. Each answer button has a hover effect that will change the button background colour and the text colour which will transit from black to white slowly. After a user selects their answer, the hover effect is removed from other answers, the selected answer will change colour to either green(showing the answer was correct) or red(showing the answer was wrong), the buttons can not be clicked again.
+- **Incorrect answers**. Each time a user selects an incorrect answer or the timer runs out, the correct answer will be revealed. The background of the container will change to red colour to indicate wrong selection was made and the score will be deducted for random amount of points.
+- **Correct answers**.The correct answer will light up as green. The background of the container will change to green colour to indicate correct selection was made and the score will be incresed for 1000 points.
 - **Restart button** offers users to restart the game from the beggining. The button is disabled on first question, to prevent switching questions, user can see that the button is disabled, by lack of hover effect on the button. After the first question is answered the button is enabled and when clicked, the game will start from the beginning, without reloading the page. The question count, score, the progress bar and answer selection will all return to starting point, ie the changes will be reverted and cleared. The button has a hover effect that will change the button background colour and the text colour will transit from black to white slowly.
 - **Next button** lets users switch to next question. The button is disabled until the user makes a selection, , user can see that the button is disabled, by lack of hover effect on the button. After user selects the answer the button is enabled, has hover effect and when clicked it will load a new questions and answers. After the final question has been answered the Next button will change into Save score button The button has a hover effect that will change the button background colour and the text colour will transit from black to white slowly.
 - **Save score** button showes up in place of a next button once the final question is answered. Once pressed the user will be taken to the endscreen. In case the user clicks on Restart button, the Save score button will return to Next button state.
 - **Home button** offers users an option to return to the home page, without having to click return button on their browser. The button has a hover effect that will change the button background colour and the text colour will transit from black to white slowly.
-- **Timer** is used to keep track if the quiz is being played. Timer structure was taken from [shecode.ie](https://www.shecodes.io/athena/52336-how-to-create-a-countdown-timer-in-javascript#:~:text=let%20count%20%3D%2060%3B%20const%20timer,second%20using%20the%20setInterval%20method.)
+- **Timer** is used to keep track if the quiz is being played. Starting timer structure was taken from [shecode.ie](https://www.shecodes.io/athena/ 52336-how-to-create-a-countdown-timer-in-javascript#:~:text=let%20count%20%3D%2060%3B%20const%20timer,second%20using%20the%20setInterval%20method.) but it was updated and changed to fit within the site. The timer returns to the starting state every time the question is answered or when the timer runs out. The timer consists of the countdown that is visible to the user and the automatic progress bar that automatically updates and reduces to visually represent the time that is left.
+
+![Quiz game](assets/images/screenshots/features/quiz-game.png)
+
+![Timer feature](assets/images/screenshots/features/timer-feature.png)
+
+![Question count, Score and Progress bar](assets/images/screenshots/features/q-count-score&progress-bar.png)
+
+![Correct answer](assets/images/screenshots/features/correct-answer.png)
+
+![Incorrect answer selected, revealing correct answer](assets/images/screenshots/features/incorrect-correct-answer.png)
+
+![Restart button:hover](assets/images/screenshots/features/restart-btn.png)
+
+![Next button:hover](assets/images/screenshots/features/next-btn.png)
+
+![Home button:hover](assets/images/screenshots/features/home-btn.png)
+
+![Save Score button:hover](assets/images/screenshots/features/save-scorebtn.png)
+
 
 ### Endscreen
 
-- The only way to open the Endscreen is if you play through the whole quiz and click Save Score button 
+- The only way to reach the Endscreen is through playing and finishing the quiz and pressing on Save Score button that replaces the Next button, after last question has been answered.
+- The Endscreen will display one of three different messages that depend on the score user managed to receive.
+- In case user didn't beat at least the lowest high score, the Username input field will display a message "score too low" and it will disable any input to the field. Apart from that the Save button will be completely disabled.
+- If a user beats the lowest high score, they will need to input their username to save their score. The Save button will only be activated once the input field is filled out, after which the user can click on the button or press Enter key to save their score and to be taken to high scores.
+- User also has a choice to Replay the quiz or go to the Home screen by pressing on either of those two buttons.
+
+![Endscreen](assets/images/screenshots/features/endscreen.png)
 
 ### High scores
 
+- When the site is first loaded the site will import the placeholder high score values into the Local Storage, as to make sure that the high scores list is not empty on open.
+- The high scores are set up to hold only the total of 5 top scores at the time. On open, prior to playing the quiz and beating any of the scores, five placeholder scores are loaded. I made a small tribute to 5 nieces and nephews of mine, by using their names as score holders.
+- The high scores has 13 random messages that will change on each load of the scores page. I created various messages to help motivate the users to play the game if they haven't already.
+- The page has two buttons, one to take you to the quiz once you press Play Game. and another that will return you to the Home page.
+- All of the emoji that loads along side of the randomised messages have a hover effect to offer more interaction with the site
+
+![High Scores page](assets/images/screenshots/features/high-scores.png)
+
 ### Interactive footer
+
+- The footer consists of [Facebook](https://www.facebook.com), [Instagram](https://www.instagram.com), [X or Twitter](https://www.twitter.com), [Youtube](https://www.youtube.com) and links for [Code Institute Website](https://codeinstitute.net/ie/) and [my own linked in profile](https://www.linkedin.com/in/luka-black-lb96/).
+- Each link has an interactive links that are styled as a button, that respond to the hover by changing colours and adding a glow effect. Once clicked on, each button will take you to their own website in another tab.
+
+![Footer](assets/images/screenshots/features/footer.png)
 
 ## Features left to implement
 
-- Possible Timer - user will have 20 seconds to respond, if there is no response in the given time, the answer will automatically be incorrect and user will lose points.
-- Adding randomised messages on the high score page, to motivate users to play the game.
-- Disabling of the username input if the score is not high enough to be added to the scoreboard.
+- None, I managed to implement all of the features I thought of at the time
+
+## Possible future features
+
+- Adding more questions and/or replacing the existing questions with time.
+- Fireworks when maximum possible score is reached.
+- Offering option for users to add their own questions and answers through a specialised form.
+- Creating multiple branches for different quiz options, implementing diferent categories of questions, not just book and movie related.
 
 ## Testing
 
@@ -110,35 +166,43 @@ Sketch of a phone or similar size device:
 |          Transparent container           |                          Adjusts with screen size             |  Pass   |
 |        Play game button        | Opens and starts the quiz in same tab |  Pass   |
 |   High scores button     |                          Opens and displays high scores                           |  Pass   |
-|           Rules button     |                          Display and hides rules container on click                      |  Pass   |
+|           Rules button     |    Displays rules container on click, changes to Close Rules button        |  Pass   |
+|      Close Rules button     |    Hides rules container on click, changes to Rules button     |  Pass   |
 |      Home screen buttons:hover     |      Change background colour and change text colour with transition effect |  Pass   |
 |       Quiz game play      |                      Loads page with no issues                       |  Pass   |
 |       Question count      |                      Displays and updates correct question count                       |  Pass   |
 |       Score      |                      Displays and updates correct without issues                       |  Pass   |
 |       Progress bar      |                      Displays and updates progress on answered question              |  Pass   |
+|   Timer count     |     Timer is loaded and increments correctly with each second                   |  Pass   |
+|   Timer bar     |     timer bar reduces correctly in regards to the remaining time on the count                   |  Pass   |
 |       Question      |    Loads a random question each time/removes used questions not to display again        |  Pass   |
 |      Answer buttons     |         Loads  preset answers in a random order           |  Pass   |
 |      Answer buttons:hover     |      Change background colour and change text colour with transition effect |  Pass   |
 |      Answer buttons click     |   React to click and select as answer/Change colour and reveal if answer is true/false |  Pass   |
+|   Correct Answer Selected     |     If a correct answer is selected the button changes colour to green and correct points are added to the score                   |  Pass   |
+|   Incorrect Answer Selected     |     If a incorrect answer is selected the button changes colour to red, random points are deducted from preset array and the correct answer is displayed                  |  Pass   |
 | Answer buttons post click:hover  |      Hover effect is disabled after an answer is selected |  Pass   |
-|        Restart button        | Disabled on first question, after first question it restarts the quiz, restores original functions(questions, question count, score, progress bar) without reloading the page |  Pass   |
+|        Restart button        | Disabled before the answer is selected, after selecting answer, when clicked it restores original functions(questions, question count, score, progress bar and timer) without reloading the page |  Pass   |
 |   Next button     |     Next button is disabled until the answer is selected                   |  Pass   |
-|   Next button click     |     After selecting an answer it loads a new question and answers, updates question count, score, progress bar and removes used question from list                          |  Pass   |
+|   Next button click     |     After selecting an answer it loads a new question and answers, updates question count, score, progress bar, restores timer to initial settings and removes used question from list                          |  Pass   |
 |    Save score button    |           Save score button replaces the existing next button after the 10th question is answered           |  Pass   |
 |    Save score button click   |           Takes user to endscreen     |  Pass   |
 |           Home button     |                          Takes user to home screen                      |  Pass   |
-|      Quiz control buttons:hover     |      Change background colour and change text colour with transition effect |  Pass   |
+|      Quiz control buttons:hover     |      Change background colour and change text colour with transition effect, unless disabled |  Pass   |
 |      Endscreen      |        Loads page with no issues       |  Pass   |
 |      Message section     |        Displays one of three messages depending on the score total       |  Pass   |
 |      Message section:hover      |       Transitions colours the "border" to draw attention to the message      |  Pass   |
 |        Final score   |       Displays the correct total score user managed to achieve        |  Pass   |
 |        Username input    |       Responds to interaction from user. Required to save score        |  Pass   |
-|      Username input:hover     |      Change background colour |  Pass   |
-|      Save button     |       Doesn't work without username input, takes user to the home screen after criteria met     |  Pass   |
+
+|        Username input disabled    |       Disabled when score is too low, displays message to let user know it doesn't work and why        |  Pass   |
+|      Username input:hover     |      Change background colour and size if score is high enough to be saved |  Pass   |
+|      Save button     |       Doesn't work without username input, takes user to the high scores screen after criteria met     |  Pass   |
 |       Replay     |      Takes user to the quiz, to play the quiz again         |  Pass   |
 |           Home button     |                          Takes user to home screen                      |  Pass   |
 |      Endscreen buttons:hover     |      Change background colour and change text colour with transition effect |  Pass   |
 |       High scores      |                      Loads page with no issues                       |  Pass   |
+|       High scores message      |      Changes and displays different message when site reloads        |  Pass   |
 |       Scores    |       Displayed in right order (highest-lowest)        |  Pass   |
 |        Scores update    |        Scores are being updated when Local Storage is changed       |  Pass   |
 |       Play     |      Takes user to the quiz, to play the quiz         |  Pass   |
@@ -163,6 +227,8 @@ Sketch of a phone or similar size device:
 - I kept having issues in the console log from certain functions that were not being used on each site, so I decided to separate all of the javascript code by pages, to prevent console log being clogged up with errors, when they were not real errors.
 - After building the quiz and implementing most of the  code, I kept having issues with remaining answer buttons still having a hover effect after user makes a choice for their answer. I kept trying to find solutions online and couldn't find answers anywhere. I even tried running that part of the code through ChatGPT but it was unsucessful in giving me the right answer. No matter what I tried it didn't work, so I spent couple of days on and off playing with the code and trying to merge different event listeners and functions to get it to work and I finally managed to figure it out and disable the hover effect once the user selects an answer.
 - I had issues trying to understand the Local Storage and how to construct it, I watched multiple tutorials and in the end I decided to following a tutorial from [James Q Quick](https://www.youtube.com/watch?v=DFhmNLKwwGw) and adding my own minor changes to it.
+- Given that we are using font awesomes older version the logo for [X or Twitter](https://www.twitter.com) can not be changed to the new logo, and for that reason it has remained the same.
+- For the longest time I have been trying to implement the code that will display the correct answer if an incorrect answer was selected by the user. I created, deleted and recreated the same part of the code many times, but was unable to get it to work as I was accessing the variable from one function, and needed to use it within a different function. After days of trying to construct that code, I decided to test out each section of my code to see which parts will be able to read the file and extract variables from within the function, by running multiple console.logs. I managed to get a response from the console log, at the bottom of the code, after every function was already called and was running. I constructed my showCorrectAnswer code and it worked. I tryed moving it in other spots and it didn't work, so I just decided to leave it on the bottom of the file, and have it working from there.
 
 ### Unfixed bugs
 
@@ -170,6 +236,25 @@ Sketch of a phone or similar size device:
 
 ## Validator testing
 
+### Performance
+
+- I checked the whole site via lighthouse in devtools and made sure that the site is easily readable and fully accessible. Here are the reports for each page:
+
+#### index.html
+
+![Lighthouse performance index.html](assets/images/screenshots/validator-tests/index.html-lighthouse.png)
+
+#### quiz.html
+
+![Lighthouse performance quiz.html](assets/images/screenshots/validator-tests/quiz.html-lighthouse.png)
+
+#### endscreen.html
+
+![Lighthouse performance endscreen.html](assets/images/screenshots/validator-tests/endscreen.html-lighthouse.png)
+
+#### highscores.html
+
+![Lighthouse performance highscores.html](assets/images/screenshots/validator-tests/highscores.html-lighthouse.png)
 
 
 ## Deployment

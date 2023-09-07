@@ -282,6 +282,9 @@ startGame = () => {
 };
 
 nextQuestion = () => {
+    acceptingAnswers = true;
+
+    startTimer();
 
     if (availableQuestions.length === 0 || questionCount >= maxQuestions) {
         localStorage.setItem('newestScore', score);
@@ -298,9 +301,11 @@ nextQuestion = () => {
     currentQuestion = availableQuestions[randomQuestion];
     question.innerText = currentQuestion.question;
     nextButton.disabled = true;
+    restartButton.disabled = true;
 
-    if (nextButton.disabled) {
+    if (nextButton.disabled || restartButton.disabled) {
         removeHoverEffect(document.querySelectorAll('.next-btn'));
+        removeHoverEffect(document.querySelectorAll('.restart-btn'));
     }
 
     // Clear container 
@@ -344,11 +349,6 @@ nextQuestion = () => {
     });
 
     availableQuestions.splice(randomQuestion, 1);
-    acceptingAnswers = true;
-
-    startTimer();
-
-
 };
 
 // Timer
@@ -390,6 +390,10 @@ function startTimer() {
 
                 removeAnswerEventListeners();
 
+                progressBar.style.width = `${(questionCount / maxQuestions) * 100}%`;
+
+
+
                 nextButton.disabled = false;
                 restartButton.disabled = false;
                 removeHoverEffect(document.querySelectorAll('.answer-btn'));
@@ -400,6 +404,12 @@ function startTimer() {
                 showCorrectAnswers();
                 deductPoints();
                 stopTimer();
+
+                if (availableQuestions.length === 0 || questionCount >= maxQuestions) {
+                    // Replace Next button text with Save Highscore text
+                    nextButton.innerHTML = '<i class="far fa-save"></i> Save Score';
+                    console.log('Quiz finished. Save your score.');
+                }
             }
         }, 1000);
     }
@@ -568,8 +578,6 @@ startGame();
 
 
 function showCorrectAnswers() {
-    const correctAnswer = currentQuestion.answers.find(answer => answer.correct === true);
-    const correctAnswerText = correctAnswer.text;
     const currentAnswers = currentQuestion.answers;
 
     currentAnswers.forEach(answer => {

@@ -1,15 +1,19 @@
 // Rules of the game.
 const rules = [];
 rules[0] = '1. For best user experience open the game on a larger screen devices, otherwise use a portrait mode on your smaller devices.';
-rules[1] = '2. You can start the game as soon as the site loads by pressing Start Game button';
+rules[1] = '2. You can start the game as soon as the site loads by pressing Play Game button';
 rules[2] = '3. The game will give you a random questions about books and/or movies that you have to guess.';
-rules[3] = '4. Choose your answers wisely as each correct answer will give you points, and incorrect answer will show you how many points you have missed out on.';
-rules[4] = '5. Each time you answer correct the answer will light up green and you will be awarded 10 points.';
-rules[5] = '6. Each incorrect answer will light up as red and 2 points will be taken from the total score.';
-rules[6] = '7. Try and answer as many correct answers, and if you answer all of them correctly, you might get a prize.';
-rules[7] = '8. If you are stuck, you can press restart, to start from beggining.';
-rules[8] = '9. Once you reach the end the game will automatically end, where you will have an option to either restart or to save your score to the highscore on your local storage.';
-rules[9] = '10. To save your score you will need to fill out requested details and save your score.';
+rules[3] = '4. There is a total of 27 questions, out of which you will need to answer 10 random ones.';
+rules[4] = '5. Choose your answers wisely as each correct answer will give you points, and incorrect answer will deduct points from your score.';
+rules[5] = '6. Each time you answer correctly, the selected answer will light up green and you will be awarded 1000 points.';
+rules[6] = '7. Each time incorrect answer is selected it will light up red, the correct answer will be revealed by lighting up green and random points, either none, 10, 30, 50 or 100 points, will be deducted from the your score.';
+rules[7] = '8. Try and get as many correct answers, and if you manage to get all of them correctly, you might get a prize.';
+rules[8] = "9. Make sure to keep track of your timer coundown, as if it runs out, it will count as incorrect answer, which will deduct your points.";
+rules[9] = '10. If you want to start from the beggining, you can press restart, to start from beggining. You will need to answer the question to activate Restart Button.';
+rules[10] = '11. Keep in mind, to load each next question, you will need to press next button. You will need to answer the question to activate Next Button.';
+rules[11] = '12. Once you reach the end the game will automatically end, where you will have an option to either restart or to save your score to the highscore on your local storage.';
+rules[12] = '13. To save your score you will need to fill out requested details and save your score.';
+rules[13] = 'May the odds be ever in your favor!';
 
 
 document.addEventListener('load', console.log('Welcome to the site.'));
