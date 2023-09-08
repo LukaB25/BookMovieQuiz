@@ -94,8 +94,8 @@ Sketch of a phone or similar size device:
 - **Answers**. For each question, there are 4 answers. The order of the answers will change with each time question is loaded. Each answer button has a hover effect that will change the button background colour and the text colour which will transit from black to white slowly. After a user selects their answer, the hover effect is removed from other answers, the selected answer will change colour to either green(showing the answer was correct) or red(showing the answer was wrong), the buttons can not be clicked again.
 - **Incorrect answers**. Each time a user selects an incorrect answer or the timer runs out, the correct answer will be revealed. The background of the container will change to red colour to indicate wrong selection was made and the score will be deducted for random amount of points.
 - **Correct answers**.The correct answer will light up as green. The background of the container will change to green colour to indicate correct selection was made and the score will be incresed for 1000 points.
-- **Restart button** offers users to restart the game from the beggining. The button is disabled on first question, to prevent switching questions, user can see that the button is disabled, by lack of hover effect on the button. After the first question is answered the button is enabled and when clicked, the game will start from the beginning, without reloading the page. The question count, score, the progress bar and answer selection will all return to starting point, ie the changes will be reverted and cleared. The button has a hover effect that will change the button background colour and the text colour will transit from black to white slowly.
-- **Next button** lets users switch to next question. The button is disabled until the user makes a selection, , user can see that the button is disabled, by lack of hover effect on the button. After user selects the answer the button is enabled, has hover effect and when clicked it will load a new questions and answers. After the final question has been answered the Next button will change into Save score button The button has a hover effect that will change the button background colour and the text colour will transit from black to white slowly.
+- **Restart button** offers users to restart the game from the beggining. The button is disabled on first question, to prevent switching questions, user can see that the button is disabled, by lack of hover effect on the button. After the first question is answered the button is enabled and when clicked, the game will start from the beginning, without reloading the page. The question count, score, the progress bar and answer selection will all return to starting point, ie the changes will be reverted and cleared. The button has a hover effect that will change the button background colour and the text colour will transit from black to white slowly. I added the disable function that changes the background and text colour if the button is not enabled.
+- **Next button** lets users switch to next question. The button is disabled until the user makes a selection, , user can see that the button is disabled, by lack of hover effect on the button. After user selects the answer the button is enabled, has hover effect and when clicked it will load a new questions and answers. After the final question has been answered the Next button will change into Save score button The button has a hover effect that will change the button background colour and the text colour will transit from black to white slowly. I added the disable function that changes the background and text colour if the button is not enabled.
 - **Save score** button showes up in place of a next button once the final question is answered. Once pressed the user will be taken to the endscreen. In case the user clicks on Restart button, the Save score button will return to Next button state.
 - **Home button** offers users an option to return to the home page, without having to click return button on their browser. The button has a hover effect that will change the button background colour and the text colour will transit from black to white slowly.
 - **Timer** is used to keep track if the quiz is being played. Starting timer structure was taken from [shecode.ie](https://www.shecodes.io/athena/ 52336-how-to-create-a-countdown-timer-in-javascript#:~:text=let%20count%20%3D%2060%3B%20const%20timer,second%20using%20the%20setInterval%20method.) but it was updated and changed to fit within the site. The timer returns to the starting state every time the question is answered or when the timer runs out. The timer consists of the countdown that is visible to the user and the automatic progress bar that automatically updates and reduces to visually represent the time that is left.
@@ -114,9 +114,11 @@ Sketch of a phone or similar size device:
 
 ![Next button:hover](assets/images/screenshots/features/next-btn.avif)
 
-![Home button:hover](assets/images/screenshots/features/home-btn.avif)
+![Restart and Next button disabled](assets/images/screenshots/features/restart-next-btn-disabled.avif)
 
-![Save Score button:hover](assets/images/screenshots/features/save-scorebtn.avif)
+![Save Score button:hover](assets/images/screenshots/features/save-score-btn.avif)
+
+![Home button:hover](assets/images/screenshots/features/home-btn.avif)
 
 ### Endscreen
 
@@ -125,8 +127,13 @@ Sketch of a phone or similar size device:
 - In case user didn't beat at least the lowest high score, the Username input field will display a message "score too low" and it will disable any input to the field. Apart from that the Save button will be completely disabled.
 - If a user beats the lowest high score, they will need to input their username to save their score. The Save button will only be activated once the input field is filled out, after which the user can click on the button or press Enter key to save their score and to be taken to high scores.
 - User also has a choice to Replay the quiz or go to the Home screen by pressing on either of those two buttons.
+- I added the disable function that changes the background and text colour of username and save button if they are not enabled.
 
 ![Endscreen](assets/images/screenshots/features/endscreen.avif)
+
+![Endscreen input enabled](assets/images/screenshots/features/endscreen-input-enabled.avif)
+
+![Endscreen input field filled out](assets/images/screenshots/features/endscreen-input-done.avif)
 
 ### High scores
 

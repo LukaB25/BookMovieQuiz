@@ -406,6 +406,8 @@ function startTimer() {
                 removeHoverEffect(document.querySelectorAll('.answer-btn'));
                 returnHoverEffect(document.querySelectorAll('.restart-btn'));
                 returnHoverEffect(document.querySelectorAll('.next-btn'));
+                removeDisableStyle(document.querySelectorAll('.restart-btn'));
+                removeDisableStyle(document.querySelectorAll('.next-btn'));
 
 
                 console.log('Sadly time ran out.');
