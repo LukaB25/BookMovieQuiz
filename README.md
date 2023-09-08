@@ -190,6 +190,7 @@ Sketch of a phone or similar size device:
 | Answer buttons post click:hover  |      Hover effect is disabled after an answer is selected |  Pass   |
 |        Restart button        | Disabled before the answer is selected, after selecting answer, when clicked it restores original functions(questions, question count, score, progress bar and timer) without reloading the page |  Pass   |
 |   Next button     |     Next button is disabled until the answer is selected                   |  Pass   |
+|   Next/restart button:disabled     |     Button is disabled and has different style to indicate it is inactive                   |  Pass   |
 |   Next button click     |     After selecting an answer it loads a new question and answers, updates question count, score, progress bar, restores timer to initial settings and removes used question from list                          |  Pass   |
 |    Save score button    |           Save score button replaces the existing next button after the 10th question is answered           |  Pass   |
 |    Save score button click   |           Takes user to endscreen     |  Pass   |
@@ -200,9 +201,10 @@ Sketch of a phone or similar size device:
 |      Message section:hover      |       Transitions colours the "border" to draw attention to the message      |  Pass   |
 |        Final score   |       Displays the correct total score user managed to achieve        |  Pass   |
 |        Username input    |       Responds to interaction from user. Required to save score        |  Pass   |
-|        Username input disabled    |       Disabled when score is too low, displays message to let user know it doesn't work and why        |  Pass   |
+|        Username input disabled    |       Disabled when score is too low, displays message and styled differently to let user know it doesn't work and why,        |  Pass   |
 |      Username input:hover     |      Change background colour and size if score is high enough to be saved |  Pass   |
 |      Save button     |       Doesn't work without username input, takes user to the high scores screen after criteria met     |  Pass   |
+|      Save button:disabled     |       Disabled if score is too low, has different style to indicate it is not enabled     |  Pass   |
 |       Replay     |      Takes user to the quiz, to play the quiz again         |  Pass   |
 |           Home button     |                          Takes user to home screen                      |  Pass   |
 |      Endscreen buttons:hover     |      Change background colour and change text colour with transition effect |  Pass   |
@@ -243,6 +245,9 @@ Sketch of a phone or similar size device:
 ## Validator testing
 
 ### Performance
+
+- The site was checked and is working seamlessly and without errors or problems in multiple browsers: Safari, Chrome, Firefox
+- The site was tested on multiple screen sizes and is working seamslessly without any errors or problems.
 
 - I checked the whole site via lighthouse in devtools and made sure that the site is easily readable and fully accessible. Here are the reports for each page:
 
