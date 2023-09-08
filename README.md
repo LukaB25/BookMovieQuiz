@@ -321,13 +321,13 @@ Sketch of a phone or similar size device:
 
 ### Tutorials and lessons used during the project
 
-- https://www.youtube.com/watch?v=rFWbAj40JrQ
-- https://www.youtube.com/watch?v=riDzcEQbX6k
-- https://www.youtube.com/watch?v=fYTTUBa-lPc
-- https://www.youtube.com/watch?v=NQMs0rn6kwM&t=114s
-- https://www.youtube.com/watch?v=XF1_MlZ5l6M&t=910s
-- https://www.youtube.com/watch?v=y17RuWkWdn8&t=496s
-- https://www.youtube.com/watch?v=Ynp6Gdd3XVE&t=477s
-- https://www.youtube.com/watch?v=UsKDcsH2LBc&t=10s
-- https://www.youtube.com/watch?v=lqVNVmD27ag
+- <https://www.youtube.com/watch?v=rFWbAj40JrQ>
+- <https://www.youtube.com/watch?v=riDzcEQbX6k>
+- <https://www.youtube.com/watch?v=fYTTUBa-lPc>
+- <https://www.youtube.com/watch?v=NQMs0rn6kwM&t=114s>
+- <https://www.youtube.com/watch?v=XF1_MlZ5l6M&t=910s>
+- <https://www.youtube.com/watch?v=y17RuWkWdn8&t=496s>
+- <https://www.youtube.com/watch?v=Ynp6Gdd3XVE&t=477s>
+- <https://www.youtube.com/watch?v=UsKDcsH2LBc&t=10s>
+- <https://www.youtube.com/watch?v=lqVNVmD27ag>
 - and other video lessons as well as articles explaining that javascript elements, functions and variations can do and how to use each one.
