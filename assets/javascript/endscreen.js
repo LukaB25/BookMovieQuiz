@@ -20,7 +20,7 @@ finalScore.innerText = newestScore;
 
 // Compares users score to the existing high scores on the list 
 // and displays a message that fits preset criteria
-if (newestScore === '10000' | newestScore > highScores[0].score) {
+if (newestScore === '10000' || newestScore > highScores[0].score) {
     endgameMessage.innerText = `Congratulations! You beat the highest score. Your score is: ${newestScore}. Make sure you save your score, to receive your prize of 10 minutes of a bragging time, totally free of charge.`;
 } else if (newestScore > highScores[4].score) {
     endgameMessage.innerText = `Great job! You managed to beat some of the old high scores. You managed to get ${newestScore} points. Sadly given that your score is not the highest, you will have to try and beat it to get the prize.`;
@@ -37,6 +37,7 @@ username.addEventListener('keyup', () => {
 // Removes hover effect if the Save Button is disabled
 if (saveButton.disabled) {
     removeHoverEffect(document.querySelectorAll('.save-btn'));
+    addDisableStyle(document.querySelectorAll('.save-btn'));
 }
 
 // Checks if there is any text input in the username field to either 
@@ -44,8 +45,10 @@ if (saveButton.disabled) {
 username.addEventListener('input', () => {
     if (username.value) {
         returnHoverEffect(document.querySelectorAll('.save-btn'));
+        removeDisableStyle(document.querySelectorAll('.save-btn'));
     } else {
         removeHoverEffect(document.querySelectorAll('.save-btn'));
+        addDisableStyle(document.querySelectorAll('.save-btn'));
     }
 });
 
@@ -107,5 +110,19 @@ function removeHoverEffect(element) {
 function returnHoverEffect(element) {
     element.forEach(button => {
         button.classList.add('btn-hover');
+    });
+}
+
+// Adds disabled class to buttons, to indicate the button is inactive
+function addDisableStyle(element) {
+    element.forEach(button => {
+        button.classList.add('disabled');
+    });
+}
+
+// Removes disabled class to buttons, to indicate the button is active
+function removeDisableStyle(element) {
+    element.forEach(button => {
+        button.classList.remove('disabled');
     });
 }

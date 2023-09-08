@@ -314,6 +314,8 @@ nextQuestion = () => {
     if (nextButton.disabled || restartButton.disabled) {
         removeHoverEffect(document.querySelectorAll('.next-btn'));
         removeHoverEffect(document.querySelectorAll('.restart-btn'));
+        addDisableStyle(document.querySelectorAll('.restart-btn'));
+        addDisableStyle(document.querySelectorAll('.next-btn'));
     }
 
     // Clear container 
@@ -405,6 +407,7 @@ function startTimer() {
                 returnHoverEffect(document.querySelectorAll('.restart-btn'));
                 returnHoverEffect(document.querySelectorAll('.next-btn'));
 
+
                 console.log('Sadly time ran out.');
 
                 // Reveals correct answer, deducts random points and stops timer
@@ -453,6 +456,20 @@ function removeHoverEffect(element) {
 function returnHoverEffect(element) {
     element.forEach(button => {
         button.classList.add('btn-hover');
+    });
+}
+
+// Adds disabled class to buttons, to indicate the button is inactive
+function addDisableStyle(element) {
+    element.forEach(button => {
+        button.classList.add('disabled');
+    });
+}
+
+// Removes disabled class to buttons, to indicate the button is active
+function removeDisableStyle(element) {
+    element.forEach(button => {
+        button.classList.remove('disabled');
     });
 }
 
@@ -531,9 +548,11 @@ function selectAnswer(e) {
     restartButton.disabled = false;
     if (!restartButton.disabled) {
         returnHoverEffect(document.querySelectorAll('.restart-btn'));
+        removeDisableStyle(document.querySelectorAll('.restart-btn'));
     }
     if (!nextButton.disabled) {
         returnHoverEffect(document.querySelectorAll('.next-btn'));
+        removeDisableStyle(document.querySelectorAll('.next-btn'));
     }
     restartButton.addEventListener('click', restartGame);
     nextButton.addEventListener('click', nextQuestion);
@@ -584,6 +603,7 @@ restartGame = () => {
     restartButton.disabled = true;
     if (restartButton.disabled) {
         removeHoverEffect(document.querySelectorAll('.restart-btn'));
+        addDisableStyle(document.querySelectorAll('.restart-btn'));
     }
 };
 

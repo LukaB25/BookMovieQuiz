@@ -157,6 +157,11 @@ https://uiverse.io/cssbuttons-io/funny-dog-69 to raise the styles on the site*/
     cursor: default;
 }
 
+.disabled {
+    background-color: #2c281e;
+    color: rgb(255, 246, 231);
+}
+
 /* Rules */
 .rules-text {
     font-size: 2rem;
@@ -289,7 +294,7 @@ footer p>a {
     font-weight: 600;
     text-decoration: none;
     cursor: pointer;
-    border-radius: 25px;
+    border-radius: 1rem;
     outline: none;
     overflow: hidden;
     transition: color 0.3s 0.1s ease-out;
@@ -317,8 +322,11 @@ footer p>a::before {
 }
 
 #facebook {
+    font-size: 4rem;
+    padding: 0.3rem 1rem;
     border: 1px solid rgb(25, 112, 194);
     color: rgb(25, 112, 194);
+    margin-bottom: 1rem;
 }
 
 #facebook:hover {
@@ -337,6 +345,8 @@ footer p>a::before {
 }
 
 #instagram {
+    font-size: 4rem;
+    padding: 0.3rem 1rem;
     border: 1px solid rgb(203, 69, 136);
     color: rgb(203, 69, 136);
 }
@@ -357,6 +367,8 @@ footer p>a::before {
 }
 
 #twitter {
+    font-size: 4rem;
+    padding: 0.3rem 1rem;
     border: 1px solid rgb(40, 144, 241);
     color: rgb(40, 144, 241);
 }
@@ -377,6 +389,8 @@ footer p>a::before {
 }
 
 #youtube {
+    font-size: 4rem;
+    padding: 0.3rem 1rem;
     border: 1px solid rgb(235, 31, 31);
     color: rgb(235, 31, 31);
 }
@@ -405,7 +419,7 @@ footer p>a::before {
 footer p {
     font-size: 2rem;
     display: flex;
-    padding-top: 1rem;
+    padding-top: 2rem;
     align-items: center;
 }
 
@@ -476,12 +490,16 @@ footer p {
 }
 
 #username:focus {
-    background-color: white;
+    background-color: rgb(255, 246, 231);
+    ;
     color: #2c281e;
-
     transform: scale(1.05);
     box-shadow: 13px 13px 100px #969696,
         -13px -13px 100px #ffffff;
+}
+
+#username:disabled {
+    background-color: #2c281e;
 }
 
 #message-container {
@@ -610,9 +628,11 @@ footer p {
 
 /* Media queries for small screens to make sure site is accessible and fully functional on all devices */
 @media screen and (max-width: 800px) {
+    h2 {
+        font-size: 2.5rem;
+    }
 
     /* Footer */
-    footer li>a,
     footer p>a,
     footer p {
         font-size: 1.5rem;
@@ -632,16 +652,12 @@ footer p {
         font-size: 3rem;
     }
 
-    h2 {
-        font-size: 2.5rem;
-    }
-
     h3 {
         font-size: 1.5rem;
     }
 
     /* Buttons */
-    .btn {
+    .answer-btn {
         font-size: 1.5rem;
     }
 
@@ -650,11 +666,22 @@ footer p {
         font-size: 1.5rem;
     }
 
+    .high-score {
+        max-width: 80vw;
+    }
+
     /* Footer */
-    footer li>a,
     footer p>a,
     footer p {
         font-size: 1rem;
+        padding-top: 0.5rem;
+    }
+
+    #facebook,
+    #instagram,
+    #twitter,
+    #youtube {
+        font-size: 2.5rem;
     }
 }
 
@@ -662,21 +689,29 @@ footer p {
     /* Buttons */
 
     .btn {
-        width: 90vw;
+        width: 80vw;
     }
 
     .restart-btn,
     .next-btn {
-        max-width: 90vw;
+        max-width: 80vw;
         display: flex;
         justify-content: center;
     }
 
+    .controls {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
     /* Footer */
-    footer li>a,
     footer p>a,
     footer p {
         justify-content: center;
-        font-size: 0.5rem;
+        font-size: 0.8rem;
+    }
+
+    footer li>a {
+        padding: 0.2rem 1rem;
     }
 }
