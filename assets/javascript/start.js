@@ -13,6 +13,7 @@ rules[9] = "10. If you want to start from the beggining, you can press restart, 
 rules[10] = "11. Keep in mind, to load each next question, you will need to press next button. You will need to answer the question to activate Next Button.";
 rules[11] = "12. Once you reach the end the game will automatically end, where you will have an option to either restart or to save your score to the highscore on your local storage.";
 rules[12] = "13. To save your score you will need to fill out requested details and save your score.";
+// I used a quote from the Hunger Games book/movie series as a good luck sign off in the rules
 rules[13] = "May the odds be ever in your favor!";
 
 // Starts the function that enables showing/hiding of the rules when DOM is loaded
