@@ -4,8 +4,13 @@ document.addEventListener('load', console.log('Displaying high scores.'));
 const highScoresList = document.getElementById('high-score-list');
 const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
 
+// Check if there are no high scores in local storage and load placeholders if needed
+if (highScores.length === 0) {
+    loadPlaceholderHighScore();
+}
+
 // Imports placeholder high scores to the Local Storage to prevent empty high scores page in case they are removed
-document.addEventListener('DOMContentLoaded', function loadPlaceholderHighScore() {
+function loadPlaceholderHighScore() {
     const placeholderHighScores = [
         { score: 9000, name: 'Tena' },
         { score: 8990, name: 'Dodo' },
@@ -15,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function loadPlaceholderHighScore(
     ];
     localStorage.setItem('highScores', JSON.stringify(placeholderHighScores));
     console.log('Importing high scores...');
-});
+}
 
 // Separates all high scores and places them in individual list, displaying the name and their score
 highScoresList.innerHTML = highScores.map(score => {
