@@ -1,5 +1,7 @@
 document.addEventListener('load', console.log('Quiz loaded completely.'));
 
+// Starting code was partially used from https://www.youtube.com/watch?v=rFWbAj40JrQ&list=PLB6wlEeCDJ5Yyh6P2N6Q_9JijB6v4UejF
+// and was used as reference as to check if I was on the right track until I got more confortable writing out my own code
 // Constants and selectors
 const question = document.getElementById('question');
 const answerButtons = document.querySelectorAll('.answer-btn');
@@ -366,6 +368,8 @@ let count = totalCount;
 let timer;
 let timerWorking = false;
 
+
+// Starting timer structure was taken from shecode.ie https://www.shecodes.io/athena/52336-how-to-create-a-countdown-timer-in-javascript#:~:text=let%20count%20%3D%2060%3B%20const%20timer,second%20using%20the%20setInterval%20method. but it was updated and improved to fit within the site.
 function startTimer() {
     restartTimer(); // Restart the timer before starting a new one
     if (!timerWorking) {
