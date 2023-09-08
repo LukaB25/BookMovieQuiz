@@ -32,7 +32,7 @@ const questions = [
         ]
     },
     {
-        question: "Trilogy under the name Divirgent is a:",
+        question: "Trilogy under the name Divergent is a:",
         answers: [
             { text: 'Both', correct: true },
             { text: 'Movie', correct: false },
@@ -95,7 +95,7 @@ const questions = [
         ]
     },
     {
-        question: "Which of this books was not adapted into a movie or a Tv Show:",
+        question: "Which of this books was not adapted into a movie or a TV Show:",
         answers: [
             { text: 'Enemies with Benefits (by Lavander Fields)', correct: true },
             { text: 'Red, White and Royal Blue (by Casey McQuiston)', correct: false },
@@ -113,7 +113,7 @@ const questions = [
         ]
     },
     {
-        question: "Which two actresses were in a Book-To-Movie adaptation of A Simple Favour (2018)?",
+        question: "Which two actresses were in a Book-To-Movie adaptation of A Simple Favor (2018)?",
         answers: [
             { text: 'Blake Lively and Anna Kendrick', correct: true },
             { text: 'Blake Lively and Anne Hathaway', correct: false },
