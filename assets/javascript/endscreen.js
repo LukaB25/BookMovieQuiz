@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', console.log('Displaying final score..'));
-
 // Endscreen
 // Part of the code was taken and improved to fit my site from https://www.youtube.com/watch?v=DFhmNLKwwGw
 
@@ -12,8 +11,6 @@ const endgameMessage = document.getElementById('endgame-message');
 
 // Takes high scores from local storage
 const highScores = JSON.parse(localStorage.getItem('highScores')) || [];
-
-const maxHighScores = 5;
 
 // Imputs the final score into the page
 finalScore.innerText = newestScore;
@@ -77,7 +74,7 @@ username.addEventListener('keydown', function (event) {
 // saves the new high score to local storage, removes lowest high score located
 // at the end of stored array
 // Automatically sends user to the high score page to see current score list
-saveHighScore = (e) => {
+function saveHighScore(e) {
     console.log('Clicked save button.');
     e.preventDefault();
 

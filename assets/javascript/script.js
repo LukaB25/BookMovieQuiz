@@ -6,7 +6,6 @@ const answerButtons = document.querySelectorAll('.answer-btn');
 const answerContainer = document.getElementById('answer-btns');
 const restartButton = document.getElementById("restart-btn");
 const nextButton = document.getElementById("next-btn");
-const yourScore = document.getElementById('score');
 const questionCounter = document.getElementById('question-counter');
 const scoreCounter = document.getElementById('score-counter');
 const progressBar = document.getElementById('progress-bar');

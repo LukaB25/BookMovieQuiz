@@ -17,11 +17,6 @@ document.addEventListener('DOMContentLoaded', function loadPlaceholderHighScore(
     console.log('Importing high scores...');
 });
 
-// Checks if there are existing high scores and imports placeholder if there are none 
-if (highScores.lenght === 0) {
-    loadPlaceholderHighScore();
-}
-
 // Separates all high scores and places them in individual list, displaying the name and their score
 highScoresList.innerHTML = highScores.map(score => {
     return `<li class="high-score">${score.name} <=> ${score.score}</li>`;

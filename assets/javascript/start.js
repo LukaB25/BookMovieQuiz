@@ -63,13 +63,6 @@ document.addEventListener("DOMContentLoaded", function displayRules() {
     console.log("Welcome to the site.");
 });
 
-const highScores = JSON.parse(localStorage.getItem("highScores")) || [];
-
-// Checks if there are existing high scores and imports placeholder if there are none
-if (highScores.lenght === 0) {
-    loadPlaceholderHighScore();
-}
-
 // Imports placeholder high scores to the Local Storage to prevent empty high scores page before quiz is played
 document.addEventListener(
     "DOMContentLoaded",

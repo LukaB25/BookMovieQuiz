@@ -267,7 +267,7 @@ Sketch of a phone or similar size device:
 
 ![Lighthouse performance highscores.html](assets/images/screenshots/validator-tests/highscores.html-lighthouse.avif)
 
-### HTML, CSS
+### HTML, CSS and JavaScript
 
 #### HTML
 
@@ -279,6 +279,10 @@ Sketch of a phone or similar size device:
 #### CSS
 
 - The CSS file had two errors and two warnings all being connected to the translate style that was unnecessary. I corrected the CSS file and removed them.
+
+#### JavaScript
+
+- I ran all of my javascript code throuhh jslint to check my code and it came up with couple of warnings, but no errors. I removed excess unused variables and ran the code again, there were no major warnings, errors or issues spotted.
 
 ## Deployment
 
