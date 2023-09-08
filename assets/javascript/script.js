@@ -361,7 +361,7 @@ nextQuestion = () => {
 const timerCount = document.getElementById('timer-count');
 const timerProgressBar = document.getElementById('timer-progress-bar');
 timerCount.textContent = '';
-const totalCount = 30;
+const totalCount = 20;
 let count = totalCount;
 let timer;
 let timerWorking = false;
@@ -372,9 +372,9 @@ function startTimer() {
         timerWorking = true;
         timer = setInterval(function () {
             count--;
-            timerCount.innerText = `${count}/30s`;
+            timerCount.innerText = `${count}/20s`;
 
-            let timerProgressWidth = (count / 30) * 100;
+            let timerProgressWidth = (count / 20) * 100;
 
             if (count > 0) {
                 // Keeps track of the timer and reduces in size with each second that passes
@@ -433,14 +433,14 @@ function startTimer() {
 function restartTimer() {
     clearInterval(timer);
     count = totalCount;
-    timerCount.innerText = `${count}/30s`;
+    timerCount.innerText = `${count}/20s`;
 }
 
 // Stops and sets up timer for next question
 function stopTimer() {
     clearInterval(timer);
     count = totalCount;
-    timerCount.innerText = `${count}/30s`;
+    timerCount.innerText = `${count}/20s`;
     timerProgressBar.style.width = `100%`;
     timerWorking = false;
 }
