@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Meta information -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,15 +9,18 @@
       name="description"
       content="Quiz game to test your knowledge about books and movies."
     />
+    <!-- Link to external CSS file -->
     <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- Link to external font resources -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,400;1,500;1,600&family=Playfair:ital,opsz,wght@1,5..1200,300;1,5..1200,400;1,5..1200,500;1,5..1200,700&family=Roboto:wght@300;400&display=swap"
       rel="stylesheet"
     />
-
+    <!-- Page title -->
     <title>Book/Movie Quiz</title>
+    <!-- Favicon -->
     <link
       type="image/png"
       sizes="16x16"
@@ -26,9 +30,13 @@
   </head>
 
   <body>
-    <main class="container home-container">
+    <!-- Main content container -->
+    <main class="container">
+      <!-- Content for the home page -->
       <div id="home" class="justify-center flex-column">
+        <!-- Logo followed by navigation links -->
         <h1>Book/Movie Quiz</h1>
+        <!-- Start quiz link, stiled as button -->
         <a
           class="btn btn-hover"
           id="start-game"
@@ -36,12 +44,14 @@
           aria-label="Start the quiz game(opens in same tab)"
           ><i class="fas fa-play"></i> Play Game</a
         >
+        <!-- High scores link, stiled as button -->
         <a
           class="btn btn-hover"
           href="highscores.html"
           aria-label="Check out the high scores(opens in same tab)"
           ><i class="fas fa-star"></i> High Scores</a
         >
+        <!-- Button to display rules, when clicked switches to button to hide rules -->
         <button
           class="btn btn-hover"
           id="rules-btn"
@@ -49,12 +59,16 @@
         >
           <i class="fas fa-list-alt"></i> Rules
         </button>
+        <!-- Container for rules -->
         <div class="rules-text">
           <ul id="rules-list"></ul>
         </div>
       </div>
     </main>
+
+    <!-- Footer section -->
     <footer>
+      <!-- Links to social media pages -->
       <div class="links-page">
         <ul>
           <li>
@@ -99,6 +113,7 @@
           </li>
         </ul>
       </div>
+      <!-- What was project created for information and by whom -->
       <div class="project-links">
         <p>
           Created as a project for

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Meta information -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,16 +9,18 @@
       name="description"
       content="Quiz game to test your knowledge about books and movies."
     />
+    <!-- Link to external CSS file -->
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
+    <!-- Link to external font resources -->
     <link
       href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,400;1,500;1,600&family=Playfair:ital,opsz,wght@1,5..1200,300;1,5..1200,400;1,5..1200,500;1,5..1200,700&family=Roboto:wght@300;400&display=swap"
       rel="stylesheet"
     />
-
+    <!-- Page title -->
     <title>Book/Movie Quiz - Scores</title>
+    <!-- Favicon -->
     <link
       type="image/png"
       sizes="16x16"
@@ -27,17 +30,24 @@
   </head>
 
   <body>
+    <!-- Main content container -->
     <main class="container">
+      <!-- Content for the high scores page -->
       <div id="game" class="justify-center flex-column">
+        <!-- Logo -->
         <h1>Book/Movie Quiz</h1>
+        <!-- Randomised message to motivate players -->
         <h2 class="text-center" id="highscores-message"></h2>
+        <!-- High scores list being insert by JS -->
         <ul id="high-score-list"></ul>
+        <!-- Start quiz link, stiled as button -->
         <a
           class="btn btn-hover"
           href="quiz.html"
           aria-label="Start the quiz game(opens in same tab)"
           ><i class="fas fa-play"></i> Play Game</a
         >
+        <!-- Home button to go back to home screen -->
         <a
           class="btn btn-hover"
           href="index.html"
@@ -46,7 +56,10 @@
         >
       </div>
     </main>
+
+    <!-- Footer section -->
     <footer>
+      <!-- Links to social media pages -->
       <div class="links-page">
         <ul>
           <li>
@@ -91,6 +104,7 @@
           </li>
         </ul>
       </div>
+      <!-- What was project created for information and by whom -->
       <div class="project-links">
         <p>
           Created as a project for

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Meta information -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,15 +9,18 @@
       name="description"
       content="Quiz game to test your knowledge about books and movies."
     />
+    <!-- Link to external CSS file -->
     <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- Link to external font resources -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,400;1,500;1,600&family=Playfair:ital,opsz,wght@1,5..1200,300;1,5..1200,400;1,5..1200,500;1,5..1200,700&family=Roboto:wght@300;400&display=swap"
       rel="stylesheet"
     />
-
+    <!-- Page title -->
     <title>Book/Movie Quiz - Game</title>
+    <!-- Favicon -->
     <link
       type="image/png"
       sizes="16x16"
@@ -26,40 +30,54 @@
   </head>
 
   <body>
+    <!-- Main content container -->
     <main class="container">
+      <!-- Content for the game page -->
       <div id="game" class="justify-center flex-column">
+        <!-- Logo -->
         <h1>Book/Movie Quiz</h1>
+        <!-- Timer section -->
         <div id="timer-container">
           <p id="timer-count">30/30</p>
         </div>
+        <!-- Timer progress bar -->
         <div id="timer-bar-container">
           <div id="timer-progress-bar"></div>
         </div>
+        <!-- Question counter -->
         <div id="progress-display">
           <div class="question-counter">
             <p class="count-prefix">
               Question: <span id="question-counter" class="count-text"></span>
             </p>
           </div>
+          <!-- Score counter -->
           <div id="score" class="scoreboard">
             <p class="score">
               Score: <span id="score-counter" class="score">0</span>
             </p>
           </div>
         </div>
+        <!-- Progress bar -->
         <div id="progress-container">
           <div id="progress-bar"></div>
         </div>
+        <!-- Question -->
         <h2 id="question" class="text-center">Can you answer correctly?</h2>
+        <!-- Answer buttons -->
         <div id="answer-btns" class="justify-center flex-column"></div>
+        <!-- Game controls -->
         <div class="controls">
+          <!-- Restart questions button -->
           <button id="restart-btn" class="restart-btn btn btn-hover">
             <i class="fas fa-redo"></i> Restart
           </button>
+          <!-- Next question button -->
           <button id="next-btn" class="next-btn btn btn-hover">
             <i class="fas fa-arrow-circle-right"></i> Next
           </button>
         </div>
+        <!-- Home button to go back to home screen -->
         <a
           class="btn btn-hover home-btn"
           href="index.html"
@@ -68,7 +86,10 @@
         >
       </div>
     </main>
+
+    <!-- Footer section -->
     <footer>
+      <!-- Links to social media pages -->
       <div class="links-page">
         <ul>
           <li>
@@ -113,6 +134,7 @@
           </li>
         </ul>
       </div>
+      <!-- What was project created for information and by whom -->
       <div class="project-links">
         <p>
           Created as a project for
