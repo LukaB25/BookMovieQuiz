@@ -12,11 +12,11 @@ if (highScores.length === 0) {
 // Imports placeholder high scores to the Local Storage to prevent empty high scores page in case they are removed
 function loadPlaceholderHighScore() {
     const placeholderHighScores = [
-        { score: 9000, name: 'Tena' },
-        { score: 8990, name: 'Dodo' },
-        { score: 8970, name: 'Tin' },
-        { score: 7870, name: 'Lara' },
-        { score: 6850, name: 'Teo' }
+        { score: 8970, name: 'Tena' },
+        { score: 7930, name: 'Dodo' },
+        { score: 6870, name: 'Tin' },
+        { score: 5670, name: 'Lara' },
+        { score: 3650, name: 'Teo' }
     ];
     localStorage.setItem('highScores', JSON.stringify(placeholderHighScores));
     console.log('Importing high scores...');
